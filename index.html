@@ -12,6 +12,7 @@
     <title>Landing Page - Start Bootstrap Theme</title>
 
     <script type="text/javascript" src="http://smartken.github.io/cdn/bootcdn.js"></script>
+	<script type="text/javascript" src="http://smartken.github.io/cdn/rawgithub.js"></script>
     <script type="text/javascript" >
 	   Bootcdn.importFontawesome();
 	</script>
@@ -217,7 +218,21 @@
      <script type="text/javascript">
 	     Bootcdn.importJquery();
 		 Bootcdn.importBootstrap();
+		 Bootcdn.importKnockout();
+		 Bootcdn.importJsurl();
+		 Rawgithub.importGithubapi();
 	</script>	
+	
+	 <script type="text/javascript">
+		 var user=url("?user")||"hhland"
+		 ,repo=url("?repo")||"hhland.github.io"
+		 ;
+		 
+		 var gituser=gh.user(user);
+		 gituser.show(function (data) {
+			console.log(data.user);
+		});
+	 </script>
 
 </body>
 
