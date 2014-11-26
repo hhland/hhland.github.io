@@ -88,17 +88,17 @@
     <!-- /.intro-header -->
 
     <!-- Page Content -->
+    <div >
+    <div class="content-section-a" >
 
-    <div class="content-section-a">
-
-        <div class="container">
+        <div class="container" data-bind="foreach:repos" >
 
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
-                    <p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
+                    <h2 class="section-heading" data-bind="text:name"></h2>
+                    <p class="lead" data-bind="text:description"></p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <img class="img-responsive" src="img/ipad.png" alt="">
@@ -222,12 +222,13 @@
 	<script type="text/javascript" src="cdn/githubapi.js"></script>
 	 <script type="text/javascript">
 		 var owner=url("?owner")||"hhland"
-		 ,repo=owner+".github.io"
+		 ,_repo=owner+".github.io"
 		 ;
 		 
 		 var viewModel=function(){
 		     this.siteinfo=ko.observable({url:"",description:""});
 			 this.ownerinfo=ko.observable({login:"",html_url:"",avatar_url:""});
+			  this.repos=ko.observableArray([]);
 		 };
 		 
 		 var vm=new viewModel();
@@ -238,7 +239,7 @@
 		 
 		 
 		 var githubuser=new Github.user(owner);
-		 var githubrepo=githubuser.repo(repo);
+		 var githubrepo=githubuser.repo(_repo);
 		 
 		 githubrepo.info(function(info){
 		   console.log(info);
@@ -248,7 +249,18 @@
 		 
 		 githubuser.repos(function(repos){
 		    console.log(repos);
-			
+			var repos0=[];
+			for(var i=0;i<repos.length;i++){
+			   var repo=repos[i];
+			   if(repo["name"]==_repo){
+			   
+			   vm.siteinfo(repo);
+		       vm.ownerinfo(repo["owner"]);
+			   continue;
+			   };
+			   repos0.push(repo);
+			}
+			vm.repos(repos0);
 		 });
 		 
 		 
