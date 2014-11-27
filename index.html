@@ -99,7 +99,7 @@
         <div class="container" data-bind="foreach:{data:repos,afterRender:afterRanderRepo}" >
 
             <div class="row">
-                <div class="col-lg-7 col-sm-8">
+                <div class="col-lg-8 col-sm-8">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading" data-bind="text:name"></h2>
@@ -120,9 +120,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-2  col-sm-4">
+                <div class="col-lg-4 col-sm-4">
                     <img data-bind="attr:{src:'http://cdn.rawgit.com/'+full_name+'/'+default_branch+'/site.index.jpg'}"  class="img-responsive"
-                      style="max-width:350px;"
+                      style="max-width:100%;"
 					alt="">
                 </div>
             </div>
