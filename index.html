@@ -94,12 +94,14 @@
 
     <!-- Page Content -->
     <div >
-    <div class="content-section-a" >
+   
+   
+   <div class="content-section-a" >
 
-        <div class="container" data-bind="foreach:{data:repos,afterRender:afterRanderRepo}" >
+			<div class="container" data-bind="foreach:{data:repos,afterRender:afterRanderRepo}" >
 
             <div class="row">
-                <div class="col-lg-8 col-sm-8">
+                <div class="col-lg-7 col-sm-7">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading" data-bind="text:name"></h2>
@@ -109,51 +111,66 @@
 					<hr />
 					<ul class="list-inline banner-social-buttons">
 					    <li>
-                            <a data-bind="attr:{href:html_url}" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                            <a data-bind="attr:{href:html_url}" class="btn btn-block btn-lg btn-default"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                         </li>
                         <li>
-                            <a data-bind="attr:{href:html_url+'/commits/'+default_branch }" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Commits</span></a>
+                            <a data-bind="attr:{href:html_url+'/commits/'+default_branch }" class="btn btn-block btn-lg btn-info"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Commits</span></a>
                         </li>
                         
                         <li>
-                            <a data-bind="attr:{href:html_url+'/branches'}" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Branches</span></a>
+                            <a data-bind="attr:{href:html_url+'/branches'}" class="btn btn-block btn-lg btn-primary"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Branches</span></a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-sm-4">
-                    <img data-bind="attr:{src:'http://cdn.rawgit.com/'+full_name+'/'+default_branch+'/site.index.jpg'}"  class="img-responsive"
-                      style="max-width:100%;"
-					alt="">
+							<div class="col-lg-5 col-sm-5"   >
+								  <div data-bind="style:{backgroundImage:'url(http://cdn.rawgit.com/'+full_name+'/'+default_branch+'/site.index.jpg)'}" style="background-size:100% auto;">
+										<div class="login" style="background-size:100% auto;"></div>
+								</div>
+									
+                   
                 </div>
             </div>
 
         </div>
         <!-- /.container -->
+			
 
     </div>
     <!-- /.content-section-a -->
-
+    
     <div class="content-section-b">
 
         <div class="container">
 
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
-                    <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/dog.png" alt="">
-                </div>
+            <div class="demo-browser">
+					<!--
+            <div class="demo-browser-side">
+              <div class="demo-browser-author"></div>
+              <div class="demo-browser-action">
+                <a class="btn btn-danger btn-lg btn-block" href="http://twitter.com/monstercritic" target="_blank">
+                  <span class="fui-plus"></span>Follow
+                </a>
+              </div>
+              <h5>@monstercritic</h5>
+              <h6>
+                Tourist. Designer. NYC
+                <a href="http://shmidt.in" target="_blank">shmidt.in</a>
+              </h6>
+            </div> -->
+						<div class="demo-browser-content" data-bind="foreach:{data:following}" >
+							<a data-bind="attr:{href:'#'+login}">
+              <img class="icon" data-bind="attr:{src:avatar_url,alt:avatar_url}"   />
+							</a>
             </div>
+          </div>
+        </div>
 
         </div>
         <!-- /.container -->
 
     </div>
     <!-- /.content-section-b -->
+   
 
     <div class="content-section-a">
 
@@ -240,6 +257,7 @@
 		 Bootcdn.importKnockout();
 		 Bootcdn.importJsurl();
 		 Bootcdn.importMarked();
+		 Rawgithub.importFlatui();
 	</script>	
 	<script type="text/javascript" src="cdn/githubapi.js"></script>
 	 <script type="text/javascript">
@@ -251,6 +269,8 @@
 		     this.siteinfo=ko.observable({url:"",description:""});
 			 this.ownerinfo=ko.observable({login:"",html_url:"",avatar_url:""});
 			  this.repos=ko.observableArray([]);
+			  
+			  this.following=ko.observableArray([]);
 			  
 			 this.afterRanderRepo=function(e,repo){
 			    var repo_name=repo.name;
@@ -280,7 +300,7 @@
 		    $(this).hide();
 		 });
 		 
-		 var githubuser=new Github.user(owner);
+		 var githubuser=new Github.User(owner);
 		 var githubrepo=githubuser.repo(_repo);
 		 
 		
@@ -301,7 +321,10 @@
 			vm.repos(repos0);
 		 });
 		 
-		 
+		 githubuser.following(function(following){
+		    console.log(following);
+			  vm.following(following);
+		 });
 		 
 	 </script>
 	 
