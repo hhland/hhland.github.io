@@ -20,40 +20,44 @@
 		});
 	};
 	
-	github.user=function(owner){
+	github.User=function(owner){
 	     this.owner=owner;
 	} 
 	
-	github.user.prototype.info = function(callback) {
+	github.User.prototype.info = function(callback) {
       github.fn.request('/users/' + this.owner, {}, function(data) {callback(data.data);});
 	};
 	
-	github.user.prototype.repos=function(callback) {
+	github.User.prototype.repos=function(callback) {
       github.fn.request('/users/' + this.owner + '/repos', {}, function(data) {callback(data.data);});
 	};
+	
+	github.User.prototype.following=function(callback) {
+      github.fn.request('/users/' + this.owner + '/following', {}, function(data) {callback(data.data);});
+	};
 
-	github.user.prototype.repo=function(repo) {
-      return new github.repo(this.owner,repo);
+	github.User.prototype.repo=function(repo) {
+      return new github.Repo(this.owner,repo);
 	};
 	
-    github.repo=function(owner,repo){
+    github.Repo=function(owner,repo){
 	     this.owner=owner;
 		 this.repo=repo;
 	}; 
 
-	github.repo.prototype.info = function(callback) {
+	github.Repo.prototype.info = function(callback) {
       github.fn.request('/repos/' + this.owner + '/' + this.repo , function(data) {callback(data.data);});
 	};
 
-	github.repo.prototype.issues = function(param,callback) {
+	github.Repo.prototype.issues = function(param,callback) {
       github.fn.request('/repos/' + this.owner + '/' + this.repo + '/issues', param, function(data) {callback(data.data);});
 	};
 
-	github.repo.prototype.forks = function(param,callback) {
+	github.Repo.prototype.forks = function(param,callback) {
       github.fn.request('/repos/' + this.owner + '/' + this.repo + '/forks', param, function(data) {callback(data.data);});
 	};
 	
-   github.repo.prototype.labels = function(owner,repo,callback) {
+   github.Repo.prototype.labels = function(owner,repo,callback) {
       github.fn.request('/repos/' + this.owner + '/' + this.repo + '/labels', {}, function(data) {callback(data.data);});
 	};
 
