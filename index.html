@@ -90,7 +90,7 @@
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>
-                                <a href="#repos" target="_self" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Repositories</span></a>
+                                <a href="#repos" target="_self" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Last 10 Repositories</span></a>
                             </li>
                             <li>
                                 <a href="#following" target="_self" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Following</span></a>
@@ -126,7 +126,7 @@
                     <h2 class="section-heading" data-bind="text:name"></h2>
                     <p class="lead" data-bind="text:description"></p>
 					<hr />
-					<div class="sample" data-bind="attr:{id:'sample_'+name,repo:name}"></div>
+					<div class="sample" data-bind="attr:{id:'sample_'+name,repo:name,has_issues:has_issues?1:0}"></div>
 					<hr />
 					<ul class="list-inline banner-social-buttons">
 					    <li>
@@ -340,8 +340,12 @@
 		 var loadSample=function(){
 		   var $sample=$("div.sample:empty:first");
 		   if($sample.length<=0)return;
-		   var _repo=$sample.attr("repo");
+		   var _repo=$sample.attr("repo"),has_issues=$sample.attr("has_issues");
 		   var grepo=githubuser.repo(_repo);
+		   if(has_issues==0){
+		       $sample.addClass("alert alert-warning").html("The repositorie is allow assues.");
+			   loadSample();
+		   }
 		   grepo.issues({labels:"site"},function(issues){
 					var sample;
 					for(var i=0;i<issues.length;i++){
@@ -364,10 +368,10 @@
 			});
 		 };
 		 
-		 githubuser.repos({sort:'updated'},function(repos){
+		 githubuser.repos({sort:'updated',direction:'desc'},function(repos){
 		    console.log(repos);
 			var repos0=[];
-			for(var i=0;i<repos.length;i++){
+			for(var i=0;i<10&&i<repos.length;i++){
 			   var repo=repos[i];
 			   if(repo["has_pages"]){
 			   
