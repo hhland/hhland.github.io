@@ -26,6 +26,13 @@
 	   margin-bottom:20px;
 	 }
 	
+	.demo-browser-content img.icon {
+  float: left;
+  width: 102px;
+  margin: 0 15px 20px 0;
+  border: 6px solid #fff;
+  }
+	
 	</style>
     
 </head>
@@ -52,7 +59,7 @@
                     <li>
 					    
                         <a data-bind="attr:{href:html_url}">
-						<img data-bind="attr:{src:avatar_url}" style="height:30px" />
+						
 						  <span data-bind="text:login"></span>
 						  
 						</a>
@@ -81,11 +88,23 @@
                         <h1 data-bind="text:name">Landing Page</h1>
                         <h3 data-bind="text:description">A Template by Start Bootstrap</h3>
                         <hr class="intro-divider">
-                        
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="#repos" target="_self" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Repositories</span></a>
+                            </li>
+                            <li>
+                                <a href="#following" target="_self" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Following</span></a>
+                            </li>
+                            <li>
+                                <a href="#followers" target="_self" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Followers</span></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
+		
+			
         </div>
         <!-- /.container -->
 
@@ -96,18 +115,18 @@
     <div >
    
    
-   <div class="content-section-a" >
+   <div id="repos" class="content-section-a" >
 
 			<div class="container" data-bind="foreach:{data:repos,afterRender:afterRanderRepo}" >
 
-            <div class="row">
+            <div class="row repo" data-bind="attr:{id:'repo_'+name}">
                 <div class="col-lg-7 col-sm-7">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading" data-bind="text:name"></h2>
                     <p class="lead" data-bind="text:description"></p>
 					<hr />
-					<div data-bind="attr:{id:'sample_'+name}"></div>
+					<div class="sample" data-bind="attr:{id:'sample_'+name,repo:name}"></div>
 					<hr />
 					<ul class="list-inline banner-social-buttons">
 					    <li>
@@ -123,7 +142,7 @@
                     </ul>
                 </div>
 							<div class="col-lg-5 col-sm-5"   >
-								  <div data-bind="style:{backgroundImage:'url(http://cdn.rawgit.com/'+full_name+'/'+default_branch+'/site.index.jpg)'}" style="background-size:100% auto;">
+								  <div data-bind="style:{backgroundImage:'url(http://cdn.rawgit.com/'+full_name+'/'+default_branch+'/site.index.jpg)'}" style="background-size:100% auto;background-repeat:no-repeat">
 										<div class="login" style="background-size:100% auto;"></div>
 								</div>
 									
@@ -137,29 +156,63 @@
 
     </div>
     <!-- /.content-section-a -->
-    
-    <div class="content-section-b">
+	
+	
+	<div id="followers" class="content-section-a">
 
         <div class="container">
+            <span style="padding-left:30px">Followers</span>
+            <div class="demo-browser" style="margin-top:-35px">
+					
+            
+              		
+			<div class="demo-browser-content" data-bind="foreach:{data:followers}" style="min-height:300px" >
+							<a data-bind="attr:{href:'?owner='+login,title:login}">
+              <img class="icon" data-bind="attr:{src:avatar_url,alt:avatar_url}"   />
+			  
+							</a>
+            </div>
+			
+			
+			
+          </div>
+        </div>
 
-            <div class="demo-browser">
-					<!--
-            <div class="demo-browser-side">
-              <div class="demo-browser-author"></div>
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+	
+    
+    <div id="following" class="content-section-b">
+
+        <div class="container">
+              <span style="padding-left:30px">Following</span>
+            <div class="demo-browser" style="margin-top:-35px">
+					
+            <div class="demo-browser-side" data-bind="with:ownerinfo">
+              <div class="demo-browser-author" data-bind="style:{backgroundImage:'url('+avatar_url+')'}"></div>
+			  
               <div class="demo-browser-action">
-                <a class="btn btn-danger btn-lg btn-block" href="http://twitter.com/monstercritic" target="_blank">
-                  <span class="fui-plus"></span>Follow
-                </a>
+			    <form data-bind="attr:{action:'https://api.github.com/user/following/'+login}" method="PUT">
+				   <button type="submit" class="btn btn-danger btn-lg btn-block" href="http://twitter.com/monstercritic" target="_blank">
+                    <span class="fui-plus"></span>Follow
+                  </button>
+				</form>
+               
               </div>
               <h5>@monstercritic</h5>
               <h6>
                 Tourist. Designer. NYC
                 <a href="http://shmidt.in" target="_blank">shmidt.in</a>
               </h6>
-            </div> -->
-						<div class="demo-browser-content" data-bind="foreach:{data:following}" >
-							<a data-bind="attr:{href:'#'+login}">
+            </div>
+              		
+			<div class="demo-browser-content" data-bind="foreach:{data:following}" style="min-height:300px" >
+							<a data-bind="attr:{href:'?owner='+login,title:login}">
               <img class="icon" data-bind="attr:{src:avatar_url,alt:avatar_url}"   />
+			  
 							</a>
             </div>
           </div>
@@ -172,27 +225,7 @@
     <!-- /.content-section-b -->
    
 
-    <div class="content-section-a">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Google Web Fonts and<br>Font Awesome Icons</h2>
-                    <p class="lead">This template features the 'Lato' font, part of the <a target="_blank" href="http://www.google.com/fonts">Google Web Font library</a>, as well as <a target="_blank" href="http://fontawesome.io">icons from Font Awesome</a>.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/phones.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
+    
 
     <div class="banner">
 
@@ -271,8 +304,9 @@
 			  this.repos=ko.observableArray([]);
 			  
 			  this.following=ko.observableArray([]);
+			  this.followers=ko.observableArray([]);
 			  
-			 this.afterRanderRepo=function(e,repo){
+			 this.afterRanderRepo=function(e,repo){  return;
 			    var repo_name=repo.name;
 			    var grepo=githubuser.repo(repo_name);
 			    var elid="#sample_"+repo_name;
@@ -303,9 +337,34 @@
 		 var githubuser=new Github.User(owner);
 		 var githubrepo=githubuser.repo(_repo);
 		 
-		
+		 var loadSample=function(){
+		   var $sample=$("div.sample:empty:first");
+		   if($sample.length<=0)return;
+		   var _repo=$sample.attr("repo");
+		   var grepo=githubuser.repo(_repo);
+		   grepo.issues({labels:"site"},function(issues){
+					var sample;
+					for(var i=0;i<issues.length;i++){
+					   var issue=issues[i];
+					   if(issue["title"]="sample"){
+						 sample=issue;
+						 break;
+					   }
+					}
+					if(sample){
+					  var html=marked(issue["body"]);
+						 $sample.html(html);
+					}else{
+					   var newissueurl="https://github.com/"+owner+"/"+_repo+"/issues/new";
+					   $sample.addClass("alert alert-warning").html("There is no sample in the repositorie!<p> please add issue(lable='site',title='sample') in "+
+					   "<a href='"+newissueurl+"'>new issue<"+"/a>"
+					   +"</p>");
+					}
+					loadSample();
+			});
+		 };
 		 
-		 githubuser.repos(function(repos){
+		 githubuser.repos({sort:'updated'},function(repos){
 		    console.log(repos);
 			var repos0=[];
 			for(var i=0;i<repos.length;i++){
@@ -319,11 +378,20 @@
 			   repos0.push(repo);
 			}
 			vm.repos(repos0);
+			loadSample();
+			
 		 });
+		 
+		 
 		 
 		 githubuser.following(function(following){
 		    console.log(following);
 			  vm.following(following);
+		 });
+		
+		 githubuser.followers(function(followers){
+		    console.log(followers);
+			  vm.followers(followers);
 		 });
 		 
 	 </script>

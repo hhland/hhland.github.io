@@ -28,12 +28,20 @@
       github.fn.request('/users/' + this.owner, {}, function(data) {callback(data.data);});
 	};
 	
-	github.User.prototype.repos=function(callback) {
-      github.fn.request('/users/' + this.owner + '/repos', {}, function(data) {callback(data.data);});
+	github.User.prototype.repos=function(param,callback) {
+      github.fn.request('/users/' + this.owner + '/repos', param, function(data) {callback(data.data);});
 	};
 	
 	github.User.prototype.following=function(callback) {
       github.fn.request('/users/' + this.owner + '/following', {}, function(data) {callback(data.data);});
+	};
+	
+	github.User.prototype.followers=function(callback) {
+      github.fn.request('/users/' + this.owner + '/followers', {}, function(data) {callback(data.data);});
+	};
+	
+	github.User.prototype.issues=function(param,callback) {
+      github.fn.request('/user/issues', param, function(data) {callback(data.data);});
 	};
 
 	github.User.prototype.repo=function(repo) {

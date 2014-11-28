@@ -164,3 +164,62 @@ footer {
 p.copyright {
     margin: 15px 0 0;
 }
+
+
+.demo-browser {
+  padding-top: 42px;
+  margin: 0 41px 140px 0;
+  color: #fff;
+  background: #2c3e50 url(../img/demo-browser.png) 0 0 no-repeat;
+  background-size: 100% 42px;
+  border-radius: 0 0 6px 6px;
+  }
+.demo-browser-side {
+  float: left;
+  width: 20%;
+  padding: 22px 20px;
+  }
+.demo-browser-side > h5 {
+  margin-top: 4px;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+  }
+.demo-browser-side > h6 {
+  margin-top: 3px;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 18px;
+  text-transform: none;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+  }
+.demo-browser-author {
+  display: block;
+  width: 84px;
+  height: 84px;
+  margin: 0 auto;
+  background-size:84px 84px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  }
+.demo-browser-action {
+  padding: 30px 0 12px;
+  }
+.demo-browser-action > .btn {
+  padding: 7px 0 8px 11px !important;
+  text-align: left;
+  border-radius: 3px;
+  }
+.demo-browser-action > .btn > [class^="fui-"] {
+  position: relative;
+  top: 1px;
+  margin-right: 12px;
+  }
+.demo-browser-content {
+  padding: 21px 0 0 20px;
+  overflow: hidden;
+  background-color: #34495e;
+  border-radius: 0 0 6px;
+  }
