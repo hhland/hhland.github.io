@@ -146,9 +146,11 @@
 						
                     </ul>
                 </div>
-							<div class="col-lg-5 col-sm-5"   >
-								  <div data-bind="style:{backgroundImage:'url(http://cdn.rawgit.com/'+full_name+'/'+default_branch+'/site.index.jpg)'}" style="background-size:100% auto;background-repeat:no-repeat">
+							<div class="col-lg-5 col-sm-5" style="background-image:url(img/sample-error.jpg); background-repeat:no-repeat;background-position:20px 15px; background-size:90% auto;"  >
+								  <div data-bind="style:{backgroundImage:'url(http://cdn.rawgit.com/'+full_name+'/'+default_branch+'/site.sample.jpg)'}" style="background-size:100% auto;background-repeat:no-repeat"
+								  >
 										<div class="login" style="background-size:100% auto;"></div>
+								
 								</div>
 									
                    
@@ -334,10 +336,7 @@
 		     ko.applyBindings(vm);
 		 });
 		 
-		 $("img").error(function(){
-		    
-		    $(this).hide();
-		 });
+		 
 		 
 		 var githubuser=new Github.User(owner);
 		 var githubrepo=githubuser.repo(_repo);
