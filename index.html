@@ -137,8 +137,13 @@
                         </li>
                         
                         <li>
-                            <a data-bind="attr:{href:html_url+'/branches'}" class="btn btn-block btn-lg btn-primary"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Branches</span></a>
+                            <a data-bind="attr:{href:html_url+'/branches'}" class="btn btn-block btn-lg btn-warning"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Branches</span></a>
                         </li>
+						
+						<li>
+                            <a data-bind="visible:has_issues,attr:{href:'http://smartken.github.io?repo='+name+'&owner='+owner.login }" class="btn btn-block btn-lg btn-primary"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Blog</span></a>
+                        </li>
+						
                     </ul>
                 </div>
 							<div class="col-lg-5 col-sm-5"   >
@@ -342,9 +347,21 @@
 		   if($sample.length<=0)return;
 		   var _repo=$sample.attr("repo"),has_issues=$sample.attr("has_issues");
 		   var grepo=githubuser.repo(_repo);
+		   var newissueurl="https://github.com/"+owner+"/"+_repo+"/issues/new"
+		   ,settingurl="https://github.com/"+owner+"/"+_repo+"/settings"
+		   ;
+		   var a_newissue="<a href='"+newissueurl+"'>new issue<"+"/a>"
+		   ,a_setting="<a href='"+settingurl+"'>"+_repo+" Setting<"+"/a>"
+		   
+		   ;
 		   if(has_issues==0){
-		       $sample.addClass("alert alert-warning").html("The repositorie is allow assues.");
+		       $sample.addClass("alert alert-danger").html("The repositorie is not allow issues. <br/>If your're the owner ,you can resolve the problem by ...<ol type='1'>"
+			   +"<li>Enable the Features Issues in "+a_setting+"</li>"
+			   +"<li>Add issue(label='site',title='sample') in  "+a_newissue+"</li>"
+			   +"<li>Reload the page </li>"
+			   +"</ol>");
 			   loadSample();
+			   return;
 		   }
 		   grepo.issues({labels:"site"},function(issues){
 					var sample;
@@ -359,10 +376,12 @@
 					  var html=marked(issue["body"]);
 						 $sample.html(html);
 					}else{
-					   var newissueurl="https://github.com/"+owner+"/"+_repo+"/issues/new";
-					   $sample.addClass("alert alert-warning").html("There is no sample in the repositorie!<p> please add issue(lable='site',title='sample') in "+
-					   "<a href='"+newissueurl+"'>new issue<"+"/a>"
-					   +"</p>");
+					   
+					   $sample.addClass("alert alert-warning").html("There is no sample in the repositorie!</br >If your're the owner ,you can resolve the problem by ...<ol type='1'> "
+					   
+			           +"<li>Add issue(label='site',title='sample') in  "+a_newissue+"</li>"
+			   +"<li>Reload the page </li>"
+			   +"</ol>");
 					}
 					loadSample();
 			});
@@ -371,7 +390,7 @@
 		 githubuser.repos({sort:'updated',direction:'desc'},function(repos){
 		    console.log(repos);
 			var repos0=[];
-			for(var i=0;i<10&&i<repos.length;i++){
+			for(var i=0;i<repos.length&&i<10;i++){
 			   var repo=repos[i];
 			   if(repo["has_pages"]){
 			   
