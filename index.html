@@ -40,7 +40,7 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-bind="with:ownerinfo">
+    <nav class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation" >
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -50,26 +50,34 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" data-bind="text:'Start Bootstrap '"></a>
+                <a class="navbar-brand" data-bind="text:'Start Bootstrap '" ></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+				
 				    
-                    <li>
-					    
-                        <a data-bind="attr:{href:html_url}">
-						
-						  <span data-bind="text:login"></span>
-						  
-						</a>
+					<li>
+					   <div class="dropdown">
+  <button class="btn btn-inverse dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+   >
+    Last 10 Repositories
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" data-bind="foreach:repos">
+    <li role="presentation"><a role="menuitem" target="_self" data-bind="text:name,attr:{href:'#repo_'+name}"></a></li>
+    
+  </ul>
+</div>
+					</li>
+			                    <li>
+                        <a href="#following" target="_self">Following</a>
                     </li>
                     <li>
-                        <a data-bind="attr:{href:html_url+'?tab=repositories'}">Repositories</a>
-                    </li>
-                    <li>
-                        <a data-bind="attr:{href:html_url+'?tab=activity'}">Activity</a>
-                    </li>
+                        <a href="#followers" target="_self">Followers</a>
+                    </li>		
+					
+					
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -82,7 +90,7 @@
 
         <div class="container"  >
 
-            <div class="row" data-bind="with:siteinfo">
+            <div class="row" data-bind="with:siteinfo" >
                 <div class="col-lg-12">
                     <div class="intro-message">
                         <h1 data-bind="text:name">Landing Page</h1>
@@ -90,14 +98,21 @@
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>
-                                <a href="#repos" target="_self" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Last 10 Repositories</span></a>
-                            </li>
-                            <li>
-                                <a href="#following" target="_self" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Following</span></a>
-                            </li>
-                            <li>
-                                <a href="#followers" target="_self" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Followers</span></a>
-                            </li>
+                        <a class="btn btn-default btn-lg" data-bind="attr:{href:html_url}">
+						<i class="fa fa-github fa-fw"></i> <span class="network-name">Contributions</span>
+						</a>
+                    </li>
+							
+							<li>
+                        <a class="btn btn-default btn-lg" data-bind="attr:{href:html_url+'?tab=repositories'}">
+						<i class="fa fa-github fa-fw"></i> <span class="network-name">Repositories</span>
+						</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-default btn-lg" data-bind="attr:{href:html_url+'?tab=activity'}"><i class="fa fa-github fa-fw"></i> <span class="network-name">Activity</span></a>
+                    </li>
+							
+                    
                         </ul>
                     </div>
                 </div>
@@ -119,7 +134,7 @@
 
 			<div class="container" data-bind="foreach:{data:repos,afterRender:afterRanderRepo}" >
 
-            <div class="row repo" data-bind="attr:{id:'repo_'+name}">
+            <div  class="row repo" data-bind="attr:{id:'repo_'+name}">
                 <div class="col-lg-7 col-sm-7">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
@@ -130,7 +145,7 @@
 					<hr />
 					<ul class="list-inline banner-social-buttons">
 					    <li>
-                            <a data-bind="attr:{href:html_url}" class="btn btn-block btn-lg btn-default"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                            <a data-bind="attr:{href:html_url}" class="btn btn-block btn-lg btn-inverse"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                         </li>
                         <li>
                             <a data-bind="attr:{href:html_url+'/commits/'+default_branch }" class="btn btn-block btn-lg btn-info"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Commits</span></a>
@@ -165,37 +180,13 @@
     <!-- /.content-section-a -->
 	
 	
-	<div id="followers" class="content-section-a">
 
-        <div class="container">
-            <span style="padding-left:30px">Followers</span>
-            <div class="demo-browser" style="margin-top:-35px">
-					
-            
-              		
-			<div class="demo-browser-content" data-bind="foreach:{data:followers}" style="min-height:300px" >
-							<a data-bind="attr:{href:'?owner='+login,title:login}">
-              <img class="icon" data-bind="attr:{src:avatar_url,alt:avatar_url}"   />
-			  
-							</a>
-            </div>
-			
-			
-			
-          </div>
-        </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
 	
     
-    <div id="following" class="content-section-b">
+    <div id="followers" class="content-section-b">
 
         <div class="container">
-              <span style="padding-left:30px">Following</span>
+              <span style="padding-left:30px">Followers</span>
             <div class="demo-browser" style="margin-top:-35px">
 					
             <div class="demo-browser-side" data-bind="with:ownerinfo">
@@ -216,7 +207,7 @@
               </h6>
             </div>
               		
-			<div class="demo-browser-content" data-bind="foreach:{data:following}" style="min-height:300px" >
+			<div class="demo-browser-content" data-bind="foreach:{data:followers}" style="min-height:300px" >
 							<a data-bind="attr:{href:'?owner='+login,title:login}">
               <img class="icon" data-bind="attr:{src:avatar_url,alt:avatar_url}"   />
 			  
@@ -231,7 +222,31 @@
     </div>
     <!-- /.content-section-b -->
    
+	<div id="following" class="content-section-a">
 
+        <div class="container">
+            <span style="padding-left:30px">Following</span>
+            <div class="demo-browser" style="margin-top:-35px">
+					
+            
+              		
+			<div class="demo-browser-content" data-bind="foreach:{data:following}" style="min-height:300px" >
+							<a data-bind="attr:{href:'?owner='+login,title:login}">
+              <img class="icon" data-bind="attr:{src:avatar_url,alt:avatar_url}"   />
+			  
+							</a>
+            </div>
+			
+			
+			
+          </div>
+        </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
     
 
     <div class="banner">
@@ -306,7 +321,7 @@
 		 ;
 		 
 		 var viewModel=function(){
-		     this.siteinfo=ko.observable({url:"",description:""});
+		     this.siteinfo=ko.observable({url:"",description:"",html_url:""});
 			 this.ownerinfo=ko.observable({login:"",html_url:"",avatar_url:""});
 			  this.repos=ko.observableArray([]);
 			  
