@@ -22,9 +22,7 @@
     <link href="css/landing-page.css" rel="stylesheet">
 
     <style>
-	 div.row{
-	   margin-bottom:20px;
-	 }
+	 
 	
 	.demo-browser-content img.icon {
   float: left;
@@ -70,6 +68,8 @@
   </ul>
 </div>
 					</li>
+					
+					
 			                    <li>
                         <a href="#following" target="_self">Following</a>
                     </li>
@@ -140,10 +140,7 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading" data-bind="text:name"></h2>
                     <p class="lead" data-bind="text:description"></p>
-					<hr />
-					<div class="sample" data-bind="attr:{id:'sample_'+name,repo:name,has_issues:has_issues?1:0}"></div>
-					<hr />
-					<ul class="list-inline banner-social-buttons">
+					<ul class="list-inline banner-social-buttons" style="float:left">
 					    <li>
                             <a data-bind="attr:{href:html_url}" class="btn btn-block btn-lg btn-inverse"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                         </li>
@@ -161,7 +158,7 @@
 						
                     </ul>
                 </div>
-							<div class="col-lg-5 col-sm-5" style="background-image:url(img/sample-error.jpg); background-repeat:no-repeat;background-position:20px 15px; background-size:90% auto;"  >
+							<div class="col-lg-5 col-sm-5" style="background-image:url(img/sample-error.jpg); background-repeat:no-repeat;background-position:20px 15px; background-size:90% auto; margin-top:40px"  >
 								  <div data-bind="style:{backgroundImage:'url(http://cdn.rawgit.com/'+full_name+'/'+default_branch+'/site.sample.jpg)'}" style="background-size:100% auto;background-repeat:no-repeat"
 								  >
 										<div class="login" style="background-size:100% auto;"></div>
@@ -171,7 +168,20 @@
                    
                 </div>
             </div>
-
+            
+			<div class="row">
+			  
+					<fieldset>
+					   <legend>sample</legend>
+					   
+					   <div class="sample" data-bind="attr:{id:'sample_'+name,repo:name,has_issues:has_issues?1:0}"></div>
+					   
+					</fieldset>
+					<hr/>
+					
+					
+			</div>
+		   
         </div>
         <!-- /.container -->
 			
