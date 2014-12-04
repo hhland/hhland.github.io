@@ -144,6 +144,7 @@
 					    <li>
                             <a data-bind="attr:{href:html_url}" class="btn btn-block btn-lg btn-inverse"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                         </li>
+						<!--
                         <li>
                             <a data-bind="attr:{href:html_url+'/commits/'+default_branch }" class="btn btn-block btn-lg btn-info"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Commits</span></a>
                         </li>
@@ -151,11 +152,13 @@
                         <li>
                             <a data-bind="attr:{href:html_url+'/branches'}" class="btn btn-block btn-lg btn-warning"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Branches</span></a>
                         </li>
-						
+						-->
 						<li>
                             <a data-bind="visible:has_issues,attr:{href:'http://smartken.github.io?repo='+name+'&owner='+owner.login }" class="btn btn-block btn-lg btn-primary"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Blog</span></a>
                         </li>
-						
+						<li>
+                            <a data-bind="visible:homepage,attr:{href:homepage }" class="btn btn-block btn-lg btn-info"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">ShowCase</span></a>
+                        </li>
                     </ul>
                 </div>
 							<div class="col-lg-5 col-sm-5" style="background-image:url(img/sample-error.jpg); background-repeat:no-repeat;background-position:20px 15px; background-size:90% auto; margin-top:40px"  >
@@ -171,12 +174,10 @@
             
 			<div class="row">
 			  
-					<fieldset>
-					   <legend>sample</legend>
-					   
+					
 					   <div class="sample" data-bind="attr:{id:'sample_'+name,repo:name,has_issues:has_issues?1:0}"></div>
 					   
-					</fieldset>
+					
 					<hr/>
 					
 					
