@@ -135,7 +135,7 @@
 			<div class="container" data-bind="foreach:{data:repos,afterRender:afterRanderRepo}" >
 
             <div  class="row repo" data-bind="attr:{id:'repo_'+name}">
-                <div class="col-lg-7 col-sm-7">
+                <div class="col-lg-7 col-sm-7 repo-info">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading" data-bind="text:name"></h2>
@@ -144,15 +144,6 @@
 					    <li>
                             <a data-bind="attr:{href:html_url}" class="btn btn-block btn-lg btn-inverse"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                         </li>
-						<!--
-                        <li>
-                            <a data-bind="attr:{href:html_url+'/commits/'+default_branch }" class="btn btn-block btn-lg btn-info"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Commits</span></a>
-                        </li>
-                        
-                        <li>
-                            <a data-bind="attr:{href:html_url+'/branches'}" class="btn btn-block btn-lg btn-warning"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Branches</span></a>
-                        </li>
-						-->
 						<li>
                             <a data-bind="visible:has_issues,attr:{href:'http://smartken.github.io?repo='+name+'&owner='+owner.login }" class="btn btn-block btn-lg btn-primary"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Blog</span></a>
                         </li>
@@ -427,7 +418,10 @@
 			}
 			vm.repos(repos0);
 			loadSample();
+			var $repo_info_odd=$("div.repo-info:odd");
 			
+			$repo_info_odd.css("float","right").css("text-align","right");
+			$repo_info_odd.find("ul.banner-social-buttons").css("float","right");
 		 });
 		 
 		 
