@@ -145,6 +145,15 @@
          importScript("/marked/"+version+"/marked.min.js");
     };
     
+    bootcdn["importReact"]=function(version){
+        ////cdn.bootcss.com/react/0.14.0-alpha3/react.min.js
+        version=version||"0.14.0-alpha3";
+         importScript("/react/"+version+"/react.min.js");
+         importScript("/react/"+version+"/JSXTransformer.js");
+    };
+    
+    
+    
     win['Bootcdn']=bootcdn;
   
 })(window);
