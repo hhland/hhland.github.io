@@ -32,6 +32,7 @@
     cdn["importMetroUI"]=function(version){
          importStyle("/olton/Metro-UI-CSS/master/build/css/metro.min.css");
           importStyle("/olton/Metro-UI-CSS/master/build/css/metro-icons.min.css");
+          importScript("/olton/Metro-UI-CSS/master/build/js/metro.min.js");
     };
     
    
