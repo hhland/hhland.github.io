@@ -153,12 +153,19 @@
     };
     
     bootcdn["importTinymce"]=function(version){
-        version=vesrsion||"4.2.5";
+        version=version||"4.2.5";
         importScript("tinymce/"+version+"/tinymce.min.js");
         importScript("tinymce/"+version+"/jquery.tinymce.min.js");
         
     }
     
+    
+    bootcdn["importJustifiedGallery"]=function(version){
+        version=version||"3.6.0";
+        importStyle("justifiedGallery/"+version+"/css/justifiedGallery.min.css");
+        importScript("justifiedGallery/"+version+"/css/justifiedGallery.min.js");
+        
+    }
     
     win['Bootcdn']=bootcdn;
   
