@@ -152,6 +152,12 @@
          importScript("/react/"+version+"/JSXTransformer.js");
     };
     
+    bootcdn["importTinymce"]=function(version){
+        version=vesrsion||"4.2.5";
+        importScript("tinymce/"+version+"/tinymce.min.js");
+        importScript("tinymce/"+version+"/jquery.tinymce.min.js");
+        
+    }
     
     
     win['Bootcdn']=bootcdn;
