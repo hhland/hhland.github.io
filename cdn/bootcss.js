@@ -167,6 +167,15 @@
         
     }
     
+    bootcdn["importChartist"]=function(version){
+        version=version||"0.9.4";
+        importStyle("/chartist/"+version+"/css/chartist.min.css");
+        importScript("/chartist/"+version+"/css/chartist.min.js");
+        
+    }
+    
+    
+    
     win['Bootcdn']=bootcdn;
   
 })(window);
