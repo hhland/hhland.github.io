@@ -162,8 +162,8 @@
     
     bootcdn["importJustifiedGallery"]=function(version){
         version=version||"3.6.0";
-        importStyle("/justifiedGallery/"+version+"/css/justifiedGallery.min.css");
-        importScript("/justifiedGallery/"+version+"/css/justifiedGallery.min.js");
+        importStyle("/justifiedGallery/"+version+"/justifiedGallery.min.css");
+        importScript("/justifiedGallery/"+version+"/justifiedGallery.min.js");
         
     }
     
