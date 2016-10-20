@@ -1,0 +1,550 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="thowto" name="DC.Type" />
+<meta name="DC.Title" content="在 Minitab 中创建混料 DOE 的图形" />
+<meta name="abstract" content="有关如何使用 Minitab 创建混料设计图的说明" />
+<meta name="description" content="有关如何使用 Minitab 创建混料设计图的说明" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta content="混料" name="DC.subject" />
+<meta content="混料" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Mixture_plot_uses.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Mixture_plot_data.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>在 Minitab 中创建混料 DOE 的图形</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "doe/mixture_plot_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fdoe%2Fmixture_plot_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fdoe%2Fmixture_plot_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../doe/mixture_plot_uses.html">用途</a>
+</li>
+
+<li><a href="../doe/mixture_plot_data.html">数据</a>
+</li>
+
+<li><a>操作步骤</a>
+</li>
+
+<li class="sectiontitle">在 Minitab 中创建混料 DOE 的图形</li>
+</ul>
+</div>
+
+<div>
+<p class="noshow">有关如何使用 Minitab 创建混料设计图的说明 &nbsp;</p>
+
+<div class="scenario">
+<h2 class="sectiontitle">情形</h2>
+
+<p>一家食品实验室的研究人员正在尝试改进酒味乳酪的烹饪方法。 他们要研究混料混合和火锅的操作温度如何影响口味。</p>
+
+<p>混料由三种成分组成： 两种类型的瑞士奶酪（Emmenthaler 和 Gruyere）和白葡萄酒。</p>
+
+<div class="note">
+<table class="notetable">
+<tbody>
+<tr>
+<td valign="baseline" nowrap="true"><span class=
+"notetitle">注</span>
+</td>
+<td valign="baseline">为了说明因子图（主效应、交互作用和立方），设计中包括了操作时间 (ServeTime)。
+其他任何图形中均未包括此过程变量。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="phase">
+<h2>创建单纯形设计图</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>按低温度设置和高温度设置创建单纯形设计图，使您的设计可视化。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDC20B70328F3F485C86374A3E90D0F5B4_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDC20B70328F3F485C86374A3E90D0F5B4_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDC20B70328F3F485C86374A3E90D0F5B4_li">
+</a> 打开<span class="filepath">火锅.MTW</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDA577E744EF224812A9F9AC37F1E6F00B_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDA577E744EF224812A9F9AC37F1E6F00B_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDA577E744EF224812A9F9AC37F1E6F00B_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">DOE</span> &gt; <span class=
+"uicontrol">混料</span> &gt; <span class=
+"uicontrol">单纯形设计图</span></span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDE6A858D644894970B3C0F3D59D81F0E0_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDE6A858D644894970B3C0F3D59D81F0E0_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDE6A858D644894970B3C0F3D59D81F0E0_li">
+</a> 单击<span class="uicontrol">设置</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID6E57BE454C8F46E085B74183BBE94CD6_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID6E57BE454C8F46E085B74183BBE94CD6_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID6E57BE454C8F46E085B74183BBE94CD6_li">
+</a> 在<span class="uicontrol">保留过程变量在</span>下，选择<span class=
+"uicontrol">低设置</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID9FC42D9E9DCD44969CB2894F860C2150_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID9FC42D9E9DCD44969CB2894F860C2150_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID9FC42D9E9DCD44969CB2894F860C2150_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDDBCE8BA09EF24CD884703DF73FDE18CE_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDDBCE8BA09EF24CD884703DF73FDE18CE_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDDBCE8BA09EF24CD884703DF73FDE18CE_li">
+</a> 按 [Ctrl]+[E]。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID5E2C763460E447E6A270BDC5AAD00EFC_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID5E2C763460E447E6A270BDC5AAD00EFC_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID5E2C763460E447E6A270BDC5AAD00EFC_li">
+</a> 单击<span class="uicontrol">设置</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID8FB9D07ACDE7435AA480F6EC685C3350_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID8FB9D07ACDE7435AA480F6EC685C3350_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID8FB9D07ACDE7435AA480F6EC685C3350_li">
+</a> 在<span class="uicontrol">保留过程变量在</span>下，选择<span class=
+"uicontrol">高设置</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID40B48D0BD0984186BD8281AB5AC02635_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID40B48D0BD0984186BD8281AB5AC02635_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID40B48D0BD0984186BD8281AB5AC02635_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>创建因子图</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>创建因子图可看到过程变量（操作温度和火锅料在其操作锅中盛放的时间）是如何影响响应的。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID5573057441A94751ADAFAAAF62F7E586_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID5573057441A94751ADAFAAAF62F7E586_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID5573057441A94751ADAFAAAF62F7E586_li">
+</a> 打开<span class="filepath">奶酪.MTW</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID2D04AFC114A8410F9F475C73930F8A50_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID2D04AFC114A8410F9F475C73930F8A50_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID2D04AFC114A8410F9F475C73930F8A50_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">DOE</span> &gt; <span class=
+"uicontrol">混料</span> &gt; <span class=
+"uicontrol">因子图</span></span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID56167315EB494345907BA344983186DF_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID56167315EB494345907BA344983186DF_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID56167315EB494345907BA344983186DF_li">
+</a> 选中<span class="uicontrol">主效应图</span>，然后单击<span class=
+"uicontrol">设置</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDBE9E7ABBC3EC4008A8D9D927D6BFF17F_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDBE9E7ABBC3EC4008A8D9D927D6BFF17F_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDBE9E7ABBC3EC4008A8D9D927D6BFF17F_li">
+</a> 在<span class="uicontrol">响应</span>中，输入<kbd class=
+"userinput">口味</kbd>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID22DAA30066324FDFB1D36F556CC48DC6_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID22DAA30066324FDFB1D36F556CC48DC6_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID22DAA30066324FDFB1D36F556CC48DC6_li">
+</a> 将<span class="uicontrol">可用项</span>中的<span class=
+"uicontrol">温度</span>和<span class=
+"uicontrol">操作时间</span>移动到<span class="uicontrol">选定项</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDA0AF4FE67B7F40C1ACD210C8B823DC4D_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDA0AF4FE67B7F40C1ACD210C8B823DC4D_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDA0AF4FE67B7F40C1ACD210C8B823DC4D_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDDD9936D947D04ADFADDCFCC91B363BCE_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDDD9936D947D04ADFADDCFCC91B363BCE_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDDD9936D947D04ADFADDCFCC91B363BCE_li">
+</a> 重复步骤 3 - 6 后，选中<span class=
+"uicontrol">交互作用图</span>，然后再次选中<span class=
+"uicontrol">立方图</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID8C319542A962430F9CF878370F1C711E_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID8C319542A962430F9CF878370F1C711E_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID8C319542A962430F9CF878370F1C711E_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>创建响应跟踪图</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>创建响应跟踪图可以看到分量比率的更改如何影响响应（相对于参考混料）。 将过程变量保留在高设置。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID12F8FD4A5CA24C5A8674CF6628DF6C9A_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID12F8FD4A5CA24C5A8674CF6628DF6C9A_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID12F8FD4A5CA24C5A8674CF6628DF6C9A_li">
+</a> 打开<span class="filepath">火锅2.MTW</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID3430DA14E2EB42C9A9BBFE9416F07CE6_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID3430DA14E2EB42C9A9BBFE9416F07CE6_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID3430DA14E2EB42C9A9BBFE9416F07CE6_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">DOE</span> &gt; <span class=
+"uicontrol">混料</span> &gt; <span class=
+"uicontrol">响应跟踪图</span></span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDACFF4A83E6934B6D89B787BC3B988A37_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDACFF4A83E6934B6D89B787BC3B988A37_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDACFF4A83E6934B6D89B787BC3B988A37_li">
+</a> 单击<span class="uicontrol">设置</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDCA3104A412C941CB9173BA6BDE7A6764_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDCA3104A412C941CB9173BA6BDE7A6764_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDCA3104A412C941CB9173BA6BDE7A6764_li">
+</a> 在<span class="uicontrol">保留过程变量在</span>下，选择<span class=
+"uicontrol">高设置</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID5CB104A023D3421B8F851B83D59BA854_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID5CB104A023D3421B8F851B83D59BA854_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID5CB104A023D3421B8F851B83D59BA854_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>创建等值线图和曲面图</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>创建等值线图和曲面图可以找出提供所需响应的分量设置。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID125235E3B70D44B18001CC926B85F3EE_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID125235E3B70D44B18001CC926B85F3EE_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID125235E3B70D44B18001CC926B85F3EE_li">
+</a> 打开<span class="filepath">火锅2.MTW</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID17C975C6BC5144008F4687810D04EAA2_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID17C975C6BC5144008F4687810D04EAA2_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID17C975C6BC5144008F4687810D04EAA2_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">DOE</span> &gt; <span class=
+"uicontrol">混料</span> &gt; <span class=
+"uicontrol">等值线/曲面图</span></span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID6DB3B96075474347BBFB0C9E4DF7DE2C_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID6DB3B96075474347BBFB0C9E4DF7DE2C_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID6DB3B96075474347BBFB0C9E4DF7DE2C_li">
+</a> 选中<span class="uicontrol">等值线图</span>，然后单击<span class=
+"uicontrol">设置</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID54D2BA81788E471990A4092BE09554B8_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID54D2BA81788E471990A4092BE09554B8_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID54D2BA81788E471990A4092BE09554B8_li">
+</a> 在<span class="uicontrol">图中的分量单位</span>下，选择<span class=
+"uicontrol">比率</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDA9F6DB4961F3468AA699BEB796FF4652_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDA9F6DB4961F3468AA699BEB796FF4652_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDA9F6DB4961F3468AA699BEB796FF4652_li">
+</a> 选中<span class="uicontrol">标绘全部水平组合</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDA06568C2CA0742A780DA9829F4FD025D_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDA06568C2CA0742A780DA9829F4FD025D_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDA06568C2CA0742A780DA9829F4FD025D_li">
+</a> 单击<span class="uicontrol">等值线</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID6624AF0E90624B59AE57F742D999CDD9_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID6624AF0E90624B59AE57F742D999CDD9_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID6624AF0E90624B59AE57F742D999CDD9_li">
+</a> 在<span class="uicontrol">等值线水平</span>下，选择<span class=
+"uicontrol">数字</span>，然后键入 <kbd class="userinput">6</kbd>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID20937CB707DE46E99C1D7D90EDF5C570_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID20937CB707DE46E99C1D7D90EDF5C570_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID20937CB707DE46E99C1D7D90EDF5C570_li">
+</a> 单击<span class="uicontrol">确定</span>两次。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID459B3C3B3AA24DFDB56C2BE779C32B78_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID459B3C3B3AA24DFDB56C2BE779C32B78_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID459B3C3B3AA24DFDB56C2BE779C32B78_li">
+</a> 选中<span class="uicontrol">曲面图</span>，然后单击<span class=
+"uicontrol">设置</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID204CF13720054378BC79C46C0450F279_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID204CF13720054378BC79C46C0450F279_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID204CF13720054378BC79C46C0450F279_li">
+</a> 在<span class="uicontrol">图中的分量单位</span>下，选择<span class=
+"uicontrol">比率</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDE04964A16C5C4C88951AA19C327CB72E_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDE04964A16C5C4C88951AA19C327CB72E_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDE04964A16C5C4C88951AA19C327CB72E_li">
+</a> 单击<span class="uicontrol">设置</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDD03480B4A5B947B9916ED368FC5C6698_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDD03480B4A5B947B9916ED368FC5C6698_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__IDD03480B4A5B947B9916ED368FC5C6698_li">
+</a> 在<span class="uicontrol">保留过程变量在</span>下，选择<span class=
+"uicontrol">高设置</span>。</li>
+
+<li id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID5481C63512F047229782531B5D234B05_li">
+<a name=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID5481C63512F047229782531B5D234B05_li"
+id=
+"ID6FE878A7A1E3463F83E9D3AEB5F24B69_thowto__ID5481C63512F047229782531B5D234B05_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="sectiontitle">解释输出</h2>
+
+<p>现在应该做些什么？ 有关如何解释此分析结果的指导信息，请参见 <a href=
+"..//domixdes/mixc_000_summary.htm');history.back(1);">StatGuide</a>。
+要查看有关如何创建此设计的教程，请参见<a href=
+"creating_mixture_designs.html">创建混料设计</a>。
+要查看有关如何分析此设计的教程，请参见<a href=
+"analyze_mixture_designs.html">分析混料设计</a>。</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

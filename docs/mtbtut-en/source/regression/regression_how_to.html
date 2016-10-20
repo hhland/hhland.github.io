@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="thowto" />
+<meta name="DC.Title" content="Performing Regression in Minitab" />
+<meta name="abstract" content=
+"Description of how to perform General Regression using Minitab" />
+<meta name="description" content=
+"Description of how to perform General Regression using Minitab" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.subject" content="Regression" />
+<meta name="keywords" content="Regression" />
+<meta name="DC.Relation" scheme="URI" content=
+"../Regression/regression_benefits.html" />
+<meta name="DC.Relation" scheme="URI" content=
+"../Regression/regression_data.html" />
+<meta name="DC.Relation" scheme="URI" content=
+"../Regression/regression_benefits.html" />
+<meta name="DC.Relation" scheme="URI" content=
+"../Regression/regression_data.html" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto" />
+<title>Performing Regression in Minitab</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "regression/regression_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fregression%2Fregression_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fregression%2Fregression_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../regression/regression_benefits.html">Uses</a>
+</li>
+
+<li><a href="../regression/regression_data.html">Data</a>
+</li>
+
+<li><a>How To</a>
+</li>
+
+<li class="sectiontitle">Performing Regression in Minitab</li>
+</ul>
+</div>
+
+<div class="body thowbody">
+<p class="noshow">Description of how to perform General Regression
+using Minitab &nbsp;</p>
+
+<div class="scenario">
+<h2 class="title sectiontitle">Scenario</h2>
+
+<p class="p">A pharmaceutical company wants to model the
+relationship between the salaries of research scientists and their
+gender, years of experience, and an index of publication quality.
+The company wants to test the interactions between all
+predictors.</p>
+</div>
+
+<div class="phase">
+<h2>Choose the appropriate analysis</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">The company wants to create a regression model with
+both continuous and categorical predictors and interactions between
+predictors, so they use General Regression.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDE78FA97D25884FACAAADEB73B6345D27_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDE78FA97D25884FACAAADEB73B6345D27_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDE78FA97D25884FACAAADEB73B6345D27_li">
+</a>Open the worksheet <span class=
+"ph filepath">RESEARCHERSALARY.MTW</span>.</li>
+
+<li class="li" id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDDA69539683B24EBFA315F830E20451A3_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDDA69539683B24EBFA315F830E20451A3_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDDA69539683B24EBFA315F830E20451A3_li">
+</a>Choose <span class="ph menucascade"><span class=
+"ph uicontrol">Stat</span> &gt; <span class=
+"ph uicontrol">Regression</span> &gt; <span class=
+"ph uicontrol">Regression</span> &gt; <span class=
+"ph uicontrol">Fit Regression Model</span></span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Enter your response variable</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">Enter a single column of measurements for the response
+variable.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDC640185345174ED899B0DCE797763D21_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDC640185345174ED899B0DCE797763D21_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDC640185345174ED899B0DCE797763D21_li">
+</a>In <span class="ph uicontrol">Responses</span>, enter
+<kbd class="ph userinput">Salary</kbd>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Enter the terms in your model</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">Enter a column of data for each predictor
+variable.</p>
+
+<p class="p">Fit Regression Model can include both categorical and
+continuous predictors in the model.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID645CB922014442B5BB13F388C2B74AC5_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID645CB922014442B5BB13F388C2B74AC5_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID645CB922014442B5BB13F388C2B74AC5_li">
+</a>In <span class="ph uicontrol">Continuous predictors</span>,
+enter <kbd class="ph userinput">Publication Years</kbd>.</li>
+
+<li class="li" id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID8FA234C2EC6B48528969AFDC96D9B8C7_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID8FA234C2EC6B48528969AFDC96D9B8C7_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID8FA234C2EC6B48528969AFDC96D9B8C7_li">
+</a>In <span class="ph uicontrol">Categorical predictors</span>,
+enter <kbd class="ph userinput">Gender</kbd>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Further specify your model</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">To specify interaction terms and polynomial terms,
+click <span class="ph uicontrol">Model</span>.</p>
+
+<p class="p">These terms do not necessarily correspond to a single
+column of data. In this example, the company includes the two-way
+interactions.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID5C316C2C008C4F5D819382CBC80E0513_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID5C316C2C008C4F5D819382CBC80E0513_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID5C316C2C008C4F5D819382CBC80E0513_li">
+</a>Click <span class="ph uicontrol">Model</span>.</li>
+
+<li class="li" id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID8D5E81B4E69F43FBABD7E67E53C61693_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID8D5E81B4E69F43FBABD7E67E53C61693_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID8D5E81B4E69F43FBABD7E67E53C61693_li">
+</a>Under <span class="ph uicontrol">Predictors</span>, press the
+<strong class="ph b">Ctrl</strong> key and select <kbd class=
+"ph userinput">Publication Years Gender</kbd>.</li>
+
+<li class="li" id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID662E8595CEE94D51A9B28AF0527C718E_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID662E8595CEE94D51A9B28AF0527C718E_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID662E8595CEE94D51A9B28AF0527C718E_li">
+</a>To the right of <span class="ph uicontrol">Interactions through
+order</span>, choose <kbd class="ph userinput">3</kbd>, and click
+<span class="ph uicontrol">Add</span>.</li>
+
+<li class="li" id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDB5BF64B71B224CF793A40CFD9C50924A_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDB5BF64B71B224CF793A40CFD9C50924A_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDB5BF64B71B224CF793A40CFD9C50924A_li">
+</a>Click <span class="ph uicontrol">OK</span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Specify options</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">To create residual plots, click <span class=
+"ph uicontrol">Graphs</span>. To change the confidence level,
+transform nonnormal data with the Box-Cox transformation, and other
+aspects of the analysis, click <span class=
+"ph uicontrol">Options</span>. To control how Minitab codes
+categorical predictors and to standardize continuous predictors,
+click <span class="ph uicontrol">Coding</span>. If you want to use
+a stepwise procedure to choose your model, click <span class=
+"ph uicontrol">Stepwise</span>. To control the display of analysis
+results, click <span class="ph uicontrol">Results</span>. To store
+regression statistics, click <span class=
+"ph uicontrol">Storage</span>.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDEE9F235E4E4C46B997A2A3FAFC9E0C3A_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDEE9F235E4E4C46B997A2A3FAFC9E0C3A_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDEE9F235E4E4C46B997A2A3FAFC9E0C3A_li">
+</a>Click <span class="ph uicontrol">Graphs</span>.</li>
+
+<li class="li" id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID7936C1468438480799270D7E0197BFAF_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID7936C1468438480799270D7E0197BFAF_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID7936C1468438480799270D7E0197BFAF_li">
+</a>Under <span class="ph uicontrol">Residual plots</span>, choose
+<span class="ph uicontrol">Four in one</span>.</li>
+
+<li class="li" id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID9B79E622804F45E0AFF5EFBA9385D290_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID9B79E622804F45E0AFF5EFBA9385D290_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID9B79E622804F45E0AFF5EFBA9385D290_li">
+</a>Under <span class="ph uicontrol">Residuals versus the
+variables</span>, enter <kbd class="ph userinput">Years</kbd>.</li>
+
+<li class="li" id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID74E45B5C246544D3837C62E6C414B295_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID74E45B5C246544D3837C62E6C414B295_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID74E45B5C246544D3837C62E6C414B295_li">
+</a>Click <span class="ph uicontrol">OK</span> in each dialog
+box.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="title sectiontitle">Interpreting the output</h2>
+
+<p class="p">Now what? For guidance on interpreting the results of
+this analysis, see <a href=
+"..//stregrsn/greg_000_summary.htm');history.back(1);">StatGuide</a>.</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

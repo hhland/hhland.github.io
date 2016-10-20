@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="thowto" />
+<meta name="DC.Title" content=
+"Performing a 2-Sample t in Minitab" />
+<meta name="abstract" content=
+"Description of how to perform a 2-sample t-test using Minitab" />
+<meta name="description" content=
+"Description of how to perform a 2-sample t-test using Minitab" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.subject" content="2 Sample t" />
+<meta name="keywords" content="2 Sample t" />
+<meta name="DC.Relation" scheme="URI" content=
+"../Basic_Statistics/2_sample_t_benefits.html" />
+<meta name="DC.Relation" scheme="URI" content=
+"../Basic_Statistics/2_sample_t_data.html" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto" />
+<title>Performing a 2-Sample t in Minitab</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "basic_statistics/2_sample_t_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fbasic_statistics%2F2_sample_t_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fbasic_statistics%2F2_sample_t_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../basic_statistics/2_sample_t_benefits.html">Uses</a>
+</li>
+
+<li><a href="../basic_statistics/2_sample_t_data.html">Data</a>
+</li>
+
+<li><a>How To</a>
+</li>
+
+<li class="sectiontitle">Performing a 2-Sample t in Minitab</li>
+</ul>
+</div>
+
+<div class="body thowbody">
+<p class="noshow">Description of how to perform a 2-sample t-test
+using Minitab &nbsp;</p>
+
+<div class="scenario">
+<h2 class="title sectiontitle">Scenario</h2>
+
+<p class="p">A health management firm has samples of satisfaction
+ratings from former patients of two hospitals. The firm wants to
+know if one hospital is rated more highly than the other. The firm
+will use the information to refer patients and to make suggestions
+for hospital improvement. The variances of the two samples are
+sufficiently similar, so the firm will use a pooled standard
+deviation for the test.</p>
+</div>
+
+<div class="phase">
+<h2>Choose the appropriate analysis</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">Because you want to compare the means of two
+independent groups, a 2-sample t-test is appropriate.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__IDD9DB8FB7933D46A89DF75D4A4AD22621_li">
+<a name=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__IDD9DB8FB7933D46A89DF75D4A4AD22621_li"
+id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__IDD9DB8FB7933D46A89DF75D4A4AD22621_li">
+</a>Open the worksheet <span class=
+"ph filepath">HOSPITALRATINGS.MTW</span>.</li>
+
+<li class="li" id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__IDFA0BDB59031B47FCA69FC95EFDD5A3C6_li">
+<a name=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__IDFA0BDB59031B47FCA69FC95EFDD5A3C6_li"
+id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__IDFA0BDB59031B47FCA69FC95EFDD5A3C6_li">
+</a>Choose <span class="ph menucascade"><span class=
+"ph uicontrol">Stat</span> &gt; <span class="ph uicontrol">Basic
+Statistics</span> &gt; <span class="ph uicontrol">2-Sample
+t</span></span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Choose the appropriate data setup option and enter your
+data.</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">These observations have been organized as both stacked
+(<kbd class="ph userinput">Rate</kbd> and <kbd class=
+"ph userinput">Hospital</kbd>) data and unstacked (<kbd class=
+"ph userinput">A</kbd> and <kbd class="ph userinput">B</kbd>) data,
+so you can enter your data using either the <span class=
+"ph uicontrol">Both samples are in one column</span> option or the
+<span class="ph uicontrol">Each sample is in its own column</span>
+option. In this example, we'll use the unstacked data.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID7F900369CE5A4799B5686F72E4A17504_li">
+<a name=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID7F900369CE5A4799B5686F72E4A17504_li"
+id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID7F900369CE5A4799B5686F72E4A17504_li">
+</a>Choose <span class="ph uicontrol">Each sample is in its own
+column</span>.</li>
+
+<li class="li" id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__IDE4B262424A944205A431338F114902EA_li">
+<a name=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__IDE4B262424A944205A431338F114902EA_li"
+id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__IDE4B262424A944205A431338F114902EA_li">
+</a>In <span class="ph uicontrol">Sample 1</span>, enter
+<kbd class="ph userinput">A</kbd>.</li>
+
+<li class="li" id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID66716E9116524BAA990CB6A029CD6921_li">
+<a name=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID66716E9116524BAA990CB6A029CD6921_li"
+id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID66716E9116524BAA990CB6A029CD6921_li">
+</a>In <span class="ph uicontrol">Sample 2</span>, enter
+<kbd class="ph userinput">B</kbd>.</li>
+
+<li class="li" id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID7557E68AFE474FD886B5CB41EC369CAB_li">
+<a name=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID7557E68AFE474FD886B5CB41EC369CAB_li"
+id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID7557E68AFE474FD886B5CB41EC369CAB_li">
+</a>Click <span class="ph uicontrol">Options</span>.</li>
+
+<li class="li" id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__IDDFFE7A5DAB7344ABAD76A60D75C39272_li">
+<a name=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__IDDFFE7A5DAB7344ABAD76A60D75C39272_li"
+id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__IDDFFE7A5DAB7344ABAD76A60D75C39272_li">
+</a>Check <span class="ph uicontrol">Assume equal
+variances</span>.</li>
+
+<li class="li" id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID14E19B374F154B2596363A91BCEBE3DA_li">
+<a name=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID14E19B374F154B2596363A91BCEBE3DA_li"
+id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID14E19B374F154B2596363A91BCEBE3DA_li">
+</a>Click <span class="ph uicontrol">OK</span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Specify a test difference, if necessary</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">For this 2-sample t-test, you want to know if the
+ratings differ, but, if you wanted to know if they differed by a
+particular amount or if a particular group had higher or lower
+ratings, you would specify that in <span class=
+"ph uicontrol">Options</span>.</p>
+</td>
+<td class="steps">
+<ul class="simple">
+<li class="sli">(no action required)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Add graphs to your output</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">Both boxplots and individual value plots can help you
+understand how your groups differ.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID66E50D9F595E4DB894095DCF34F1F629_li">
+<a name=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID66E50D9F595E4DB894095DCF34F1F629_li"
+id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID66E50D9F595E4DB894095DCF34F1F629_li">
+</a>Click <span class="ph uicontrol">Graphs</span>, and then check
+<span class="ph uicontrol">Individual value plot</span> and
+<span class="ph uicontrol">Boxplot</span>.</li>
+
+<li class="li" id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID2EC8570C08714537A783E05CEB592E51_li">
+<a name=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID2EC8570C08714537A783E05CEB592E51_li"
+id=
+"IDFF3BCA0C32DB456695BA936F31A31043_thowto__ID2EC8570C08714537A783E05CEB592E51_li">
+</a>Click <span class="ph uicontrol">OK</span> in each dialog
+box.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="title sectiontitle">Interpreting the output</h2>
+
+<p class="p">Now what? For guidance on interpreting the results of
+this analysis, see <a href=
+"..//stbasics/twot_000_summary.htm');history.back(1);">StatGuide</a>.</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

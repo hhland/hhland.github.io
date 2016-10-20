@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="thowto" name="DC.Type" />
+<meta name="DC.Title" content="在 Minitab 中分析响应曲面设计" />
+<meta name="abstract" content="有关如何使用 Minitab 的说明" />
+<meta name="description" content="有关如何使用 Minitab 的说明" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Analyzing_response_surface_designs.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Analyzing_response_surface_design_data.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>在 Minitab 中分析响应曲面设计</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "doe/analyzing_response_surface_designs_in_minitab.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fdoe%2Fanalyzing_response_surface_designs_in_minitab.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fdoe%2Fanalyzing_response_surface_designs_in_minitab.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../doe/analyzing_response_surface_designs.html">用途</a>
+</li>
+
+<li><a href=
+"../doe/analyzing_response_surface_design_data.html">数据</a>
+</li>
+
+<li><a>操作步骤</a>
+</li>
+
+<li class="sectiontitle">在 Minitab 中分析响应曲面设计</li>
+</ul>
+</div>
+
+<div>
+<p class="noshow">有关如何使用 Minitab 的说明 &nbsp;</p>
+
+<div class="scenario">
+<h2 class="sectiontitle">情形</h2>
+
+<p>一家化工厂正在尝试最大限度地提高催化反应的产量。 研究人员选择中心复合设计来研究时间和温度对反应产量的效应。
+由于数据是分两天采集的，因此设计包含两个区组。</p>
+</div>
+
+<div class="phase">
+<h2>在数据表中输入响应数据</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>创建设计之后，先执行试验，收集数据，然后再在 Minitab 工作表中输入这些数据。 工作表已准备好，可以进行分析。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID1B89E2B4B0AB42AE8EC1574011FC427F_li">
+<a name=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID1B89E2B4B0AB42AE8EC1574011FC427F_li"
+id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID1B89E2B4B0AB42AE8EC1574011FC427F_li">
+</a> 打开<span class="filepath">催化反应.MTW</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>指定您的模型</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>您可以向模型中添加和从中删除单个项，或者指定模型的顺序。
+对于此示例，您要包括主效应、时间和温度之间的交互作用以及时间和温度的二次项。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID23165380AAD94794B8B9FFFD6A8A8231_li">
+<a name=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID23165380AAD94794B8B9FFFD6A8A8231_li"
+id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID23165380AAD94794B8B9FFFD6A8A8231_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">DOE</span> &gt; <span class=
+"uicontrol">响应曲面</span> &gt; <span class=
+"uicontrol">分析响应曲面设计</span></span>。</li>
+
+<li id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID7A55576B3B0E4D5F8B87BD5AC958294C_li">
+<a name=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID7A55576B3B0E4D5F8B87BD5AC958294C_li"
+id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID7A55576B3B0E4D5F8B87BD5AC958294C_li">
+</a> 在<span class="uicontrol">响应</span>中，输入<kbd class=
+"userinput">产量</kbd>。</li>
+
+<li id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__IDF5CE17F9EF9E461DBCBB11713E8B6A9C_li">
+<a name=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__IDF5CE17F9EF9E461DBCBB11713E8B6A9C_li"
+id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__IDF5CE17F9EF9E461DBCBB11713E8B6A9C_li">
+</a> 单击<span class="uicontrol">项</span>。</li>
+
+<li id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID444E51A3547C4D17A13BDCC115D23C05_li">
+<a name=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID444E51A3547C4D17A13BDCC115D23C05_li"
+id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID444E51A3547C4D17A13BDCC115D23C05_li">
+</a> 从<span class="uicontrol">按顺序在模型中包含项的阶数</span>中，选择<span class=
+"uicontrol">完全二次</span>。</li>
+
+<li id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID53995AD5444441C38B3D8ED3F87E7EC3_li">
+<a name=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID53995AD5444441C38B3D8ED3F87E7EC3_li"
+id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID53995AD5444441C38B3D8ED3F87E7EC3_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>将图形添加到输出中</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>当您获得最终模型后，请创建残差图来检查正态性、方差一致性和随机性的假设。
+残差图还可帮助您检查是否有其他影响响应的变量或是否存在异常值。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID091AE1144616460E8D3672C2861220DF_li">
+<a name=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID091AE1144616460E8D3672C2861220DF_li"
+id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID091AE1144616460E8D3672C2861220DF_li">
+</a> 单击<span class="uicontrol">图形</span>。</li>
+
+<li id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID3C4C72146F7845B896A49E171408DC52_li">
+<a name=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID3C4C72146F7845B896A49E171408DC52_li"
+id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID3C4C72146F7845B896A49E171408DC52_li">
+</a> 在<span class="uicontrol">残差图</span>下，选择<span class=
+"uicontrol">四合一</span>。</li>
+
+<li id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID0878F606B03D4D21B7D3FABB341180A3_li">
+<a name=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID0878F606B03D4D21B7D3FABB341180A3_li"
+id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__ID0878F606B03D4D21B7D3FABB341180A3_li">
+</a> 选中<span class="uicontrol">残差与变量</span>，然后输入<kbd class=
+"userinput">工具</kbd>。</li>
+
+<li id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__IDA6BD71385CEC4DFDAB635E4D37A2FCC4_li">
+<a name=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__IDA6BD71385CEC4DFDAB635E4D37A2FCC4_li"
+id=
+"ID8FB50F37DE1D419EA75A7ADA1E3608C5_thowto__IDA6BD71385CEC4DFDAB635E4D37A2FCC4_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="sectiontitle">解释输出</h2>
+
+<p>现在应该做些什么？ 有关如何解释此分析结果的指导信息，请参见 <a href=
+"..//dorsfdes/resp_000_summary.htm');history.back(1);">StatGuide</a>。
+要查看有关如何创建此设计的教程，请参见 <a href=
+"creating_response_surface_designs.html">创建响应曲面设计</a>。
+有关与此类型的设计关联的图形的教程，请参见<a href="rs_plot_uses.html">响应曲面 DOE
+的图形</a>。</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

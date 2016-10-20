@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="thowto" name="DC.Type" />
+<meta name="DC.Title" content="在 Minitab 中使用响应优化器" />
+<meta name="abstract" content="有关如何在 Minitab 中使用响应优化器的说明" />
+<meta name="description" content="有关如何在 Minitab 中使用响应优化器的说明" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta content="响应优化器" name="DC.subject" />
+<meta content="响应优化器" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Response_optimizer_uses.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Response_optimizer_data.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Response_optimizer_uses.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Response_optimizer_data.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="IDC4B2F71143A14A129E836659A2006BE9_thowto" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>在 Minitab 中使用响应优化器</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "doe/response_optimizer_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fdoe%2Fresponse_optimizer_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fdoe%2Fresponse_optimizer_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../doe/response_optimizer_uses.html">用途</a>
+</li>
+
+<li><a href="../doe/response_optimizer_data.html">数据</a>
+</li>
+
+<li><a>操作步骤</a>
+</li>
+
+<li class="sectiontitle">在 Minitab 中使用响应优化器</li>
+</ul>
+</div>
+
+<div>
+<p class="noshow">有关如何在 Minitab 中使用响应优化器的说明 &nbsp;</p>
+
+<div class="scenario">
+<h2 class="sectiontitle">情形</h2>
+
+<p>一家建筑材料制造商正在开发一种新型绝缘产品。 他们需要分析三个质量特征： 绝缘值、密度和绝缘强度。</p>
+</div>
+
+<div class="phase">
+<h2>选择适当的分析方式</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>该制造商已经分析了一个因子设计，因此他们可以使用<span class=
+"uicontrol">响应优化器</span>。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__ID4F1BF5F110114D0C857A3F66691D9CD8_li">
+<a name=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__ID4F1BF5F110114D0C857A3F66691D9CD8_li"
+id=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__ID4F1BF5F110114D0C857A3F66691D9CD8_li">
+</a> 打开<span class="filepath">绝缘2.MTW</span>。</li>
+
+<li id=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__ID554A154369734DF2B11AB5E5458FB28F_li">
+<a name=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__ID554A154369734DF2B11AB5E5458FB28F_li"
+id=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__ID554A154369734DF2B11AB5E5458FB28F_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">DOE</span> &gt; <span class=
+"uicontrol">因子</span> &gt; <span class=
+"uicontrol">响应优化器</span></span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>指定要优化的响应</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>该制造商想要优化三个响应： 绝缘、密度和强度。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__IDE9DA461FDB734D3FB621053AD0846B7E_li">
+<a name=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__IDE9DA461FDB734D3FB621053AD0846B7E_li"
+id=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__IDE9DA461FDB734D3FB621053AD0846B7E_li">
+</a> 单击双箭头将<kbd class="userinput">绝缘</kbd>、<kbd class=
+"userinput">密度</kbd>和<kbd class="userinput">强度</kbd>移动到<span class=
+"uicontrol">选定项</span>中。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>为每个响应指定目标、界限和重要性</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>您必须为每个响应指定目的（望小、望目或望大）和界限。 该制造商想要找出可使绝缘值最大化、符合目标强度和最小化密度的设置。
+您还可以定义满意度函数的形状，或指定响应的相对重要性。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__IDBE5ECE5F546F461ABD9265B8259E296F_li">
+<a name=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__IDBE5ECE5F546F461ABD9265B8259E296F_li"
+id=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__IDBE5ECE5F546F461ABD9265B8259E296F_li">
+</a> 单击<span class="uicontrol">设置</span>并按照以下方式填充表格： <a name=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__ID23BAA50D75F34081AFECC13E59CED2ED_table"
+id=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__ID23BAA50D75F34081AFECC13E59CED2ED_table">
+</a>
+<table cellspacing="0px" cellpadding="3px" id=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__ID23BAA50D75F34081AFECC13E59CED2ED_table"
+class="tableborder">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" width="NaN%" id="N1016A">
+<span class="uicontrol">响应</span>
+</th>
+<th class="cellrowborder" valign="top" width="NaN%" id="N10177">
+<span class="uicontrol">目的</span>
+</th>
+<th class="cellrowborder" valign="top" width="NaN%" id="N10184">
+<span class="uicontrol">下限</span>
+</th>
+<th class="cellrowborder" valign="top" width="NaN%" id="N10191">
+<span class="uicontrol">目标</span>
+</th>
+<th class="cellrowborder" valign="top" width="NaN%" id="N1019E">
+<span class="uicontrol">上限</span>
+</th>
+<th class="row-nocellborder" valign="top" width="NaN%" id="N101AB">
+<span class="uicontrol">权重</span>
+</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N1016A"><span class="uicontrol">绝缘</span>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N10177"><span class="uicontrol">望大</span>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N10184"><kbd class="userinput-alt">25</kbd>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N10191"><kbd class="userinput-alt">60</kbd>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N1019E">&nbsp;</td>
+<td class="row-nocellborder" valign="top" width="NaN%" headers=
+"N101AB"><span class="uicontrol">1</span>
+</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N1016A"><span class="uicontrol">密度</span>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N10177"><span class="uicontrol">望小</span>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N10184">&nbsp;</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N10191"><kbd class="userinput-alt">0.5</kbd>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N1019E"><kbd class="userinput-alt">1</kbd>
+</td>
+<td class="row-nocellborder" valign="top" width="NaN%" headers=
+"N101AB"><span class="uicontrol">1</span>
+</td>
+</tr>
+
+<tr>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N1016A"><span class="uicontrol">强度</span>
+</td>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N10177"><span class="uicontrol">望目</span>
+</td>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N10184"><kbd class="userinput-alt">20</kbd>
+</td>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N10191"><kbd class="userinput-alt">30</kbd>
+</td>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N1019E"><kbd class="userinput-alt">40</kbd>
+</td>
+<td class="nocellnorowborder" valign="top" width="NaN%" headers=
+"N101AB"><kbd class="userinput-alt">0.5</kbd>
+</td>
+</tr>
+</tbody>
+</table></li>
+
+<li id=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__ID1F9B01D6C33540B89C05AAAADA799B09_li">
+<a name=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__ID1F9B01D6C33540B89C05AAAADA799B09_li"
+id=
+"IDC4B2F71143A14A129E836659A2006BE9_thowto__ID1F9B01D6C33540B89C05AAAADA799B09_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="sectiontitle">解释输出</h2>
+
+<p>现在应该做些什么？ 有关如何解释此分析结果的指导信息，请参见 <a href=
+"..//domropti/mrof_000_summary.htm');history.back(1);">StatGuide</a>。</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

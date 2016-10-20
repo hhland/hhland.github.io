@@ -1,0 +1,451 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="thowto" name="DC.Type" />
+<meta name="DC.Title" content="在 Minitab 中执行广义线性模型方差分析" />
+<meta name="abstract" content="如何使用 Minitab 执行广义线性模型方差分析的说明" />
+<meta name="description" content="如何使用 Minitab 执行广义线性模型方差分析的说明" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta content="方差分析, ANOVA, 广义线性模型" name="DC.subject" />
+<meta content="方差分析, ANOVA, 广义线性模型" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content=
+"../ANOVA/GLM_benefits.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../ANOVA/GLM_data.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="ID4B990429482B46A1898772C0A82DB348_thowto" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>在 Minitab 中执行广义线性模型方差分析</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "anova/glm_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fanova%2Fglm_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fanova%2Fglm_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../anova/glm_benefits.html">用途</a>
+</li>
+
+<li><a href="../anova/glm_data.html">数据</a>
+</li>
+
+<li><a>操作步骤</a>
+</li>
+
+<li class="sectiontitle">在 Minitab 中执行广义线性模型方差分析</li>
+</ul>
+</div>
+
+<div>
+<p class="noshow">如何使用 Minitab 执行广义线性模型方差分析的说明 &nbsp;</p>
+
+<div class="scenario">
+<h2 class="sectiontitle">方案</h2>
+
+<div class="p">一个社会学家从某大城市的大学里教夜大课程的教授中随机选择了 45 名教授作为样本。 收集的数据包括：
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDBAA70988FFD546EA930A10FCE7432DDD_ul"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDBAA70988FFD546EA930A10FCE7432DDD_ul">
+</a>
+<ul id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDBAA70988FFD546EA930A10FCE7432DDD_ul">
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID20A723F5AD754576B021E11BA65D2BB3_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID20A723F5AD754576B021E11BA65D2BB3_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID20A723F5AD754576B021E11BA65D2BB3_li">
+</a> 学科：课程主题： 人文学科 (1)、社会科学 (2)、工程学 (3) 或管理 (4)</li>
+
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID54309190D4444519B21140BA32B3367E_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID54309190D4444519B21140BA32B3367E_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID54309190D4444519B21140BA32B3367E_li">
+</a> 学历：教授的最高学历： 学士 (1)、硕士 (2) 或博士 (3)</li>
+
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDE8287D38E7E84C71909645EBD41B8D3F_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDE8287D38E7E84C71909645EBD41B8D3F_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDE8287D38E7E84C71909645EBD41B8D3F_li">
+</a> 薪金：教授此课程所获得的收入金额（单位：千美元）。</li>
+</ul></div>
+
+<p>该社会学家希望得出学历和学科对薪金所产生的效应。</p>
+</div>
+
+<div class="phase">
+<h2>选择适当的分析方式</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>数据是包含两个因子的不平衡数据，因此该社会学家使用广义线性模型 (GLM) 过程来分析这些数据。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDD7C24E3FC26240629817AA547B6365D5_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDD7C24E3FC26240629817AA547B6365D5_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDD7C24E3FC26240629817AA547B6365D5_li">
+</a> 打开工作表“<span class="filepath">教授.MTW</span>”。</li>
+
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8F0CF8B5F8D84D56B779CB6170F6CFBA_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8F0CF8B5F8D84D56B779CB6170F6CFBA_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8F0CF8B5F8D84D56B779CB6170F6CFBA_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">方差分析</span> &gt; <span class=
+"uicontrol">广义线性模型</span></span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>输入响应变量</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>输入一列响应变量的连续测量值。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID604C6CC0F09241399D6AF9D52C83E04C_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID604C6CC0F09241399D6AF9D52C83E04C_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID604C6CC0F09241399D6AF9D52C83E04C_li">
+</a> 在<span class="uicontrol">响应</span>中，输入<kbd class=
+"userinput">薪金</kbd>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>输入模型项</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>通常，每个项代表每个变量的一列数据。 然而，广义线性模型 (GLM) 的灵活性允许您指定不同类型的项。
+例如，您可以包括交互作用项、高次项和嵌套项。 这些项要求使用特殊符号，并且不与单列数据相对应。
+在本例中，社会学家使用交互作用项，用“*”表示。</p>
+
+<p>即使需要进一步指定模型，您也必须在此处输入所有模型项。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8EE8B1CBEA2F4F3697AF2866849FB036_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8EE8B1CBEA2F4F3697AF2866849FB036_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8EE8B1CBEA2F4F3697AF2866849FB036_li">
+</a> 在<span class="uicontrol">模型</span>中，输入<kbd class=
+"userinput">学科 学历 学科*学历</kbd>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>进一步指定模型</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>如果模型包含随机因子项，请将它们输入到<span class="uicontrol">随机因子</span>中。
+如果包含协变量，请单击<span class="uicontrol">协变量</span>并在此处输入它们。
+此模型既不包含随机因子项，也不包含协变量。</p>
+</td>
+<td class="steps">
+<ul class="simple">
+<li>（无需任何操作）</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>选择多重比较方法</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>要估计特定组之间的差异，请选择一种多重比较方法。 每种方法均使用一种不同的方式。 选择正确的方法非常重要，因为方法可以改变结果。
+通常，您将选择一种方法；但是，为了更好地说明问题，请选择多种方法。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID4800070ABA16461D879174D408E711CC_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID4800070ABA16461D879174D408E711CC_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID4800070ABA16461D879174D408E711CC_li">
+</a> 单击<span class="uicontrol">比较</span>。</li>
+
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDB9EEB2ADA8784D248A994CA664F4A840_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDB9EEB2ADA8784D248A994CA664F4A840_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDB9EEB2ADA8784D248A994CA664F4A840_li">
+</a> 在<span class="uicontrol">项</span>中，输入<kbd class=
+"userinput">学科</kbd>。</li>
+
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDBBC04229874049148C5BCE13F6DC07EA_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDBBC04229874049148C5BCE13F6DC07EA_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDBBC04229874049148C5BCE13F6DC07EA_li">
+</a> 在<span class="uicontrol">方法</span>下，选中 <span class=
+"uicontrol">Tukey</span>、<span class="uicontrol">Bonferroni</span>
+和 <span class="uicontrol">Sidak</span>。</li>
+
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8EC38F46BBB94B82A355C5BD337DBEEE_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8EC38F46BBB94B82A355C5BD337DBEEE_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8EC38F46BBB94B82A355C5BD337DBEEE_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>将图形添加到输出中</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>通过查看残差图来检查广义线性模型假设，这很重要。 这些图将指明您是否可以信任这些测试结果。
+主效应图和交互作用图有助于直观地表示预测变量与响应值之间的关系。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID0680C4294FDE41F0B8C8F87D2138CA49_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID0680C4294FDE41F0B8C8F87D2138CA49_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID0680C4294FDE41F0B8C8F87D2138CA49_li">
+</a> 单击<span class="uicontrol">图形</span>，然后选择<span class=
+"uicontrol">四合一</span>。</li>
+
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID0C3AC2E1DADA40AA938DC977D80892A5_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID0C3AC2E1DADA40AA938DC977D80892A5_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID0C3AC2E1DADA40AA938DC977D80892A5_li">
+</a> 在<span class="uicontrol">残差与变量</span>下，输入<kbd class=
+"userinput">学期</kbd>。 单击<span class="uicontrol">确定</span>。</li>
+
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID78F30D106206425D8EA81C583DB43B01_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID78F30D106206425D8EA81C583DB43B01_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID78F30D106206425D8EA81C583DB43B01_li">
+</a> 单击<span class="uicontrol">因子图</span>。</li>
+
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID2A22256DFED344B386AA01887270A3A0_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID2A22256DFED344B386AA01887270A3A0_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID2A22256DFED344B386AA01887270A3A0_li">
+</a> 在<span class="uicontrol">主效应图</span>下，输入<kbd class=
+"userinput">学科 学历</kbd>。</li>
+
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID14B5CF3E61E844B198837C027630A981_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID14B5CF3E61E844B198837C027630A981_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID14B5CF3E61E844B198837C027630A981_li">
+</a> 在<span class="uicontrol">交互作用图</span>下，输入<kbd class=
+"userinput">学科 学历</kbd>。</li>
+
+<li id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDB5BF64B71B224CF793A40CFD9C50924A_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDB5BF64B71B224CF793A40CFD9C50924A_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDB5BF64B71B224CF793A40CFD9C50924A_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>指定选项</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>此分析无需进一步修改，但您可以选择其他选项。 若需要其他的统计量或要对新的观测值进行预测，请单击<span class=
+"uicontrol">选项</span>。 要修改分析结果的显示方式，请单击<span class=
+"uicontrol">结果</span>。 要存储 GLM 统计量，请单击<span class=
+"uicontrol">存储</span>。</p>
+</td>
+<td class="steps">
+<ul class="simple">
+<li>（无需任何操作）</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="sectiontitle">解释输出</h2>
+
+<p>现在应该做些什么？ 有关如何解释此分析结果的指导信息，请参见 <a href=
+"..//stanovar/glms_000_summary.htm');history.back(1);">StatGuide</a>。</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

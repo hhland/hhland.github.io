@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="thowto" name="DC.Type" />
+<meta name="DC.Title" content="在 Minitab 中执行交叉分组表和卡方" />
+<meta name="abstract" content="使用 Minitab 执行交叉分组表和卡方的说明" />
+<meta name="description" content="使用 Minitab 执行交叉分组表和卡方的说明" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta content="卡方, 交叉分组表" name="DC.subject" />
+<meta content="卡方, 交叉分组表" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content=
+"../Tables/cross_tabulation_and_chi_square_benefits.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../Tables/cross_tabulation_and_chi_square_data.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="ID93D33695EC6F4777BE06076D692F1A8C_thowto" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>在 Minitab 中执行交叉分组表和卡方</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "tables/cross_tabulation_and_chi_square_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Ftables%2Fcross_tabulation_and_chi_square_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Ftables%2Fcross_tabulation_and_chi_square_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href=
+"../tables/cross_tabulation_and_chi_square_benefits.html">用途</a>
+</li>
+
+<li><a href=
+"../tables/cross_tabulation_and_chi_square_data.html">数据</a>
+</li>
+
+<li><a>操作步骤</a>
+</li>
+
+<li class="sectiontitle">在 Minitab 中执行交叉分组表和卡方</li>
+</ul>
+</div>
+
+<div>
+<p class="noshow">使用 Minitab 执行交叉分组表和卡方的说明 &nbsp;</p>
+
+<div class="scenario">
+<h2 class="sectiontitle">方案</h2>
+
+<p>一个研究人员想要研究在总统选举中性别与其候选人偏好（民主党人、共和党人和其他）之间是否存在相关性。 她记录了 400
+个随机选择的个体的性别和候选人偏好。</p>
+</div>
+
+<div class="phase">
+<h2>选择适当的分析方式</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>此研究人员希望分析两个类别变量之间的关联性，因此她使用交叉分组表和卡方。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID2192D8F3036F430DAAC2029B078DF5F2_li">
+<a name=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID2192D8F3036F430DAAC2029B078DF5F2_li"
+id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID2192D8F3036F430DAAC2029B078DF5F2_li">
+</a> 打开工作表“<span class="filepath">政治.MTW</span>”。</li>
+
+<li id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID10340FD2E01845B9A9E4D9BB0D32E2E2_li">
+<a name=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID10340FD2E01845B9A9E4D9BB0D32E2E2_li"
+id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID10340FD2E01845B9A9E4D9BB0D32E2E2_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">表格</span> &gt; <span class=
+"uicontrol">交叉分组表和卡方</span></span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>输入数据</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>要创建自己的类别数据表，请指定与该表的行对应的变量，以及与该表的列对应的变量。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDE06F1FF2851D4DEFA5D01397ACD7C8E1_li">
+<a name=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDE06F1FF2851D4DEFA5D01397ACD7C8E1_li"
+id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDE06F1FF2851D4DEFA5D01397ACD7C8E1_li">
+</a> 在<span class="uicontrol">对于行</span>中，输入<kbd class=
+"userinput">性别</kbd>。</li>
+
+<li id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID7DD1B10046234C03A9D3B27B79460219_li">
+<a name=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID7DD1B10046234C03A9D3B27B79460219_li"
+id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID7DD1B10046234C03A9D3B27B79460219_li">
+</a> 在<span class="uicontrol">对于列</span>中，输入<kbd class=
+"userinput">偏好</kbd>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>执行卡方分析</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>单击<span class="uicontrol">卡方</span>对分组数据执行此分析。
+分析将表明行变量和列变量之间是否存在关联性。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDB63EFC2D2D5449968B9C6FF40A8E56AA_li">
+<a name=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDB63EFC2D2D5449968B9C6FF40A8E56AA_li"
+id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDB63EFC2D2D5449968B9C6FF40A8E56AA_li">
+</a> 单击<span class="uicontrol">卡方</span>。</li>
+
+<li id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDAEB4A9D0D8DE402785E5C7E73EEE3E3E_li">
+<a name=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDAEB4A9D0D8DE402785E5C7E73EEE3E3E_li"
+id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDAEB4A9D0D8DE402785E5C7E73EEE3E3E_li">
+</a> 选中<span class="uicontrol">卡方分析</span>、<span class=
+"uicontrol">期望单元计数</span>、<span class=
+"uicontrol">原始残差</span>、<span class=
+"uicontrol">标准化残差</span>、<span class=
+"uicontrol">调整残差</span>和<span class=
+"uicontrol">每个单元对卡方统计的贡献</span>。</li>
+
+<li id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID6596E881ACFE448684BEDAF0815965C4_li">
+<a name=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID6596E881ACFE448684BEDAF0815965C4_li"
+id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID6596E881ACFE448684BEDAF0815965C4_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>指定选项</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>此分析无需进一步修改，但您可以选择其他选项。 单击<span class=
+"uicontrol">其他统计</span>可以请求其他关联性和独立性统计量和检验。 单击<span class=
+"uicontrol">选项</span>可以控制 Minitab 如何处理边际统计量和缺失值。</p>
+</td>
+<td class="steps">
+<ul class="simple">
+<li>（无需任何操作）</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="sectiontitle">解释输出</h2>
+
+<p>现在应该做些什么？ 有关如何解释此分析结果的指导信息，请参见 <a href=
+"..//sttables/tabl_000_summary.htm');history.back(1);">StatGuide</a>。</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

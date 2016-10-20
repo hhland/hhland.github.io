@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="thowto" name="DC.Type" />
+<meta name="DC.Title" content="在 Minitab 中执行单因子方差分析" />
+<meta name="abstract" content="如何使用 Minitab 执行单因子方差分析的说明" />
+<meta name="description" content="如何使用 Minitab 执行单因子方差分析的说明" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta content="方差分析, ANOVA, 单因子方差分析" name="DC.subject" />
+<meta content="方差分析, ANOVA, 单因子方差分析" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content=
+"../ANOVA/one_way_ANOVA_benefits.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../ANOVA/one_way_ANOVA_data.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>在 Minitab 中执行单因子方差分析</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "anova/one_way_anova_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fanova%2Fone_way_anova_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fanova%2Fone_way_anova_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../anova/one_way_anova_benefits.html">用途</a>
+</li>
+
+<li><a href="../anova/one_way_anova_data.html">数据</a>
+</li>
+
+<li><a>操作步骤</a>
+</li>
+
+<li class="sectiontitle">在 Minitab 中执行单因子方差分析</li>
+</ul>
+</div>
+
+<div>
+<p class="noshow">如何使用 Minitab 执行单因子方差分析的说明 &nbsp;</p>
+
+<div class="scenario">
+<h2 class="sectiontitle">方案</h2>
+
+<p>调查员对四种不同油漆混料的硬度进行了比较。 每种油漆混料取六份样品涂到一小块金属上，待其凝固后再测量其硬度。</p>
+</div>
+
+<div class="phase">
+<h2>选择适当的分析方式</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>单因子方差分析适用于比较均值，因为您具有一个因子（油漆混料）并且该因子具有两个以上的水平（四种油漆混料）。
+此外，您还有一个连续响应变量（油漆硬度）。 数据为非堆叠数据，因为每个组的数据都位于单独的列中。 因此，您选择采用未堆叠分析方式。
+如果响应数据堆叠在一列中，您应选择<span class="uicontrol">单因子</span>。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__ID6EAA0B3E473E4D049BDEE4D9B374E6A9_li">
+<a name=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__ID6EAA0B3E473E4D049BDEE4D9B374E6A9_li"
+id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__ID6EAA0B3E473E4D049BDEE4D9B374E6A9_li">
+</a> 打开工作表“<span class="filepath">油漆.MTW</span>”。</li>
+
+<li id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__ID5F8477E20BAA4258A1DD7172B9B69590_li">
+<a name=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__ID5F8477E20BAA4258A1DD7172B9B69590_li"
+id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__ID5F8477E20BAA4258A1DD7172B9B69590_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">方差分析</span> &gt; <span class=
+"uicontrol">单因子（未堆叠）</span></span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>输入数据</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>您具有四列油漆硬度值，每列对应一种油漆类型。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__IDF3B6F4BD4C1E4ACE8300114ED068B7E8_li">
+<a name=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__IDF3B6F4BD4C1E4ACE8300114ED068B7E8_li"
+id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__IDF3B6F4BD4C1E4ACE8300114ED068B7E8_li">
+</a> 在<span class="uicontrol">响应（在单独列中）</span>中，输入<kbd class=
+"userinput">'混料 1'-'混料 4'</kbd>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>选择多重比较方法</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>如果您希望估计指定组之间的差异，请选择多重比较方法。 每种方法均使用一种不同的方式。
+选择您所需要的正确方法非常重要，因为方法可以改变结果。 通常，您将只选择一种方法；但是，为了更好地说明问题，请选择所有方法。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__ID5AB856AC16A64FB9AAC0C3265AE31C58_li">
+<a name=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__ID5AB856AC16A64FB9AAC0C3265AE31C58_li"
+id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__ID5AB856AC16A64FB9AAC0C3265AE31C58_li">
+</a> 单击<span class="uicontrol">比较</span>，然后选中所有复选框。</li>
+
+<li id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__IDD7851947B5384979BDF3C6D8F34F9B6D_li">
+<a name=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__IDD7851947B5384979BDF3C6D8F34F9B6D_li"
+id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__IDD7851947B5384979BDF3C6D8F34F9B6D_li">
+</a> 在<span class="uicontrol">对照组水平</span>中的 <span class=
+"uicontrol">Dunnett，全族误差率</span>下，键入<kbd class="userinput">'混料
+1'</kbd>。</li>
+
+<li id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__IDFA8E473AAB1A4675AA3BC5E2668584AD_li">
+<a name=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__IDFA8E473AAB1A4675AA3BC5E2668584AD_li"
+id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__IDFA8E473AAB1A4675AA3BC5E2668584AD_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>将图形添加到输出中</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>单值图和箱线图有助于直观地表示数据的中心趋势、变异以及分布情况。 通过查看残差图来查看检验假设，这对于单因子方差分析非常重要。
+这些图将告诉您是否可以信任这些测试结果。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__IDF69C62A9C820422DA3D42FCB196EB721_li">
+<a name=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__IDF69C62A9C820422DA3D42FCB196EB721_li"
+id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__IDF69C62A9C820422DA3D42FCB196EB721_li">
+</a> 单击<span class="uicontrol">图形</span>，然后选中<span class=
+"uicontrol">单值图</span>和<span class="uicontrol">数据箱线图</span>。</li>
+
+<li id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__ID290CD8B37EBA479EA1F16B78C7083684_li">
+<a name=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__ID290CD8B37EBA479EA1F16B78C7083684_li"
+id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__ID290CD8B37EBA479EA1F16B78C7083684_li">
+</a> 在<span class="uicontrol">残差图</span>下，选择<span class=
+"uicontrol">三合一</span>。</li>
+
+<li id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__ID53886AA8CC5B4F2BA2B22ACC2E513F45_li">
+<a name=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__ID53886AA8CC5B4F2BA2B22ACC2E513F45_li"
+id=
+"ID900A30BC2C704B3AA99B20C7CD3DD56A_thowto__ID53886AA8CC5B4F2BA2B22ACC2E513F45_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="sectiontitle">解释输出</h2>
+
+<p>现在应该做些什么？ 有关如何解释此分析结果的指导信息，请参见 <a href=
+"..//stanovar/aovu_000_summary.htm');history.back(1);">StatGuide</a>。</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="thowto" />
+<meta name="DC.Title" content=
+"Creating Mixture Designs in Minitab" />
+<meta name="abstract" content=
+"Description of how to a using Minitab" />
+<meta name="description" content=
+"Description of how to a using Minitab" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.Relation" scheme="URI" content=
+"../DOE/Creating_mixture_designs.html" />
+<meta name="DC.Relation" scheme="URI" content=
+"../DOE/Creating_mixture_designs_data.html" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto" />
+<title>Creating Mixture Designs in Minitab</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "doe/creating_mixture_designs_in_minitab.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fdoe%2Fcreating_mixture_designs_in_minitab.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fdoe%2Fcreating_mixture_designs_in_minitab.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../doe/creating_mixture_designs.html">Uses</a>
+</li>
+
+<li><a href="../doe/creating_mixture_designs_data.html">Data</a>
+</li>
+
+<li><a>How To</a>
+</li>
+
+<li class="sectiontitle">Creating Mixture Designs in Minitab</li>
+</ul>
+</div>
+
+<div class="body thowbody">
+<p class="noshow">Description of how to a using Minitab &nbsp;</p>
+
+<div class="scenario">
+<h2 class="title sectiontitle">Scenario</h2>
+
+<p class="p">Researchers in a food laboratory are trying to improve
+a recipe for cheese fondue. They would like to study how the
+mixture blend and the serving temperature of the fondue affect the
+flavor.</p>
+
+<p class="p">The mixture is comprised of three ingredients: two
+types of Swiss cheese (Emmenthaler and Gruyere) and white wine.</p>
+</div>
+
+<div class="phase">
+<h2>Choose the appropriate design and number of components</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">The researchers want to conduct an extreme vertices
+design with 3 components (the cheeses and wine) and one process
+variable (serving temperature).</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID3E92078CB81E46C18E7F494B151362C0_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID3E92078CB81E46C18E7F494B151362C0_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID3E92078CB81E46C18E7F494B151362C0_li">
+</a>Choose <span class="ph menucascade"><span class=
+"ph uicontrol">Stat</span> &gt; <span class=
+"ph uicontrol">DOE</span> &gt; <span class=
+"ph uicontrol">Mixture</span> &gt; <span class=
+"ph uicontrol">Create Mixture Design</span></span>.</li>
+
+<li class="li" id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID5AFD67E8F1D24E7DA10A50C43FA17AD2_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID5AFD67E8F1D24E7DA10A50C43FA17AD2_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID5AFD67E8F1D24E7DA10A50C43FA17AD2_li">
+</a>Under <span class="ph uicontrol">Type of Design</span>, choose
+<span class="ph uicontrol">Extreme vertices</span>.</li>
+
+<li class="li" id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDA5322CE29906428AA135AC031B3E705F_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDA5322CE29906428AA135AC031B3E705F_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDA5322CE29906428AA135AC031B3E705F_li">
+</a>From <span class="ph uicontrol">Number of Components</span>,
+choose <span class="ph uicontrol">3</span>.</li>
+
+<li class="li" id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID3DFDACAFD53448929E6606BB7D655516_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID3DFDACAFD53448929E6606BB7D655516_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID3DFDACAFD53448929E6606BB7D655516_li">
+</a>Click <span class="ph uicontrol">Designs</span>. Click
+<span class="ph uicontrol">OK</span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Name components and define bounds</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">Specify the lower and upper bounds for the components.
+In this example, past experience has established limits on each
+ingredient in the overall fondue formulation.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID702D01804B5E48C1989607C66EB4B312_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID702D01804B5E48C1989607C66EB4B312_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID702D01804B5E48C1989607C66EB4B312_li">
+</a>Click <span class="ph uicontrol">Components</span> and complete
+the table as follows: <a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID23BAA50D75F34081AFECC13E59CED2ED_table"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID23BAA50D75F34081AFECC13E59CED2ED_table">
+</a>
+<table cellpadding="3px" cellspacing="0px" id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID23BAA50D75F34081AFECC13E59CED2ED_table"
+class="tableborder">
+<thead class="thead" align="left">
+<tr class="row">
+<th class="entry" valign="top" width="NaN%" id="d43505e103">
+<span class="ph uicontrol">Component</span>
+</th>
+<th class="entry" valign="top" width="NaN%" id="d43505e106">
+<span class="ph uicontrol">Name</span>
+</th>
+<th class="entry" valign="top" width="NaN%" id="d43505e109">
+<span class="ph uicontrol">Lower</span>
+</th>
+<th class="entry" valign="top" width="NaN%" id="d43505e112">
+<span class="ph uicontrol">Upper</span>
+</th>
+</tr>
+</thead>
+
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" valign="top" width="NaN%" headers="d43505e103">
+<strong class="ph b">A</strong>
+</td>
+<td class="entry" valign="top" width="NaN%" headers="d43505e106">
+<kbd class="ph userinput">Emmenthaler</kbd>
+</td>
+<td class="entry" valign="top" width="NaN%" headers="d43505e109">
+<kbd class="ph userinput">0.2</kbd>
+</td>
+<td class="entry" valign="top" width="NaN%" headers="d43505e112">
+<kbd class="ph userinput">0.6</kbd>
+</td>
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="NaN%" headers="d43505e103">
+<strong class="ph b">B</strong>
+</td>
+<td class="entry" valign="top" width="NaN%" headers="d43505e106">
+<kbd class="ph userinput">Gruyere</kbd>
+</td>
+<td class="entry" valign="top" width="NaN%" headers="d43505e109">
+<kbd class="ph userinput">0</kbd>
+</td>
+<td class="entry" valign="top" width="NaN%" headers="d43505e112">
+<kbd class="ph userinput">0.3</kbd>
+</td>
+</tr>
+
+<tr class="row">
+<td class="entry" valign="top" width="NaN%" headers="d43505e103">
+<strong class="ph b">C</strong>
+</td>
+<td class="entry" valign="top" width="NaN%" headers="d43505e106">
+<kbd class="ph userinput">Wine</kbd>
+</td>
+<td class="entry" valign="top" width="NaN%" headers="d43505e109">
+<kbd class="ph userinput">0.4</kbd>
+</td>
+<td class="entry" valign="top" width="NaN%" headers="d43505e112">
+<kbd class="ph userinput">0.6</kbd>
+</td>
+</tr>
+</tbody>
+</table></li>
+
+<li class="li" id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID401BB2FCA983465ABDF47B6E5DD87C33_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID401BB2FCA983465ABDF47B6E5DD87C33_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID401BB2FCA983465ABDF47B6E5DD87C33_li">
+</a>Click <span class="ph uicontrol">OK</span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Define process variables</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">You can define up to 7 process variables, though this
+example uses only one: serving temperature. You must specify the
+process variable name, data type, and low and high settings.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDB7A01897A70E4770A2D277B46474D43A_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDB7A01897A70E4770A2D277B46474D43A_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDB7A01897A70E4770A2D277B46474D43A_li">
+</a>Click <span class="ph uicontrol">Process Vars</span>.</li>
+
+<li class="li" id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDFD9EEEF7B63844399981F57C527A52ED_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDFD9EEEF7B63844399981F57C527A52ED_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDFD9EEEF7B63844399981F57C527A52ED_li">
+</a>Under <span class="ph uicontrol">Process Variables</span>,
+choose <span class="ph uicontrol">Number</span> and complete the
+table as follows: <a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDD3A0074F91A9483CB1F972296E7BBA24_table"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDD3A0074F91A9483CB1F972296E7BBA24_table">
+</a>
+<table cellpadding="3px" cellspacing="0px" id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDD3A0074F91A9483CB1F972296E7BBA24_table"
+class="tableborder">
+<thead class="thead" align="left">
+<tr class="row">
+<th class="entry" valign="top" width="NaN%" id="d43505e193">
+<span class="ph uicontrol">Process Variable</span>
+</th>
+<th class="entry" valign="top" width="NaN%" id="d43505e196">
+<span class="ph uicontrol">Name</span>
+</th>
+<th class="entry" valign="top" width="NaN%" id="d43505e199">
+<span class="ph uicontrol">Type</span>
+</th>
+<th class="entry" valign="top" width="NaN%" id="d43505e202">
+<span class="ph uicontrol">Low</span>
+</th>
+<th class="entry" valign="top" width="NaN%" id="d43505e205">
+<span class="ph uicontrol">High</span>
+</th>
+</tr>
+</thead>
+
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" valign="top" width="NaN%" headers="d43505e193">
+<span class="ph uicontrol">X1</span>
+</td>
+<td class="entry" valign="top" width="NaN%" headers="d43505e196">
+<kbd class="ph userinput">Temperature</kbd>
+</td>
+<td class="entry" valign="top" width="NaN%" headers="d43505e199">
+<span class="ph uicontrol">Numeric</span>
+</td>
+<td class="entry" valign="top" width="NaN%" headers="d43505e202">
+<kbd class="ph userinput">80</kbd>
+</td>
+<td class="entry" valign="top" width="NaN%" headers="d43505e205">
+<kbd class="ph userinput">90</kbd>
+</td>
+</tr>
+</tbody>
+</table></li>
+
+<li class="li" id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDE4881E7A38EB4D3E9367735A78AA5FE5_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDE4881E7A38EB4D3E9367735A78AA5FE5_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDE4881E7A38EB4D3E9367735A78AA5FE5_li">
+</a>Click <span class="ph uicontrol">OK</span> in each dialog
+box.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="title sectiontitle">Interpreting the output</h2>
+
+<p class="p">Now what? To see a related tutorial that analyzes this
+design, see <a href=
+"analyze_mixture_designs.html#idc39e0407ca5547ab99ded60e4370f29c_tuses"
+class="xref">Analyze Mixture Designs</a>. For a tutorial on graphs
+associated with this type of design, see <a href=
+"mixture_plot_uses.html#idce3bcb09f13b4712b98869ef9af1fd19_tuses"
+class="xref">Graphs for Mixtures DOE</a>.</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="thowto" />
+<meta name="DC.Title" content=
+"Performing an Attribute Agreement Analysis in Minitab" />
+<meta name="abstract" content=
+"Description of how to perform an Attribute Agreement Analysis using Minitab" />
+<meta name="description" content=
+"Description of how to perform an Attribute Agreement Analysis using Minitab" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.subject" content=
+"Attribute Agreement Analysis, Measurement Systems Analysis" />
+<meta name="keywords" content=
+"Attribute Agreement Analysis, Measurement Systems Analysis" />
+<meta name="DC.Relation" scheme="URI" content=
+"../Measurement_Systems_Analysis/Attribute_agreement_analysis_benefits.html" />
+<meta name="DC.Relation" scheme="URI" content=
+"../Measurement_Systems_Analysis/Attribute_agreement_analysis_data.html" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto" />
+<title>Performing an Attribute Agreement Analysis in
+Minitab</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "measurement_systems_analysis/attribute_agreement_analysis_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fmeasurement_systems_analysis%2Fattribute_agreement_analysis_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fmeasurement_systems_analysis%2Fattribute_agreement_analysis_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href=
+"../measurement_systems_analysis/attribute_agreement_analysis_benefits.html">
+Uses</a>
+</li>
+
+<li><a href=
+"../measurement_systems_analysis/attribute_agreement_analysis_data.html">
+Data</a>
+</li>
+
+<li><a>How To</a>
+</li>
+
+<li class="sectiontitle">Performing an Attribute Agreement Analysis
+in Minitab</li>
+</ul>
+</div>
+
+<div class="body thowbody">
+<p class="noshow">Description of how to perform an Attribute
+Agreement Analysis using Minitab &nbsp;</p>
+
+<div class="scenario">
+<h2 class="title sectiontitle">Scenario</h2>
+
+<p class="p">A fabric company uses appraisers to rate the print
+quality of cotton fabric on a 1-5 scale. To assess the consistency
+and correctness of the appraisers' ratings, four appraisers rated
+print quality on 30 samples of fabric twice. Fabric samples were
+randomly presented.</p>
+</div>
+
+<div class="phase">
+<h2>Choose the appropriate analysis</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">To evaluate this rating system, which consists of
+multiple trials by multiple appraisers, use Attribute Agreement
+Analysis.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__IDF2D31C1DE478460BA07F28CC0B355ECD_li">
+<a name=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__IDF2D31C1DE478460BA07F28CC0B355ECD_li"
+id=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__IDF2D31C1DE478460BA07F28CC0B355ECD_li">
+</a> Open the worksheet <span class=
+"ph filepath">CALICO.MTW</span>.</li>
+
+<li class="li" id=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__ID5FA7D4C1C22243368A1235E9C8E40E18_li">
+<a name=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__ID5FA7D4C1C22243368A1235E9C8E40E18_li"
+id=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__ID5FA7D4C1C22243368A1235E9C8E40E18_li">
+</a> Choose <span class="ph menucascade"><span class=
+"ph uicontrol">Stat</span> &gt; <span class="ph uicontrol">Quality
+Tools</span> &gt; <span class="ph uicontrol">Attribute Agreement
+Analysis</span></span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Enter your data</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">This worksheet contains columns of stacked data. The
+rating scale is ordinal, so you should check <span class=
+"ph uicontrol">Categories of the attribute data are
+ordered</span>.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__IDB60F031BA120432B95F8E240A80593B3_li">
+<a name=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__IDB60F031BA120432B95F8E240A80593B3_li"
+id=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__IDB60F031BA120432B95F8E240A80593B3_li">
+</a> In <span class="ph uicontrol">Attribute column</span>, enter
+<kbd class="ph userinput">Response</kbd>.</li>
+
+<li class="li" id=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__ID63750B55DBDD47B69B6B9775E37EC710_li">
+<a name=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__ID63750B55DBDD47B69B6B9775E37EC710_li"
+id=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__ID63750B55DBDD47B69B6B9775E37EC710_li">
+</a> In <span class="ph uicontrol">Samples</span>, enter
+<kbd class="ph userinput">Sample</kbd>.</li>
+
+<li class="li" id=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__ID014F2EBF102345CDB71A2E959E700B23_li">
+<a name=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__ID014F2EBF102345CDB71A2E959E700B23_li"
+id=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__ID014F2EBF102345CDB71A2E959E700B23_li">
+</a> In <span class="ph uicontrol">Appraisers</span>, enter
+<kbd class="ph userinput">Appraiser</kbd>.</li>
+
+<li class="li" id=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__ID8761DEDE217946008F5FB9C946E1816C_li">
+<a name=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__ID8761DEDE217946008F5FB9C946E1816C_li"
+id=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__ID8761DEDE217946008F5FB9C946E1816C_li">
+</a> In <span class="ph uicontrol">Known standard/attribute</span>,
+enter <kbd class="ph userinput">Standard</kbd>.</li>
+
+<li class="li" id=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__IDA347BF3301BB4EF6AC5FCD8CE3D5E053_li">
+<a name=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__IDA347BF3301BB4EF6AC5FCD8CE3D5E053_li"
+id=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__IDA347BF3301BB4EF6AC5FCD8CE3D5E053_li">
+</a> Check <span class="ph uicontrol">Categories of the attribute
+data are ordered</span>.</li>
+
+<li class="li" id=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__ID2DF24218AF6C465DA1277429E573746A_li">
+<a name=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__ID2DF24218AF6C465DA1277429E573746A_li"
+id=
+"ID36FC30F8B3BD4C39B53B5F4D1A03F1F7_thowto__ID2DF24218AF6C465DA1277429E573746A_li">
+</a> Click <span class="ph uicontrol">OK</span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Specify options</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">This attribute agreement analysis requires no further
+modifications, but other options are available. To specify study
+information, click <span class="ph uicontrol">Information</span>.
+To display the disagreement table, request Cohen's kappa, and
+change the confidence level, click <span class=
+"ph uicontrol">Options</span>. To specify graph options, click
+<span class="ph uicontrol">Graphs</span>. To control the display of
+the output, click <span class="ph uicontrol">Results</span>.</p>
+</td>
+<td class="steps">
+<ul class="simple">
+<li class="sli">(no action required)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="title sectiontitle">Interpreting the output</h2>
+
+<p class="p">Now what? For guidance on interpreting the results of
+this analysis, see <a href=
+"..//qcmeasys/atag_000_summary.htm');history.back(1);">StatGuide</a>.</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="thowto" name="DC.Type" />
+<meta name="DC.Title" content="在 Minitab 中创建因子设计" />
+<meta name="abstract" content="有关如何使用 Minitab 的说明" />
+<meta name="description" content="有关如何使用 Minitab 的说明" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Creating_factorial_designs.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Creating_factorial_design_data.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>在 Minitab 中创建因子设计</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "doe/creating_factorial_designs_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fdoe%2Fcreating_factorial_designs_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fdoe%2Fcreating_factorial_designs_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../doe/creating_factorial_designs.html">用途</a>
+</li>
+
+<li><a href="../doe/creating_factorial_design_data.html">数据</a>
+</li>
+
+<li><a>操作步骤</a>
+</li>
+
+<li class="sectiontitle">在 Minitab 中创建因子设计</li>
+</ul>
+</div>
+
+<div>
+<p class="noshow">有关如何使用 Minitab 的说明 &nbsp;</p>
+
+<div class="scenario">
+<h2 class="sectiontitle">情形</h2>
+
+<div class="p">一家建筑材料制造商正在开发一种新型绝缘产品。 他们要研究四个认为会影响绝缘强度的因子。 这四个因子是：
+<a name=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__IDF1E8A793CCA2403EB8C4F99D918C2237_ul"
+id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__IDF1E8A793CCA2403EB8C4F99D918C2237_ul">
+</a>
+<ul id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__IDF1E8A793CCA2403EB8C4F99D918C2237_ul">
+<li id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID25037271F5A14159A2D4A6BCF693956E_li">
+<a name=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID25037271F5A14159A2D4A6BCF693956E_li"
+id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID25037271F5A14159A2D4A6BCF693956E_li">
+</a> 材料类型（材料）</li>
+
+<li id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID4A1752D7D74047259B1AC20A1DD4A437_li">
+<a name=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID4A1752D7D74047259B1AC20A1DD4A437_li"
+id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID4A1752D7D74047259B1AC20A1DD4A437_li">
+</a> 注塑温度（注塑温度）</li>
+
+<li id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID369CB68889C3429BBCAF53EECFAB4A64_li">
+<a name=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID369CB68889C3429BBCAF53EECFAB4A64_li"
+id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID369CB68889C3429BBCAF53EECFAB4A64_li">
+</a> 注塑压力（注塑压力）</li>
+
+<li id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID4CB345C728154CC18538202A0B9B915D_li">
+<a name=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID4CB345C728154CC18538202A0B9B915D_li"
+id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID4CB345C728154CC18538202A0B9B915D_li">
+</a> 冷却温度（冷却温度）</li>
+</ul></div>
+
+<p>该制造商认为，温度也会对强度产生影响，但是由于在试验期间无法控制温度，因此将温度记录为协变量（测量温度）。</p>
+</div>
+
+<div class="phase">
+<h2>选择适当的设计和因子数</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>材料公司的高级研究人员想要执行一个 2 水平全因子设计，以便确定哪些因子会对绝缘材料的强度产生显著影响。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID4EE7468E071E4CF08FECFD2E2C6E8741_li">
+<a name=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID4EE7468E071E4CF08FECFD2E2C6E8741_li"
+id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID4EE7468E071E4CF08FECFD2E2C6E8741_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">DOE</span> &gt; <span class=
+"uicontrol">因子</span> &gt; <span class=
+"uicontrol">创建因子设计</span></span>。</li>
+
+<li id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID4971923528854DCC8C5A693E870BACFD_li">
+<a name=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID4971923528854DCC8C5A693E870BACFD_li"
+id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID4971923528854DCC8C5A693E870BACFD_li">
+</a> 在<span class="uicontrol">设计类型</span>下，验证是否选择了 <span class=
+"uicontrol">2 水平因子（默认生成元）</span>。</li>
+
+<li id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID74EBCF2CD5AA4B7EAE11F5346CC9C614_li">
+<a name=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID74EBCF2CD5AA4B7EAE11F5346CC9C614_li"
+id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID74EBCF2CD5AA4B7EAE11F5346CC9C614_li">
+</a> 在<span class="uicontrol">因子数</span>中，选择 <span class=
+"uicontrol">4</span>。</li>
+
+<li id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID6BF0047C4214424BBDB41EDE4DD40B06_li">
+<a name=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID6BF0047C4214424BBDB41EDE4DD40B06_li"
+id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID6BF0047C4214424BBDB41EDE4DD40B06_li">
+</a> 单击<span class="uicontrol">设计</span>。</li>
+
+<li id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID0810F6F29D4E4139B2B0196C9F30D1E9_li">
+<a name=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID0810F6F29D4E4139B2B0196C9F30D1E9_li"
+id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID0810F6F29D4E4139B2B0196C9F30D1E9_li">
+</a> 在顶部的框中，选择<span class="uicontrol">全因子</span>。</li>
+
+<li id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__IDF62D15F5D879402FA6B5071F9C97F9FE_li">
+<a name=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__IDF62D15F5D879402FA6B5071F9C97F9FE_li"
+id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__IDF62D15F5D879402FA6B5071F9C97F9FE_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>命名因子并定义因子设置</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>您可以命名每个因子、指定数据类型（文本或数字）并定义因子设置。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID9EB5B8B992D34349A9864AE268FE93AF_li">
+<a name=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID9EB5B8B992D34349A9864AE268FE93AF_li"
+id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID9EB5B8B992D34349A9864AE268FE93AF_li">
+</a> 单击<span class="uicontrol">因子</span>并按照以下方式填充表格： <a name=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID23BAA50D75F34081AFECC13E59CED2ED_table"
+id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID23BAA50D75F34081AFECC13E59CED2ED_table">
+</a>
+<table cellspacing="0px" cellpadding="3px" id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID23BAA50D75F34081AFECC13E59CED2ED_table"
+class="tableborder">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" width="NaN%" id="N1017B">
+<span class="uicontrol">因子</span>
+</th>
+<th class="cellrowborder" valign="top" width="NaN%" id="N10188">
+<span class="uicontrol">名称</span>
+</th>
+<th class="cellrowborder" valign="top" width="NaN%" id="N10195">
+<span class="uicontrol">类型</span>
+</th>
+<th class="cellrowborder" valign="top" width="NaN%" id="N101A2">
+<span class="uicontrol">低</span>
+</th>
+<th class="row-nocellborder" valign="top" width="NaN%" id="N101AF">
+<span class="uicontrol">高</span>
+</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N1017B"><strong>A</strong>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N10188"><kbd class="userinput-alt">材料</kbd>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N10195"><span class="uicontrol">文本</span>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N101A2"><kbd class="userinput-alt">公式 1</kbd>
+</td>
+<td class="row-nocellborder" valign="top" width="NaN%" headers=
+"N101AF"><kbd class="userinput-alt">公式 2</kbd>
+</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N1017B"><strong>B</strong>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N10188"><kbd class="userinput-alt">注入压力</kbd>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N10195"><span class="uicontrol">数字</span>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N101A2"><kbd class="userinput-alt">75</kbd>
+</td>
+<td class="row-nocellborder" valign="top" width="NaN%" headers=
+"N101AF"><kbd class="userinput-alt">150</kbd>
+</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N1017B"><strong>C</strong>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N10188"><kbd class="userinput-alt">注入温度</kbd>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N10195"><span class="uicontrol">数字</span>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N101A2"><kbd class="userinput-alt">85</kbd>
+</td>
+<td class="row-nocellborder" valign="top" width="NaN%" headers=
+"N101AF"><kbd class="userinput-alt">100</kbd>
+</td>
+</tr>
+
+<tr>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N1017B"><strong>D</strong>
+</td>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N10188"><kbd class="userinput-alt">冷却温度</kbd>
+</td>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N10195"><span class="uicontrol">数字</span>
+</td>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N101A2"><kbd class="userinput-alt">25</kbd>
+</td>
+<td class="nocellnorowborder" valign="top" width="NaN%" headers=
+"N101AF"><kbd class="userinput-alt">45</kbd>
+</td>
+</tr>
+</tbody>
+</table></li>
+
+<li id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID67F2B7C8ED294BE09FB3A1082FC54267_li">
+<a name=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID67F2B7C8ED294BE09FB3A1082FC54267_li"
+id=
+"ID28A8D66B8A7A4DEA92E4FA3503B9B8DD_thowto__ID67F2B7C8ED294BE09FB3A1082FC54267_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="sectiontitle">解释输出</h2>
+
+<p>现在应该做些什么？ 要查看有关如何分析此设计的教程，请参见<a href=
+"analyzing_factorial_designs.html">分析因子设计</a>。
+有关与此类型的设计关联的图形的教程，请参见<a href="factorial_plot_uses.html">因子 DOE
+的图形</a>。</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

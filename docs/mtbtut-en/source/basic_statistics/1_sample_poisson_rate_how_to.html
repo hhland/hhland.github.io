@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="thowto" />
+<meta name="DC.Title" content=
+"Performing 1-Sample Poisson Rate in Minitab" />
+<meta name="abstract" content=
+"Description of how to perform 1-Sample Poisson Rate using Minitab" />
+<meta name="description" content=
+"Description of how to perform 1-Sample Poisson Rate using Minitab" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.subject" content="1 Sample Poisson Rate" />
+<meta name="keywords" content="1 Sample Poisson Rate" />
+<meta name="DC.Relation" scheme="URI" content=
+"../Basic_Statistics/1_sample_Poisson_rate_benefits.html" />
+<meta name="DC.Relation" scheme="URI" content=
+"../Basic_Statistics/1_sample_Poisson_rate_data.html" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content=
+"ID2FBF4A5A27A14F52A4C2F95A8D12F6DA_thowto" />
+<title>Performing 1-Sample Poisson Rate in Minitab</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "basic_statistics/1_sample_poisson_rate_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fbasic_statistics%2F1_sample_poisson_rate_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fbasic_statistics%2F1_sample_poisson_rate_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href=
+"../basic_statistics/1_sample_poisson_rate_benefits.html">Uses</a>
+</li>
+
+<li><a href=
+"../basic_statistics/1_sample_poisson_rate_data.html">Data</a>
+</li>
+
+<li><a>How To</a>
+</li>
+
+<li class="sectiontitle">Performing 1-Sample Poisson Rate in
+Minitab</li>
+</ul>
+</div>
+
+<div class="body thowbody">
+<p class="noshow">Description of how to perform 1-Sample Poisson
+Rate using Minitab &nbsp;</p>
+
+<div class="scenario">
+<h2 class="title sectiontitle">Scenario</h2>
+
+<p class="p">For the past 30 days, a metropolitan public
+transportation company counted the number of customer complaints.
+The company wants to establish the rate of complaints to gauge
+staffing requirements for their new complaint department.</p>
+</div>
+
+<div class="phase">
+<h2>Choose the appropriate analysis</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">The public transportation company want to assess the
+occurrence rate of an event from a process that follows the Poisson
+distribution. 1-Sample Poisson Rate is appropriate.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"ID2FBF4A5A27A14F52A4C2F95A8D12F6DA_thowto__IDCFC834A7EA93485B8528F22C15B7FD3F_li">
+<a name=
+"ID2FBF4A5A27A14F52A4C2F95A8D12F6DA_thowto__IDCFC834A7EA93485B8528F22C15B7FD3F_li"
+id=
+"ID2FBF4A5A27A14F52A4C2F95A8D12F6DA_thowto__IDCFC834A7EA93485B8528F22C15B7FD3F_li">
+</a>Open the worksheet <span class=
+"ph filepath">BREAKDOWNS.MTW</span>.</li>
+
+<li class="li" id=
+"ID2FBF4A5A27A14F52A4C2F95A8D12F6DA_thowto__ID7B7CBB47E7B14990ABD0F544442BD04E_li">
+<a name=
+"ID2FBF4A5A27A14F52A4C2F95A8D12F6DA_thowto__ID7B7CBB47E7B14990ABD0F544442BD04E_li"
+id=
+"ID2FBF4A5A27A14F52A4C2F95A8D12F6DA_thowto__ID7B7CBB47E7B14990ABD0F544442BD04E_li">
+</a>Choose <span class="ph menucascade"><span class=
+"ph uicontrol">Stat</span> &gt; <span class="ph uicontrol">Basic
+Statistics</span> &gt; <span class="ph uicontrol">1-Sample Poisson
+Rate</span></span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Enter your data</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">The worksheet contains a single column of raw
+data.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"ID2FBF4A5A27A14F52A4C2F95A8D12F6DA_thowto__ID175FA7A5474043E39DCE5BB77225843D_li">
+<a name=
+"ID2FBF4A5A27A14F52A4C2F95A8D12F6DA_thowto__ID175FA7A5474043E39DCE5BB77225843D_li"
+id=
+"ID2FBF4A5A27A14F52A4C2F95A8D12F6DA_thowto__ID175FA7A5474043E39DCE5BB77225843D_li">
+</a>Choose <span class="ph uicontrol">One or more samples, each in
+a column.</span></li>
+
+<li class="li" id=
+"ID2FBF4A5A27A14F52A4C2F95A8D12F6DA_thowto__ID0B3D88396FDD4FD6A3555A8941886720_li">
+<a name=
+"ID2FBF4A5A27A14F52A4C2F95A8D12F6DA_thowto__ID0B3D88396FDD4FD6A3555A8941886720_li"
+id=
+"ID2FBF4A5A27A14F52A4C2F95A8D12F6DA_thowto__ID0B3D88396FDD4FD6A3555A8941886720_li">
+</a>In <span class="ph uicontrol">Sample columns</span>, enter
+<kbd class="ph userinput">Complaints</kbd>.</li>
+
+<li class="li" id=
+"ID2FBF4A5A27A14F52A4C2F95A8D12F6DA_thowto__IDAAEDCD822D60474EBF50CD37F366F881_li">
+<a name=
+"ID2FBF4A5A27A14F52A4C2F95A8D12F6DA_thowto__IDAAEDCD822D60474EBF50CD37F366F881_li"
+id=
+"ID2FBF4A5A27A14F52A4C2F95A8D12F6DA_thowto__IDAAEDCD822D60474EBF50CD37F366F881_li">
+</a>Click <span class="ph uicontrol">OK</span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Specify options</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">This 1-sample Poisson rate analysis requires no
+further modifications, but other options are available. Check
+<span class="ph uicontrol">Perform hypothesis test</span> to test
+whether the rate equals a target value. Use the <span class=
+"ph uicontrol">Options</span> subdialog box to change the length of
+observation (the length of time or size of unit over which defects
+were counted), to change the confidence level, to specify a
+one-sided hypothesis test, or to specify a normal approximation to
+calculate the test and confidence interval.</p>
+</td>
+<td class="steps">
+<ul class="simple">
+<li class="sli">(no action required)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="title sectiontitle">Interpreting the output</h2>
+
+<p class="p">Now what? For guidance on interpreting the results of
+this analysis, see <a href=
+"..//stbasics/1poi_000_summary.htm');history.back(1);">StatGuide</a>.</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

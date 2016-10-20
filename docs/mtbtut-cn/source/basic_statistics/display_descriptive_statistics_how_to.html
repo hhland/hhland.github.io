@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="thowto" name="DC.Type" />
+<meta name="DC.Title" content="在 Minitab 中执行显示描述性统计分析" />
+<meta name="abstract" content="如何使用 Minitab 执行显示描述性统计分析的说明" />
+<meta name="description" content="如何使用 Minitab 执行显示描述性统计分析的说明" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta content="基本统计量, 描述性统计" name="DC.subject" />
+<meta content="基本统计量, 描述性统计" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content=
+"../Basic_Statistics/Display_descriptive_statistics_benefits.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../Basic_Statistics/Display_descriptive_statistics_data.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="ID20ECA34905194A3A8EDCB5EE8D8515B1_thowto" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>在 Minitab 中执行显示描述性统计分析</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "basic_statistics/display_descriptive_statistics_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fbasic_statistics%2Fdisplay_descriptive_statistics_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fbasic_statistics%2Fdisplay_descriptive_statistics_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href=
+"../basic_statistics/display_descriptive_statistics_benefits.html">用途</a>
+</li>
+
+<li><a href=
+"../basic_statistics/display_descriptive_statistics_data.html">数据</a>
+</li>
+
+<li><a>操作步骤</a>
+</li>
+
+<li class="sectiontitle">在 Minitab 中执行显示描述性统计分析</li>
+</ul>
+</div>
+
+<div>
+<p class="noshow">如何使用 Minitab 执行显示描述性统计分析的说明 &nbsp;</p>
+
+<div class="scenario">
+<h2 class="sectiontitle">方案</h2>
+
+<p>一位热心的年轻气象学者收集了她家乡一年内的气象数据。 这些值显示了每个月中具有明显降雨的天数。</p>
+</div>
+
+<div class="phase">
+<h2>选择适当的分析方式</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>由于这是她首次查看这些数据，通过回顾描述性统计量可为她提供一些最重要特征的总览，例如中心趋势和展开的度量。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID20ECA34905194A3A8EDCB5EE8D8515B1_thowto__IDF28F6E481CB24FCCB33550CC97544BEF_li">
+<a name=
+"ID20ECA34905194A3A8EDCB5EE8D8515B1_thowto__IDF28F6E481CB24FCCB33550CC97544BEF_li"
+id=
+"ID20ECA34905194A3A8EDCB5EE8D8515B1_thowto__IDF28F6E481CB24FCCB33550CC97544BEF_li">
+</a> 打开工作表“<span class="filepath">降雨天数.MTW</span>”。</li>
+
+<li id=
+"ID20ECA34905194A3A8EDCB5EE8D8515B1_thowto__IDABAE51E309314C9794A673D39C8E413D_li">
+<a name=
+"ID20ECA34905194A3A8EDCB5EE8D8515B1_thowto__IDABAE51E309314C9794A673D39C8E413D_li"
+id=
+"ID20ECA34905194A3A8EDCB5EE8D8515B1_thowto__IDABAE51E309314C9794A673D39C8E413D_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">基本统计量</span> &gt; <span class=
+"uicontrol">显示描述性统计</span></span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>输入要分析的数据</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>对于在<span class="uicontrol">变量</span>中输入的每个变量，您都将获得一份单独的分析结果。
+在本例中，只有一份分析结果。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID20ECA34905194A3A8EDCB5EE8D8515B1_thowto__IDF956B66D18324876B7D8AA885C3DD1B2_li">
+<a name=
+"ID20ECA34905194A3A8EDCB5EE8D8515B1_thowto__IDF956B66D18324876B7D8AA885C3DD1B2_li"
+id=
+"ID20ECA34905194A3A8EDCB5EE8D8515B1_thowto__IDF956B66D18324876B7D8AA885C3DD1B2_li">
+</a> 在<span class="uicontrol">变量</span>中，输入<kbd class=
+"userinput">降雨天数</kbd>。</li>
+
+<li id=
+"ID20ECA34905194A3A8EDCB5EE8D8515B1_thowto__ID3AF59ECF640F4955A7342F54A923AE12_li">
+<a name=
+"ID20ECA34905194A3A8EDCB5EE8D8515B1_thowto__ID3AF59ECF640F4955A7342F54A923AE12_li"
+id=
+"ID20ECA34905194A3A8EDCB5EE8D8515B1_thowto__ID3AF59ECF640F4955A7342F54A923AE12_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>指定按变量分组（如果有必要）</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>按变量分组（通常）是一个可用于将分析分为多个可比较和对比部分的类别变量。
+例如，如果您将性别指定为按变量分组，您将分别获得男性观测值和女性观测值结果。 但是，此分析不包含按变量分组。</p>
+</td>
+<td class="steps">
+<p>（无需任何操作）</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>指定选项</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>此分析无需进一步修改，但您可以选择其他选项。 单击<span class=
+"uicontrol">统计量</span>可以更改分析中生成的默认统计量。 单击<span class=
+"uicontrol">图形</span>可以添加数据的图解。</p>
+</td>
+<td class="steps">
+<p>（无需任何操作）</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="sectiontitle">解释输出</h2>
+
+<p>现在应该做些什么？ 有关如何解释此分析结果的指导信息，请参见 <a href=
+"..//stbasics/desc_000_summary.htm');history.back(1);">StatGuide</a>。</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

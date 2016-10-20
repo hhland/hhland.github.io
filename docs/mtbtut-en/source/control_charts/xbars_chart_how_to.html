@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="thowto" />
+<meta name="DC.Title" content=
+"Creating an Xbar-S Chart in Minitab" />
+<meta name="abstract" content=
+"Description of how to creating an Xbar-S chart using Minitab" />
+<meta name="description" content=
+"Description of how to creating an Xbar-S chart using Minitab" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.Relation" scheme="URI" content=
+"../Control_Charts/XbarS_chart_benefits.html" />
+<meta name="DC.Relation" scheme="URI" content=
+"../Control_Charts/XbarS_chart_data.html" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto" />
+<title>Creating an Xbar-S Chart in Minitab</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "control_charts/xbars_chart_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fcontrol_charts%2Fxbars_chart_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fcontrol_charts%2Fxbars_chart_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../control_charts/xbars_chart_benefits.html">Uses</a>
+</li>
+
+<li><a href="../control_charts/xbars_chart_data.html">Data</a>
+</li>
+
+<li><a>How To</a>
+</li>
+
+<li class="sectiontitle">Creating an Xbar-S Chart in Minitab</li>
+</ul>
+</div>
+
+<div class="body thowbody">
+<p class="noshow">Description of how to creating an Xbar-S chart
+using Minitab &nbsp;</p>
+
+<div class="scenario">
+<h2 class="title sectiontitle">Scenario</h2>
+
+<p class="p">A canning company wants to assess whether its
+can-filling process is in control. The company collected 15
+subgroups of 10 cans at 15-minute intervals across two shifts for a
+single day's production.</p>
+
+<p class="p">To minimize the within-subgroup (can-to-can)
+variation, the 10 samples for a given subgroup were gathered in a
+short period of time. Minimizing this variation is important
+because within-subgroup variation is used to establish the control
+limits for the S chart.</p>
+</div>
+
+<div class="phase">
+<h2>Choose the appropriate analysis</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">Both Xbar-R and Xbar-S charts monitor measurement data
+collected in subgroups, but the Xbar-S chart is the better choice
+with subgroups greater than 8.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__ID4FE07821E2C84E69B4FEE5D01D5851DD_li">
+<a name=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__ID4FE07821E2C84E69B4FEE5D01D5851DD_li"
+id=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__ID4FE07821E2C84E69B4FEE5D01D5851DD_li">
+</a> Open the worksheet <span class=
+"ph filepath">CANNING.MTW</span>.</li>
+
+<li class="li" id=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__IDF0A819BB6AEA42C192B95065BF20A1B7_li">
+<a name=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__IDF0A819BB6AEA42C192B95065BF20A1B7_li"
+id=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__IDF0A819BB6AEA42C192B95065BF20A1B7_li">
+</a> Choose <span class="ph menucascade"><span class=
+"ph uicontrol">Stat</span> &gt; <span class="ph uicontrol">Control
+Charts</span> &gt; <span class="ph uicontrol">Variables Charts for
+Subgroups</span> &gt; <span class=
+"ph uicontrol">Xbar-S</span></span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Enter your data</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">You should have a single column of measurements and
+either a column containing the subgroup sizes (if the size varies)
+or an integer (if the size is constant). Entering more than one
+column in <span class="ph uicontrol">Variable</span> produces as
+many Xbar-S charts, though they will all use the same <span class=
+"ph uicontrol">Subgroups</span> value.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__IDFCD6E974BB1B4065B7D48C74F9E94939_li">
+<a name=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__IDFCD6E974BB1B4065B7D48C74F9E94939_li"
+id=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__IDFCD6E974BB1B4065B7D48C74F9E94939_li">
+</a> Choose <span class="ph uicontrol">All observations for a chart
+are in one column</span>, and then enter <kbd class=
+"ph userinput">Weight</kbd>.</li>
+
+<li class="li" id=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__ID1F4698D466EE4D9991C6B626B31AFFF5_li">
+<a name=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__ID1F4698D466EE4D9991C6B626B31AFFF5_li"
+id=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__ID1F4698D466EE4D9991C6B626B31AFFF5_li">
+</a> In <span class="ph uicontrol">Subgroup sizes</span>, enter
+<kbd class="ph userinput">10</kbd>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Specify options</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">This chart offers many helpful options. With them, you
+can add useful labels, split the chart into stages, subset the data
+used for your chart, and so on. In this case, you are concerned
+with missing any possible special causes of variation.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__ID8521B2EB565A4B95A6A2F73CA3F9D865_li">
+<a name=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__ID8521B2EB565A4B95A6A2F73CA3F9D865_li"
+id=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__ID8521B2EB565A4B95A6A2F73CA3F9D865_li">
+</a> Click <span class="ph uicontrol">Xbar-S Options</span>, and
+then choose <span class="ph uicontrol">Tests.</span></li>
+
+<li class="li" id=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__ID838E53A2530146788F96BE8BF5FDC548_li">
+<a name=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__ID838E53A2530146788F96BE8BF5FDC548_li"
+id=
+"IDFEAE3D30C5CB477FA18B1DE7E664E57D_thowto__ID838E53A2530146788F96BE8BF5FDC548_li">
+</a> Choose <span class="ph uicontrol">Perform all tests for
+special causes</span>, and then click <span class=
+"ph uicontrol">OK</span> in each dialog box.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="title sectiontitle">Interpreting the output</h2>
+
+<p class="p">Now what? For guidance on interpreting the results of
+this analysis, see <a href=
+"..//qccombin/xsch_000_summary.htm');history.back(1);">StatGuide</a>.</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

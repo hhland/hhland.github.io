@@ -1,0 +1,687 @@
+
+/*
+ | This file is part of the DITA Open Toolkit project hosted on 
+ | Sourceforge.net. See the accompanying license.txt file for 
+ | applicable licenses.
+*/
+
+/*
+ | (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved.
+ */
+ 
+ 
+/* Formatting for Beta watermark */
+/* body {
+    background: url(beta.gif);
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+*/
+
+
+div#navbar {
+    height: 30px;
+    width: 100%;
+    border-top: solid #c0c0c0 1px;
+    border-bottom: solid #c0c0c0 1px;
+    background-image: url('gradient_main.gif');
+
+}
+div#navbar ul {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Segoe UI", Helvetica, sans-serif;
+    font-size: small;
+    line-height: 30px;
+    white-space: nowrap;
+}
+div#navbar li {
+    list-style-type: none;
+    display: inline;
+    color: #000080;
+}
+
+div#navbar li a {
+    text-decoration: none;
+    padding: 7px 5px;
+    font-weight: bold;
+    border-right:1px solid #c0c0c0;
+
+}
+
+
+
+
+div#navbar li a:link {
+    font-weight: bold;
+    color: #000080;
+    border-right:1px solid #c0c0c0;
+    
+}
+div#navbar li a:visited {
+    font-weight: bold;
+    color: #000080;
+    border-right:1px solid #c0c0c0; 
+}
+div#navbar li a:hover {
+    font-weight: bold;
+    border-right:1px solid #c0c0c0; 
+    background-color: #CAE1FF;
+}
+
+
+
+.tdatainfo td h2 {
+	color: black;
+	font-family: 'Segoe UI', Arial;
+font-weight: bold;
+	font-size: 8pt;
+	background-image: url('');
+	border-bottom: solid 2px #c0c0c0;
+	padding: 0.00pt;
+	margin-left: 4.00pt;
+}
+
+
+
+li.sectiontitle  {
+	margin-bottom: 0.00pt;
+	text-align: right;
+	font-family: 'Segoe UI', Arial;
+font-weight: bold;
+	font-size: 10pt;
+	padding: 10pt;
+	color: #000080;
+	margin-top: 3pt;
+}
+
+ 
+
+.unresolved { background-color: skyblue; }
+.noTemplate { background-color: yellow; }
+
+.base { background-color: #ffffff; }
+
+/* Add space for top level topics */
+.nested0 { margin-top : 1em;}
+
+/* div with class=p is used for paragraphs that contain blocks, to keep the XHTML valid */
+.p {
+	margin-top: 2.00pt;
+	margin-bottom: 0.00pt;
+	text-align: left;
+	font-family: 'Segoe UI', Arial;
+	font-size: 8pt;
+	color: #000000;
+	padding-left: 4.00pt;
+	margin-bottom: 2.00pt;
+	padding-right: 3px;
+	
+}
+
+
+p.postfig {
+clear: left;
+}
+
+
+.subtitle { font-weight: bold; margin-top: 4pt; padding: 4pt;}
+
+
+p {
+	margin-top: 2.00pt;
+	margin-bottom: 0.00pt;
+	text-align: left;
+	font-family: 'Segoe UI', Arial;
+	font-size: 8pt;
+	color: #000000;
+	padding-left: 4.00pt;
+	margin-bottom: 2.00pt;
+	padding-right: 3px;
+}
+
+td
+{
+	margin-top: 0.00pt;
+	margin-bottom: 0.00pt;
+	font-family: 'Segoe UI', Arial;
+	font-size: 8pt;
+	color: #000000;
+	padding: 2pt;
+}
+
+th
+{
+	margin-top: 4.00pt;
+	margin-bottom: 0.00pt;
+	font-family: 'Segoe UI', Arial;
+font-weight: bold;
+	font-size: 8pt;
+	color: #000000;
+	padding: 2pt;
+}
+
+.show {display: block;}
+.noshow {display: none;}
+
+/* tutorials */
+
+.plus {
+	margin-left: 6px;
+	padding-left: 12px;
+	background-image: url(../css/plus.gif);
+	background-repeat: no-repeat;
+}
+.minus {	
+	margin-left: 6px;
+	padding-left: 12px;
+	background-image: url(../css/minus.gif);
+	background-repeat: no-repeat;
+}
+
+.hdshow {
+	display: block;
+	}
+.hdnoshow {
+	display: none;
+	}
+	
+div.phase { 
+	/*border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #c0c0c0; */
+	margin-bottom: 4.00pt; }
+	
+ 
+.phase h2 { 	
+	color: #000080;
+	font-family: 'Segoe UI', Arial;
+font-weight: bold;
+	font-size: 9pt;
+	background-image: url('./gradient_main.gif');
+	padding: 4pt;
+	border-color: #c0c0c0;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	margin-bottom: 4pt;}
+	
+div.use { 
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #c0c0c0;
+	margin-top: 2.00pt;
+	margin-bottom: 4.00pt; }
+	
+
+.use h2 { 
+	color: #000080;
+	font-weight: bold;
+	background-image: url('./gradient_main.gif');
+	padding: 4pt;
+	border-bottom: solid 2px #c0c0c0;
+	margin-top: 0;}
+
+
+	
+.use p { padding-left: 4pt; padding-top: 2pt; padding-bottom: 2pt; padding-right: 2pt; border-bottom: none;}
+
+div.scenario {
+	 margin-top: 2pt;
+	 margin-bottom: 4pt;
+	 border-style: solid;
+	 border-width: 2px 2px 2px 2px;
+	 border-color: #c0c0c0; }
+
+.scenario h2 { 
+	font-size: 9pt;
+	color: #000080;
+	font-weight: bold;
+	background-image: url('./gradient_main.gif');
+	border-bottom: solid 2px #c0c0c0;
+	margin-top: 0;
+	padding: 4.00pt;}
+	
+div.interpret {
+	 border-style: solid;
+	 border-width: 2px 2px 2px 2px;
+	 border-color: #c0c0c0; }
+	
+.interpret h2 { 
+	font-size: 9pt;
+	color: #000080;
+	font-weight: bold;
+ 	background-image: url('./gradient_main.gif');
+	border-bottom: solid 2px #c0c0c0;
+	margin-top: 0;
+	padding: 4.00pt;}
+
+
+table.mtbws { 
+	border-width: 1px;
+ 	border-spacing: 2px;
+ 	border-style: solid;
+ 	border-color: black;
+ 	border-collapse: collapse;
+ 	background-color: white;
+ 	align: right;
+}
+
+table.mtbws td
+{ 
+	border-width: 1px;
+ 	border-spacing: 2px;
+ 	border-style: solid;
+ 	border-color: black;
+
+ 	
+}
+
+table.mtbws th
+{ 
+	border-width: 1px;
+ 	border-spacing: 2px;
+ 	border-style: solid;
+ 	border-color: black;
+ 	background-color: rgb(240,240,240);
+ 	 	
+}
+
+
+
+li table { margin-top: 4.5pt; margin-bottom: 4.5pt; }	
+	
+table p {
+	margin: 0;
+	padding: 4.00pt; }
+
+span.title { 
+	color: #000080;
+	font-weight: bold;
+	margin: 0;
+	padding: 4.00pt;}
+	
+div.section {
+	 margin-top: 2pt;
+	 border-style: solid;
+	 border-width: 2px 2px 2px 2px;
+	 border-color: #c0c0c0; }
+	 
+
+
+.section h2 { 
+	font-size: 9pt;
+	color: #000080;
+	font-weight: bold;
+	background-image: url('./gradient_main.gif');
+	border-bottom: solid 2px #c0c0c0;
+	margin-top: 0;
+	padding: 4.00pt;}
+	
+	
+.section ul
+{
+	margin-top: 0.00pt;
+	margin-bottom: 0.00pt;
+	margin-left:4.00pt;
+	text-align: left;
+	padding-left: 15.00pt;
+	list-style-type: disc;
+}
+
+
+/* figure elements */
+.figtable { display: inline;}
+.figdiv { font-family: 'Segoe UI', Arial; font-size: 8pt; padding-right: 20px}
+.figcap { font-style: normal; font-weight: bold; display: block; padding-left: 4.00pt;}
+.figcapcenter { font-style: normal; font-weight: bold; display: block; margin-left: 0.00pt; margin-bottom: 4.00pt; text-align: center;}
+.figdesc { font-style: normal }
+.fignone img { 
+	float: left;
+	margin-right: 16pt;
+	display: block;} 
+.fignone { 
+	margin-top: 4.00pt;
+	margin-bottom: 4.00pt;
+	display: block;
+	clear: both;}
+
+.fignone p {
+	margin-top: 0;
+	margin-bottom: 4.00pt; }
+
+
+	
+.postfig {
+display: block;
+clear: left;
+}
+
+.left {float: left; padding: 4.00pt;}
+	
+/* this style needs to resolve to the width of the image -- for now this size keeps the list from being hidden */
+.fignone ul { margin: 0px 0px 0px 252px; }
+
+
+
+
+
+/* Use @frame to create frames on figures */
+.figborder { border-style: solid; padding-left : 3px; border-width : 2px; padding-right : 3px; margin-top: 1em; border-color : Silver;}
+.figsides { border-left : 2px solid; padding-left : 3px; border-right : 2px solid; padding-right : 3px; margin-top: 1em; border-color : Silver;}
+.figtop { border-top : 2px solid; margin-top: 1em; border-color : Silver;}
+.figbottom { border-bottom : 2px solid; border-color : Silver;}
+.figtopbot { border-top : 2px solid; border-bottom : 2px solid; margin-top: 1em; border-color : Silver;}
+
+/* Most link groups are created with <div>. Ensure they have space before and after. */
+.ullinks { list-style-type: none }
+.ulchildlink { margin-top: 1em; margin-bottom: 1em }
+.olchildlink { margin-top: 1em; margin-bottom: 1em }
+.linklist { 
+	margin-top: 0em;
+	font-family: 'Segoe UI', Arial;
+	font-size: 8pt;
+}
+.linklist a
+{
+	padding-left: 1em;
+	background-image: url(../image/nav.gif);
+	background-repeat: no-repeat;
+	color: #000000;
+	text-decoration: none;
+}
+
+.linklistwithchild { margin-left: 1.5em; margin-bottom: 1em  }
+.sublinklist { margin-left: 1.5em; margin-bottom: 1em  }
+.relconcepts { margin-top: 1em; margin-bottom: 1em }
+.reltasks { margin-top: 1em; margin-bottom: 1em }
+.relref { margin-top: 1em; margin-bottom: 1em }
+.relinfo { margin-top: 1em; margin-bottom: 1em }
+.breadcrumb { font-size : smaller; margin-bottom: 1em }
+.prereq { margin-left : 20px;}
+.userinput { font-size: 9pt; font-style: italic}
+.userinput-alt {font-size: 8pt; font-style: normal; font-family: 'Segoe UI', Arial;}
+table table .userinput { font-style: normal; font-family: 'Segoe UI', Arial;}
+
+/* Set heading sizes, getting smaller for deeper nesting */
+.topictitle1 {
+	margin-top: 0.00pt;
+	margin-bottom: 0.00pt;
+	padding-top: 6pt;
+	padding-bottom: 3pt;
+	padding-left: 0pt;
+	text-align: left;
+	font-family: 'Segoe UI', Arial;
+font-weight: bold;
+	font-size: 11pt;
+	color: #000000;
+	
+}
+.topictitle2 { margin-top: 1pc; margin-bottom: .45em; font-size: 1.17em; }
+.topictitle3 { margin-top: 1pc; margin-bottom: .17em; font-size: 1.17em; font-weight: bold; }
+.topictitle4 { margin-top: .83em; font-size: 1.17em; font-weight: bold; }
+.topictitle5 { font-size: 1.17em; font-weight: bold; }
+.topictitle6 { font-size: 1.17em; font-style: italic; }
+
+
+.sectiontitle {
+	margin-bottom: 0.00pt;
+	text-align: left;
+	font-family: 'Segoe UI', Arial;
+font-weight: bold;
+	font-size: 9pt;
+	color: #000000;
+	
+	margin-top: 3pt;
+}
+
+
+.section { margin-top: 0em; margin-bottom: 1em }
+.example { margin-top: 1em; margin-bottom: 1em }
+
+/* All note formats have the same default presentation */
+
+.note { 
+	margin-top: 6.00pt;
+	margin-bottom: 0.00pt;
+	text-align: left;
+	font-family: 'Segoe UI', Arial;
+	font-size: 8pt;
+	color: #000000;
+	margin-left: 0pt;
+}
+.notetitle {
+	font-weight: bold;
+	margin-right: 6.00pt;
+}
+.notelisttitle { font-weight: bold }
+.tip {margin-top: 6.00pt; margin-bottom: 0.00pt; text-align: left; font-size: 8pt; color: #000000; margin-left: 0pt;}
+.tiptitle {font-weight: bold; margin-right: 6.00pt;}
+.fastpath {margin-top: 6.00pt; margin-bottom: 0.00pt;  text-align: left; font-size: 8pt; color: #000000; margin-left: 0pt;}
+.fastpathtitle {font-weight: bold; margin-right: 6.00pt;}
+.important {margin-top: 6.00pt; margin-bottom: 0.00pt; text-align: left; font-size: 8pt; color: #000000; margin-left: 0pt;}
+.importanttitle {font-weight: bold;  margin-right: 6.00pt;}
+.remember {margin-top: 6.00pt; margin-bottom: 0.00pt; text-align: left; font-size: 8pt; color: #000000; margin-left: 0pt;}
+.remembertitle {font-weight: bold;  margin-right: 6.00pt;}
+.restriction {margin-top: 6.00pt; margin-bottom: 0.00pt; text-align: left; font-size: 8pt; color: #000000; margin-left: 0pt;}
+.restrictiontitle {font-weight: bold;  margin-right: 6.00pt;}
+.attention {margin-top: 6.00pt; margin-bottom: 0.00pt; text-align: left; font-size: 8pt; color: #000000; margin-left: 0pt;}
+.attentiontitle {font-weight: bold;  margin-right: 6.00pt;}
+.dangertitle {margin-top: 6.00pt; font-weight: bold; margin-right: 6.00pt;}
+.danger {margin-top: 6.00pt; margin-bottom: 0.00pt;  text-align: left; font-size: 8pt; color: #000000; margin-left: 0pt;}
+.caution   {margin-top: 6.00pt; margin-bottom: 0.00pt; text-align: left; font-size: 8pt; color: #000000; margin-left: 0pt; font-weight: normal; }
+.cautiontitle {margin-top: 6.00pt; font-weight: bold;  margin-right: 6.00pt;}
+
+
+ol
+{
+	margin-top: 4.00pt;
+	margin-left: 3em;
+	margin-bottom: 4.00pt;
+	text-align: left;
+	list-style-type: decimal;
+}
+
+ol li
+{
+	font-family: 'Segoe UI', Arial;
+	font-size: 8pt;
+	margin-top: 2.00pt;
+	margin-bottom: 0.00pt;
+}
+
+div ul
+{
+	margin-top: 0.00pt;
+	margin-bottom: 0.00pt;
+	margin-left:1.4em;
+	text-align: left;
+	list-style-type: disc;
+}
+
+span ul {
+	margin-top: 0.00pt;
+	margin-bottom: 0.00pt;
+	margin-left:1.0em;
+	text-align: left;
+	list-style-type: disc;
+}
+
+li {
+	font-family: 'Segoe UI', Arial;
+	font-size: 8pt;
+	margin-top: 2pt;
+	margin-bottom: 0.00pt;
+}
+
+/* use for continuous numbered in thowto topics */
+/*.phase ol { 
+	text-align: left;
+	list-style-type: none;
+	margin:0;
+	padding: 0 3em;}
+*/
+
+/* Simple lists do not get a bullet */
+ul.simple {margin-top: 0.00pt;
+	margin-bottom: 0.00pt;
+	margin-left: 1em;
+	list-style-image: url(../image/blankbullet.gif);
+	list-style-type: none }
+
+
+/* Used on the first column of a table, when rowheader="firstcol" is used */
+.firstcol { font-weight : bold;}
+
+/* Various basic phrase styles */
+.bold { font-weight: bold; }
+.boldItalic { font-weight: bold; font-style: italic; }
+.italic { font-style: italic; }
+.underlined { text-decoration: underline; }
+.overlined { text-decoration: overline; }
+.uicontrol { font-weight: bold; color: #0000ff;}
+.uicontrol-alt { font-weight: normal; }
+table table .uicontrol { font-weight: normal; color: #000000;}
+table table thead .uicontrol { font-weight: bold; color: #000000;}
+.menucascade { color: black}
+.menucascade .uicontrol { color: black}
+.parmname { font-weight: bold; }
+.kwd { font-weight: bold; }
+.defkwd { font-weight: bold; text-decoration: underline; }
+.var { font-style : italic;}
+.varname { font-style : normal; font-weight: bold; color: #004488; }
+.shortcut { text-decoration: underline; }
+
+/* Default of bold for definition list terms */
+.dlterm { font-weight: bold; }
+
+.term
+{
+	font-family: 'Segoe UI', Arial;
+font-weight: bold;
+	font-size: 8pt;
+	font-style: normal;
+}
+
+/* Use CSS to expand lists with @compact="no" */
+.dltermexpand { font-weight: bold; margin-top: 1em; }
+*[compact="yes"]>li { margin-top: 0em;
+	font-family: 'Segoe UI', Arial;
+	font-size: 8pt;
+	margin-bottom: 2.00pt;
+}
+*[compact="no"]>li { margin-top: .53em;
+	font-family: 'Segoe UI', Arial;
+	font-size: 8pt;
+	margin-bottom: 2.00pt;
+}	
+.liexpand { margin-top: 1em; margin-bottom: 1em }
+.sliexpand { margin-top: 1em; margin-bottom: 1em }
+.dlexpand { margin-top: 1em; margin-bottom: 1em }
+.ddexpand { margin-top: 1em; margin-bottom: 1em }
+.stepexpand { margin-top: 1em; margin-bottom: 1em }
+.substepexpand { margin-top: 1em; margin-bottom: 1em }
+
+/* Align images based on @align on topic/image */
+div.imageleft { text-align: left }
+div.imagecenter { text-align: center }
+div.imageright { text-align: right }
+div.imagejustify { text-align: justify }
+
+/* The cell border can be turned on with
+   {border-right:solid}
+   This value creates a very thick border in Firefox (does not match other tables)
+
+   Firefox works with 
+   {border-right:solid 1pt}
+   but this causes a barely visible line in IE */
+
+.steps {
+	/*background-image: url('vertical.gif');*/
+	background-color: rgb(240,240,240); 
+}
+
+td.phase {
+	valign: center;}
+	
+.tablenoborder { border: none; } 
+.tableborder { border: solid 1px #000000; } 
+.tabletopborder { border: none; border-top: solid 1px #000000; } 
+.tablebottomborder { border: none; border-bottom: solid 1px #000000; } 
+.tabletopbotborder { border: none; border-top: solid 1px #000000; border-bottom: solid 1px #000000;} 
+.tablesidesborder { border: none; border-left: solid 1px #000000; border-right: solid 1px #000000;} 
+
+.cellrowborder { border-left: hidden; border-top:hidden; border-right:solid 1px; border-bottom:solid 1px; border-color: #000000; }
+.row-nocellborder { border-left:hidden; border-right:hidden; border-top:hidden; border-right: hidden; border-bottom:solid 1px; border-color: #000000;}
+.cell-norowborder { border-top:hidden; border-bottom:hidden; border-left:hidden; border-bottom: hidden; border-right:solid 1px; border-color: #000000;}
+
+/* .nocellrowborder is set to fixed table layout to align steps columns across phases - if we move to making these a single table, then we won't need to do this*/
+.nocellnorowborder { border:hidden; border-right: hidden;border-bottom: hidden; border-color: #000000; }
+
+.linenum{ background-color: rgb(240,240,240);  border-left:solid 1px; border-top:solid 1px; border-right:solid 1px; border-bottom:solid 1px; border-color: #000000; }
+pre.screen { padding: 5px 5px 5px 5px; border: outset; background-color: #CCCCCC; margin-top: 2px; margin-bottom : 2px; white-space: pre}
+
+.caption
+{
+	margin-bottom: 0.00pt;
+	text-align: left;
+	font-family: 'Segoe UI', Arial;
+font-weight: bold;
+	font-size: 8pt;
+	color: #008888;
+	
+}
+
+.titlenav
+{
+	font-weight: normal;
+	margin-top: -2.2em;
+	text-align: right;
+	font-family: 'Segoe UI', Arial;
+	font-size: 8pt;
+}
+
+pre
+{
+	margin-top: 0.00pt;
+	margin-bottom: 0.00pt;
+	text-align: left;
+	font-family: "Courier New";
+	font-size: 8pt;
+	color: #000000;
+}
+
+.inlineequation
+{
+	margin-top: 0.00pt;
+	margin-bottom: 0.00pt;
+	text-align: left;
+	font-family: 'Segoe UI', Arial;
+	font-size: 8pt;
+	color: #00ff00;
+}
+
+inlineequation
+{
+	margin-top: 0.00pt;
+	margin-bottom: 0.00pt;
+	text-align: left;
+	font-family: 'Segoe UI', Arial;
+	font-size: 8pt;
+	color: #00ff00;
+}
+
+
+.section div.subsection h2 {
+	font-weight: bold; 
+	margin-top: 4pt; 
+	margin-bottom: -4pt; 
+	padding-left: 4pt;
+	background-image: url('');
+	border-bottom: 0px;
+	color: black;
+	font-size: 9pt;
+}
+
+.filepath {
+	text-transform: uppercase;
+}

@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="thowto" name="DC.Type" />
+<meta name="DC.Title" content="在 Minitab 中创建混料设计" />
+<meta name="abstract" content="有关如何使用 Minitab 的说明" />
+<meta name="description" content="有关如何使用 Minitab 的说明" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Creating_mixture_designs.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Creating_mixture_designs_data.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>在 Minitab 中创建混料设计</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "doe/creating_mixture_designs_in_minitab.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fdoe%2Fcreating_mixture_designs_in_minitab.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fdoe%2Fcreating_mixture_designs_in_minitab.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../doe/creating_mixture_designs.html">用途</a>
+</li>
+
+<li><a href="../doe/creating_mixture_designs_data.html">数据</a>
+</li>
+
+<li><a>操作步骤</a>
+</li>
+
+<li class="sectiontitle">在 Minitab 中创建混料设计</li>
+</ul>
+</div>
+
+<div>
+<p class="noshow">有关如何使用 Minitab 的说明 &nbsp;</p>
+
+<div class="scenario">
+<h2 class="sectiontitle">情形</h2>
+
+<p>一家食品实验室的研究人员正在尝试改进酒味乳酪的烹饪方法。 他们要研究混料混合和火锅的操作温度如何影响口味。</p>
+
+<p>混料由三种成分组成： 两种类型的瑞士奶酪（Emmenthaler 和 Gruyere）和白葡萄酒。</p>
+</div>
+
+<div class="phase">
+<h2>选择适当的设计和分量数</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>研究人员想要进行一个具有 3 个分量（两种奶酪和酒）和一个过程变量（操作温度）的极端顶点设计。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID3E92078CB81E46C18E7F494B151362C0_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID3E92078CB81E46C18E7F494B151362C0_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID3E92078CB81E46C18E7F494B151362C0_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">DOE</span> &gt; <span class=
+"uicontrol">混料</span> &gt; <span class=
+"uicontrol">创建混料设计</span></span>。</li>
+
+<li id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID5AFD67E8F1D24E7DA10A50C43FA17AD2_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID5AFD67E8F1D24E7DA10A50C43FA17AD2_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID5AFD67E8F1D24E7DA10A50C43FA17AD2_li">
+</a> 在<span class="uicontrol">设计类型</span>下，选择<span class=
+"uicontrol">极端顶点</span>。</li>
+
+<li id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDA5322CE29906428AA135AC031B3E705F_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDA5322CE29906428AA135AC031B3E705F_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDA5322CE29906428AA135AC031B3E705F_li">
+</a> 从<span class="uicontrol">分量数</span>中，选择 <span class=
+"uicontrol">3</span>。</li>
+
+<li id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID3DFDACAFD53448929E6606BB7D655516_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID3DFDACAFD53448929E6606BB7D655516_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID3DFDACAFD53448929E6606BB7D655516_li">
+</a> 单击<span class="uicontrol">设计</span>。 单击<span class=
+"uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>命名分量并定义上下限</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>为分量指定上下限。 在本示例中，已根据过去的经验确定了整个火锅配方中每种成分的限制。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID702D01804B5E48C1989607C66EB4B312_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID702D01804B5E48C1989607C66EB4B312_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID702D01804B5E48C1989607C66EB4B312_li">
+</a> 单击<span class="uicontrol">分量</span>并按照以下方式填充表格： <a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID23BAA50D75F34081AFECC13E59CED2ED_table"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID23BAA50D75F34081AFECC13E59CED2ED_table">
+</a>
+<table cellspacing="0px" cellpadding="3px" id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID23BAA50D75F34081AFECC13E59CED2ED_table"
+class="tableborder">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" width="NaN%" id="N1013D">
+<span class="uicontrol">分量</span>
+</th>
+<th class="cellrowborder" valign="top" width="NaN%" id="N1014A">
+<span class="uicontrol">名称</span>
+</th>
+<th class="cellrowborder" valign="top" width="NaN%" id="N10157">
+<span class="uicontrol">下限</span>
+</th>
+<th class="row-nocellborder" valign="top" width="NaN%" id="N10164">
+<span class="uicontrol">上限</span>
+</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N1013D"><strong>A</strong>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N1014A"><kbd class="userinput-alt">Emmenthaler 奶酪</kbd>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N10157"><kbd class="userinput-alt">0.2</kbd>
+</td>
+<td class="row-nocellborder" valign="top" width="NaN%" headers=
+"N10164"><kbd class="userinput-alt">0.6</kbd>
+</td>
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N1013D"><strong>B</strong>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N1014A"><kbd class="userinput-alt">Gruyere 奶酪</kbd>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N10157"><kbd class="userinput-alt">0</kbd>
+</td>
+<td class="row-nocellborder" valign="top" width="NaN%" headers=
+"N10164"><kbd class="userinput-alt">0.3</kbd>
+</td>
+</tr>
+
+<tr>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N1013D"><strong>C</strong>
+</td>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N1014A"><kbd class="userinput-alt">酒</kbd>
+</td>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N10157"><kbd class="userinput-alt">0.4</kbd>
+</td>
+<td class="nocellnorowborder" valign="top" width="NaN%" headers=
+"N10164"><kbd class="userinput-alt">0.6</kbd>
+</td>
+</tr>
+</tbody>
+</table></li>
+
+<li id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID401BB2FCA983465ABDF47B6E5DD87C33_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID401BB2FCA983465ABDF47B6E5DD87C33_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__ID401BB2FCA983465ABDF47B6E5DD87C33_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>定义过程变量</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>您最多可以定义 7 个过程变量，尽管本示例中仅使用了一个过程变量： 操作温度。
+您必须指定过程变量的名称、数据类型以及低设置和高设置。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDB7A01897A70E4770A2D277B46474D43A_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDB7A01897A70E4770A2D277B46474D43A_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDB7A01897A70E4770A2D277B46474D43A_li">
+</a> 单击<span class="uicontrol">过程变量</span>。</li>
+
+<li id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDFD9EEEF7B63844399981F57C527A52ED_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDFD9EEEF7B63844399981F57C527A52ED_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDFD9EEEF7B63844399981F57C527A52ED_li">
+</a> 在<span class="uicontrol">过程变量</span>下，选择<span class=
+"uicontrol">数字</span>并按照以下方式填充表格： <a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDD3A0074F91A9483CB1F972296E7BBA24_table"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDD3A0074F91A9483CB1F972296E7BBA24_table">
+</a>
+<table cellspacing="0px" cellpadding="3px" id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDD3A0074F91A9483CB1F972296E7BBA24_table"
+class="tableborder">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" width="NaN%" id="N102B8">
+<span class="uicontrol">过程变量</span>
+</th>
+<th class="cellrowborder" valign="top" width="NaN%" id="N102C5">
+<span class="uicontrol">名称</span>
+</th>
+<th class="cellrowborder" valign="top" width="NaN%" id="N102D2">
+<span class="uicontrol">类型</span>
+</th>
+<th class="cellrowborder" valign="top" width="NaN%" id="N102DF">
+<span class="uicontrol">低</span>
+</th>
+<th class="row-nocellborder" valign="top" width="NaN%" id="N102EC">
+<span class="uicontrol">高</span>
+</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N102B8"><span class="uicontrol">X1</span>
+</td>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N102C5"><kbd class="userinput-alt">温度</kbd>
+</td>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N102D2"><span class="uicontrol">数字</span>
+</td>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N102DF"><kbd class="userinput-alt">80</kbd>
+</td>
+<td class="nocellnorowborder" valign="top" width="NaN%" headers=
+"N102EC"><kbd class="userinput-alt">90</kbd>
+</td>
+</tr>
+</tbody>
+</table></li>
+
+<li id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDE4881E7A38EB4D3E9367735A78AA5FE5_li">
+<a name=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDE4881E7A38EB4D3E9367735A78AA5FE5_li"
+id=
+"IDDA5985F884424DA08B9C2CB7B04F6BE7_thowto__IDE4881E7A38EB4D3E9367735A78AA5FE5_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="sectiontitle">解释输出</h2>
+
+<p>现在应该做些什么？ 要查看有关如何分析此设计的教程，请参见<a href=
+"analyze_mixture_designs.html">分析混料设计</a>。
+有关与此类型的设计关联的图形的教程，请参见<a href="mixture_plot_uses.html">混料 DOE
+的图形</a>。</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

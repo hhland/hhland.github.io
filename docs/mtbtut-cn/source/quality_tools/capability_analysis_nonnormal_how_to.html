@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="thowto" name="DC.Type" />
+<meta name="DC.Title" content="在 Minitab 中执行非正态能力分析" />
+<meta name="abstract" content="如何使用 Minitab 执行非正态能力分析的说明" />
+<meta name="description" content="如何使用 Minitab 执行非正态能力分析的说明" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta content="能力分析" name="DC.subject" />
+<meta content="能力分析" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content=
+"../Quality_Tools/Capability_analysis_nonnormal_benefits.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../Quality_Tools/Capability_analysis_nonnormal_data.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="IDD173212974954E03A2B0953228B91545_thowto" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>在 Minitab 中执行非正态能力分析</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "quality_tools/capability_analysis_nonnormal_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fquality_tools%2Fcapability_analysis_nonnormal_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fquality_tools%2Fcapability_analysis_nonnormal_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href=
+"../quality_tools/capability_analysis_nonnormal_benefits.html">用途</a>
+</li>
+
+<li><a href=
+"../quality_tools/capability_analysis_nonnormal_data.html">数据</a>
+</li>
+
+<li><a>操作步骤</a>
+</li>
+
+<li class="sectiontitle">在 Minitab 中执行非正态能力分析</li>
+</ul>
+</div>
+
+<div>
+<p class="noshow">如何使用 Minitab 执行非正态能力分析的说明 &nbsp;</p>
+
+<div class="scenario">
+<h2 class="sectiontitle">方案</h2>
+
+<p>一位电气工程师希望评估生产过程中电子设备的质量。 收集了 150 台设备的使用寿命数据。 现已知数据遵循 Weibull 分布。
+在分析中，规格下限 (LSL) 是 1000，目标值是 2410，没有输入规格上限 (USL)。</p>
+</div>
+
+<div class="phase">
+<h2>选择适当的分析方式</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>因为此过程数据遵循 Weibull（非正态）分布，所以，非正态能力分析适用。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDD173212974954E03A2B0953228B91545_thowto__ID5B0D96EC9BA740FEB8E07924820ED462_li">
+<a name=
+"IDD173212974954E03A2B0953228B91545_thowto__ID5B0D96EC9BA740FEB8E07924820ED462_li"
+id=
+"IDD173212974954E03A2B0953228B91545_thowto__ID5B0D96EC9BA740FEB8E07924820ED462_li">
+</a> 打开工作表“<span class="filepath">电子设备.MTW</span>”。</li>
+
+<li id=
+"IDD173212974954E03A2B0953228B91545_thowto__IDB52A3978E2C2461697D02C0AC7C5E122_li">
+<a name=
+"IDD173212974954E03A2B0953228B91545_thowto__IDB52A3978E2C2461697D02C0AC7C5E122_li"
+id=
+"IDD173212974954E03A2B0953228B91545_thowto__IDB52A3978E2C2461697D02C0AC7C5E122_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">质量工具</span> &gt; <span class=
+"uicontrol">能力分析</span> &gt; <span class=
+"uicontrol">非正态</span></span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>输入数据</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>此工作表包含一个测量值列。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDD173212974954E03A2B0953228B91545_thowto__IDE53CB3301B884E73B7A2FCE1442BD245_li">
+<a name=
+"IDD173212974954E03A2B0953228B91545_thowto__IDE53CB3301B884E73B7A2FCE1442BD245_li"
+id=
+"IDD173212974954E03A2B0953228B91545_thowto__IDE53CB3301B884E73B7A2FCE1442BD245_li">
+</a> 在<span class="uicontrol">单一列</span>中，输入<kbd class=
+"userinput">小时</kbd>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>选择数据的拟合分布</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>指定与您数据相吻合的非正态分布。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDD173212974954E03A2B0953228B91545_thowto__ID20F91BEAAF464B7B8ACC8CC773AC1679_li">
+<a name=
+"IDD173212974954E03A2B0953228B91545_thowto__ID20F91BEAAF464B7B8ACC8CC773AC1679_li"
+id=
+"IDD173212974954E03A2B0953228B91545_thowto__ID20F91BEAAF464B7B8ACC8CC773AC1679_li">
+</a> 在<span class="uicontrol">拟合分布</span>下，选择 <span class=
+"uicontrol">Weibull</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>设置规格</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>必须至少输入一个规格限。 电池寿命测量值的规格下限为 1000 小时。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDD173212974954E03A2B0953228B91545_thowto__ID932B8F2CA598435EA8D07A8BAB160CFF_li">
+<a name=
+"IDD173212974954E03A2B0953228B91545_thowto__ID932B8F2CA598435EA8D07A8BAB160CFF_li"
+id=
+"IDD173212974954E03A2B0953228B91545_thowto__ID932B8F2CA598435EA8D07A8BAB160CFF_li">
+</a> 在<span class="uicontrol">规格下限</span>中，键入 <kbd class=
+"userinput">1000</kbd>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>指定目标和其他选项</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>本例使用在<span class="uicontrol">选项</span>子对话框中指定的目标值。
+您还可以在此对话框中更改过程公差、请求不同的过程能力指数或者为结果添加标题。 使用<span class=
+"uicontrol">估计</span>子对话框可以更改分布参数的估计方法。 使用<span class=
+"uicontrol">存储</span>子对话框来存储过程参数。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDD173212974954E03A2B0953228B91545_thowto__ID7414322EBF6140A7BCF8C8266D5BF2F0_li">
+<a name=
+"IDD173212974954E03A2B0953228B91545_thowto__ID7414322EBF6140A7BCF8C8266D5BF2F0_li"
+id=
+"IDD173212974954E03A2B0953228B91545_thowto__ID7414322EBF6140A7BCF8C8266D5BF2F0_li">
+</a> 单击<span class="uicontrol">选项</span>。 在<span class=
+"uicontrol">目标</span>中，键入 <kbd class="userinput">2410</kbd>。</li>
+
+<li id=
+"IDD173212974954E03A2B0953228B91545_thowto__IDBACBFF6B84614A68B81F7AC97C57C856_li">
+<a name=
+"IDD173212974954E03A2B0953228B91545_thowto__IDBACBFF6B84614A68B81F7AC97C57C856_li"
+id=
+"IDD173212974954E03A2B0953228B91545_thowto__IDBACBFF6B84614A68B81F7AC97C57C856_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="sectiontitle">解释输出</h2>
+
+<p>现在应该做些什么？ 有关如何解释此分析结果的指导信息，请参见 <a href=
+"..//qcprcapa/capn_000_summary.htm');history.back(1);">StatGuide</a>。</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

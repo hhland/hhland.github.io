@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="thowto" name="DC.Type" />
+<meta name="DC.Title" content="在 Minitab 中创建 P 控制图" />
+<meta name="abstract" content="如何使用 Minitab 创建 P 控制图的说明" />
+<meta name="description" content="如何使用 Minitab 创建 P 控制图的说明" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta content="P 控制图" name="DC.subject" />
+<meta content="P 控制图" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content=
+"../Control_Charts/P_chart_benefits.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../Control_Charts/P_chart_data.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="IDFFE82DA53EA845A490BB58D98CA245EF_thowto" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>在 Minitab 中创建 P 控制图</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "control_charts/p_chart_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fcontrol_charts%2Fp_chart_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fcontrol_charts%2Fp_chart_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../control_charts/p_chart_benefits.html">用途</a>
+</li>
+
+<li><a href="../control_charts/p_chart_data.html">数据</a>
+</li>
+
+<li><a>操作步骤</a>
+</li>
+
+<li class="sectiontitle">在 Minitab 中创建 P 控制图</li>
+</ul>
+</div>
+
+<div>
+<p class="noshow">如何使用 Minitab 创建 P 控制图的说明 &nbsp;</p>
+
+<div class="scenario">
+<h2 class="sectiontitle">方案</h2>
+
+<p>一家电话服务中心想要评估其呼叫应答系统是否受控制。 他们记录了 21 天内的来电总数和未接来电数。
+每个未接来电都是一个缺陷。</p>
+</div>
+
+<div class="phase">
+<h2>选择适当的分析方式</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>因为对缺陷品进行监视，您既可以使用 P 控制图，也可以使用 NP 控制图；但是，因为子组大小（每天的呼入电话数）不同，所以，P
+控制图更适用。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID08472E8F1D9240B09BD7C4E6C7AFE93F_li">
+<a name=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID08472E8F1D9240B09BD7C4E6C7AFE93F_li"
+id=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID08472E8F1D9240B09BD7C4E6C7AFE93F_li">
+</a> 打开工作表“<span class="filepath">电话.MTW</span>”。</li>
+
+<li id=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID22D46F184C6340668F78EA51EFDBFDDA_li">
+<a name=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID22D46F184C6340668F78EA51EFDBFDDA_li"
+id=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID22D46F184C6340668F78EA51EFDBFDDA_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">控制图</span> &gt; <span class=
+"uicontrol">属性控制图</span> &gt; <span class=
+"uicontrol">P</span></span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>输入数据</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>您有一个包含缺陷数据的列和一个包含子组大小的列。 如果子组大小是常量，您可以输入这个值而不是一个列。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID50DEA5AE213B4C0C924B65612B929CB2_li">
+<a name=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID50DEA5AE213B4C0C924B65612B929CB2_li"
+id=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID50DEA5AE213B4C0C924B65612B929CB2_li">
+</a> 在<span class="uicontrol">变量</span>中，输入<kbd class=
+"userinput">未接来电</kbd>。</li>
+
+<li id=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__IDD8898286531C43558762FE15CCC39D89_li">
+<a name=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__IDD8898286531C43558762FE15CCC39D89_li"
+id=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__IDD8898286531C43558762FE15CCC39D89_li">
+</a> 在<span class="uicontrol">子组大小</span>中，输入 <kbd class=
+"userinput">子组</kbd>。</li>
+
+<li id=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID39FB7D23903845BE8ECE2FD68F177C72_li">
+<a name=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID39FB7D23903845BE8ECE2FD68F177C72_li"
+id=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID39FB7D23903845BE8ECE2FD68F177C72_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>指定选项</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>此控制图可提供多个有用的选项。 您可以用它们来添加标签、将控制图分为几个阶段、为控制图使用的数据创建子集等。
+在本例中，您所关心的是不要丢失任何可能的变异特殊原因。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID75630F9D89B44DC9AEF9431D6856DE20_li">
+<a name=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID75630F9D89B44DC9AEF9431D6856DE20_li"
+id=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID75630F9D89B44DC9AEF9431D6856DE20_li">
+</a> 单击 <span class="uicontrol">P 控制图选项</span>，然后选择<span class=
+"uicontrol">检验</span>。</li>
+
+<li id=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID3A9D276CA3C84A8B8233BFE4D7A241B5_li">
+<a name=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID3A9D276CA3C84A8B8233BFE4D7A241B5_li"
+id=
+"IDFFE82DA53EA845A490BB58D98CA245EF_thowto__ID3A9D276CA3C84A8B8233BFE4D7A241B5_li">
+</a> 选择<span class=
+"uicontrol">执行所有的特殊原因检验</span>，然后在每个对话框中单击<span class=
+"uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="sectiontitle">解释输出</h2>
+
+<p>现在应该做些什么？ 有关如何解释此分析结果的指导信息，请参见 <a href=
+"..//qcattrib/pcha_000_summary.htm');history.back(1);">StatGuide</a>。</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

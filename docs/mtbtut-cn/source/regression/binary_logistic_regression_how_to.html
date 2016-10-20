@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="thowto" name="DC.Type" />
+<meta name="DC.Title" content="在 Minitab 中执行二元 Logistic 回归" />
+<meta name="abstract" content="如何使用 Minitab 执行二元 Logistic 回归的说明" />
+<meta name="description" content=
+"如何使用 Minitab 执行二元 Logistic 回归的说明" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta content="二元逻辑" name="DC.subject" />
+<meta content="二元逻辑" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content=
+"../Regression/binary_logistic_regression_benefits.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../Regression/binary_logistic_regression_data.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="IDA91D624F12D7495EAA8467A3EF1B055C_thowto" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>在 Minitab 中执行二元 Logistic 回归</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "regression/binary_logistic_regression_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fregression%2Fbinary_logistic_regression_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fregression%2Fbinary_logistic_regression_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href=
+"../regression/binary_logistic_regression_benefits.html">用途</a>
+</li>
+
+<li><a href=
+"../regression/binary_logistic_regression_data.html">数据</a>
+</li>
+
+<li><a>操作步骤</a>
+</li>
+
+<li class="sectiontitle">在 Minitab 中执行二元 Logistic 回归</li>
+</ul>
+</div>
+
+<div>
+<p class="noshow">如何使用 Minitab 执行二元 Logistic 回归的说明 &nbsp;</p>
+
+<div class="scenario">
+<h2 class="sectiontitle">方案</h2>
+
+<p>一家谷类食品公司正在调查一种名为 Cocoa Crunch 的新产品的电视广告效应。
+广告在某一社区播出一周后，他们在一家当地超市的出口处随机访问了七十一位成年人作为样本。</p>
+
+<div class="p">调查问题是： <a name=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID7E86832F34974A289885BB27711E67F2_ul"
+id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID7E86832F34974A289885BB27711E67F2_ul">
+</a>
+<ul id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID7E86832F34974A289885BB27711E67F2_ul">
+<li id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID2FE55321B71A4300A1B09662E04B31C4_li">
+<a name=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID2FE55321B71A4300A1B09662E04B31C4_li"
+id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID2FE55321B71A4300A1B09662E04B31C4_li">
+</a> 是否购买了 Cocoa Crunch（购买）</li>
+
+<li id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID4961C03AEDA740F9BAD2A28B4EFD18A7_li">
+<a name=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID4961C03AEDA740F9BAD2A28B4EFD18A7_li"
+id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID4961C03AEDA740F9BAD2A28B4EFD18A7_li">
+</a> 家庭收入（以千美元为单位）（收入）</li>
+
+<li id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID41B60ED8F7064C1FA1A8E43C7B5A2D09_li">
+<a name=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID41B60ED8F7064C1FA1A8E43C7B5A2D09_li"
+id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID41B60ED8F7064C1FA1A8E43C7B5A2D09_li">
+</a> 是否有子女（儿童）</li>
+
+<li id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID66FCE4814C364FFB8650942EAD7B55CB_li">
+<a name=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID66FCE4814C364FFB8650942EAD7B55CB_li"
+id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID66FCE4814C364FFB8650942EAD7B55CB_li">
+</a> 是否观看过广告（收看广告）</li>
+</ul></div>
+</div>
+
+<div class="phase">
+<h2>选择适当的分析方式</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>公司希望使用多种预测变量为二元结果建模，因此他们使用二元 Logistic 回归。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID4EFEB38E43A64CDEAF5CC41629D3CAF7_li">
+<a name=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID4EFEB38E43A64CDEAF5CC41629D3CAF7_li"
+id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID4EFEB38E43A64CDEAF5CC41629D3CAF7_li">
+</a> 打开工作表“<span class="filepath">谷类广告.MTW</span>”。</li>
+
+<li id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID7C807DE55723429A93C3B264A9FB3B45_li">
+<a name=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID7C807DE55723429A93C3B264A9FB3B45_li"
+id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID7C807DE55723429A93C3B264A9FB3B45_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">回归</span> &gt; <span class=
+"uicontrol">二元 Logistic 回归</span></span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>输入响应变量</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>公司具有一个二元响应变量的原始数据列。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID8FE20D7736A54D0E96BCDDB5DFAAAEC2_li">
+<a name=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID8FE20D7736A54D0E96BCDDB5DFAAAEC2_li"
+id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID8FE20D7736A54D0E96BCDDB5DFAAAEC2_li">
+</a> 选择<span class="uicontrol">以响应/频率形式的响应</span>。</li>
+
+<li id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID6FFA4E69C46042AFB6CB1007E53FE8F5_li">
+<a name=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID6FFA4E69C46042AFB6CB1007E53FE8F5_li"
+id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID6FFA4E69C46042AFB6CB1007E53FE8F5_li">
+</a> 在<span class="uicontrol">响应</span>中，输入<kbd class=
+"userinput">购买</kbd>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>输入模型项</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>在<span class="uicontrol">模型</span>中输入所有项，并在<span class=
+"uicontrol">因子</span>中输入所有类别变量。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__IDD6EB873F2C20411F9973D7ABDC7F4BD2_li">
+<a name=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__IDD6EB873F2C20411F9973D7ABDC7F4BD2_li"
+id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__IDD6EB873F2C20411F9973D7ABDC7F4BD2_li">
+</a> 在<span class="uicontrol">模型</span>中，输入<kbd class=
+"userinput">收入 儿童 收看广告</kbd>。</li>
+
+<li id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID0FC8258213314C6C80C343836FE35621_li">
+<a name=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID0FC8258213314C6C80C343836FE35621_li"
+id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID0FC8258213314C6C80C343836FE35621_li">
+</a> 在<span class="uicontrol">因子</span>中，输入<kbd class=
+"userinput">儿童 收看广告</kbd>。</li>
+
+<li id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID9B9C44F119F64757840D03F2998E0B75_li">
+<a name=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID9B9C44F119F64757840D03F2998E0B75_li"
+id=
+"IDA91D624F12D7495EAA8467A3EF1B055C_thowto__ID9B9C44F119F64757840D03F2998E0B75_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>指定选项</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>此回归分析无需进一步修改，但您可以选择其他选项。 要创建各种诊断图，请单击<span class=
+"uicontrol">图形</span>。 要更改链接功能或进行其他分析修改，请单击<span class=
+"uicontrol">选项</span>。 要控制结果的显示方式，请单击<span class=
+"uicontrol">结果</span>。 要存储各种统计量，请单击<span class=
+"uicontrol">存储</span>。</p>
+</td>
+<td class="steps">
+<ul class="simple">
+<li>（无需任何操作）</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="sectiontitle">解释输出</h2>
+
+<p>现在应该做些什么？ 有关如何解释此分析结果的指导信息，请参见 <a href=
+"..//stregrsn/blog_000_summary.htm');history.back(1);">StatGuide</a>。</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

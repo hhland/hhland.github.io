@@ -1,0 +1,556 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="thowto" />
+<meta name="DC.Title" content=
+"Performing General Linear Model ANOVA in Minitab" />
+<meta name="abstract" content=
+"Description of how to perform a General Linear Model ANOVA using Minitab" />
+<meta name="description" content=
+"Description of how to perform a General Linear Model ANOVA using Minitab" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.subject" content=
+"Analysis of Variance, ANOVA, General Linear Model" />
+<meta name="keywords" content=
+"Analysis of Variance, ANOVA, General Linear Model" />
+<meta name="DC.Relation" scheme="URI" content=
+"../ANOVA/GLM_benefits.html" />
+<meta name="DC.Relation" scheme="URI" content=
+"../ANOVA/GLM_data.html" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content=
+"ID4B990429482B46A1898772C0A82DB348_thowto" />
+<title>Performing General Linear Model ANOVA in Minitab</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "anova/glm_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fanova%2Fglm_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fanova%2Fglm_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../anova/glm_benefits.html">Uses</a>
+</li>
+
+<li><a href="../anova/glm_data.html">Data</a>
+</li>
+
+<li><a>How To</a>
+</li>
+
+<li class="sectiontitle">Performing General Linear Model ANOVA in
+Minitab</li>
+</ul>
+</div>
+
+<div class="body thowbody">
+<p class="noshow">Description of how to perform a General Linear
+Model ANOVA using Minitab &nbsp;</p>
+
+<div class="scenario">
+<h2 class="title sectiontitle">Scenario</h2>
+
+<div class="p">A sociologist randomly sampled 45 professors who
+taught an evening course at a large, metropolitan university. The
+data collected includes:<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDBAA70988FFD546EA930A10FCE7432DDD_ul"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDBAA70988FFD546EA930A10FCE7432DDD_ul"></a>
+<ul class="ul" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDBAA70988FFD546EA930A10FCE7432DDD_ul">
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID20A723F5AD754576B021E11BA65D2BB3_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID20A723F5AD754576B021E11BA65D2BB3_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID20A723F5AD754576B021E11BA65D2BB3_li">
+</a>Subject: The subject matter of the course: humanities (1),
+social sciences (2), engineering (3), or management (4)</li>
+
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID54309190D4444519B21140BA32B3367E_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID54309190D4444519B21140BA32B3367E_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID54309190D4444519B21140BA32B3367E_li">
+</a>Degree: The highest degree that the professor possesses:
+Bachelor's (1), Master's (2), or Ph.D. (3)</li>
+
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDE8287D38E7E84C71909645EBD41B8D3F_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDE8287D38E7E84C71909645EBD41B8D3F_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDE8287D38E7E84C71909645EBD41B8D3F_li">
+</a>Salary: The amount of payment received for teaching the course
+(in thousands of dollars).</li>
+</ul></div>
+
+<p class="p">The sociologist wants to examine the effects of degree
+and subject on salary.</p>
+</div>
+
+<div class="phase">
+<h2>Choose the appropriate analysis</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">The data are unbalanced and there are two factors, so
+the sociologist uses the GLM procedure to analyze them.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDD7C24E3FC26240629817AA547B6365D5_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDD7C24E3FC26240629817AA547B6365D5_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDD7C24E3FC26240629817AA547B6365D5_li">
+</a>Open the worksheet <span class=
+"ph filepath">PROFESSOR.MTW</span>.</li>
+
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8F0CF8B5F8D84D56B779CB6170F6CFBA_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8F0CF8B5F8D84D56B779CB6170F6CFBA_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8F0CF8B5F8D84D56B779CB6170F6CFBA_li">
+</a>Choose <span class="ph menucascade"><span class=
+"ph uicontrol">Stat</span> &gt; <span class=
+"ph uicontrol">ANOVA</span> &gt; <span class="ph uicontrol">General
+Linear Model</span> &gt; <span class="ph uicontrol">Fit General
+Linear Model</span></span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Enter your response variable</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">Enter a column of continuous measurements for the
+response variable.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID604C6CC0F09241399D6AF9D52C83E04C_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID604C6CC0F09241399D6AF9D52C83E04C_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID604C6CC0F09241399D6AF9D52C83E04C_li">
+</a>In <span class="ph uicontrol">Responses</span>, enter
+<kbd class="ph userinput">Salary</kbd>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Enter the factors and covariates in your model</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">Each factor and covariate represents a column of data
+for each variable.</p>
+
+<p class="p">You must enter all of the terms in your model here,
+even if you need to further specify your model.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8EE8B1CBEA2F4F3697AF2866849FB036_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8EE8B1CBEA2F4F3697AF2866849FB036_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8EE8B1CBEA2F4F3697AF2866849FB036_li">
+</a>In <span class="ph uicontrol">Factors</span>, enter <kbd class=
+"ph userinput">Subject Degree</kbd>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Further specify your model</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">The flexibility of GLM allows you to specify different
+types of terms. For instance, you may include interaction,
+higher-order, and nested terms. To specify these terms, you must
+perform additional actions in different dialog boxes. These terms
+do not correspond to a single column of data. In this example, the
+sociologist includes the interaction term.</p>
+
+<p class="p">If you have covariates, enter them in <span class=
+"ph uicontrol">Covariates</span> in the main dialog. If your model
+includes random factors or nested factors, click <span class=
+"ph uicontrol">Random/Nest</span> and specify them there. This
+model includes neither.</p>
+
+<p class="p">To specify interaction terms and polynomial terms,
+click <span class="ph uicontrol">Model</span>.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID9A6B268A966546398BDC2DDAE3193ED9_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID9A6B268A966546398BDC2DDAE3193ED9_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID9A6B268A966546398BDC2DDAE3193ED9_li">
+</a>Click <span class="ph uicontrol">Model</span>.</li>
+
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID5C316C2C008C4F5D819382CBC80E0513_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID5C316C2C008C4F5D819382CBC80E0513_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID5C316C2C008C4F5D819382CBC80E0513_li">
+</a>Under <span class="ph uicontrol">Factors and covariates</span>,
+press the <strong class="ph b">Ctrl</strong> key and select both
+<kbd class="ph userinput">Subject Degree</kbd>.</li>
+
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID662E8595CEE94D51A9B28AF0527C718E_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID662E8595CEE94D51A9B28AF0527C718E_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID662E8595CEE94D51A9B28AF0527C718E_li">
+</a>To the right of <span class="ph uicontrol">Interactions through
+order</span>, choose <kbd class="ph userinput">2</kbd>, and click
+<span class="ph uicontrol">Add</span>.</li>
+
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDB5BF64B71B224CF793A40CFD9C50924A_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDB5BF64B71B224CF793A40CFD9C50924A_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDB5BF64B71B224CF793A40CFD9C50924A_li">
+</a>Click <span class="ph uicontrol">OK</span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Add graphs to your output</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">Viewing the residual plots to check GLM assumptions is
+important. The plots indicate whether you can trust the test
+results. The Main Effects Plot and Interactions Plot help you to
+visualize the relationship between the predictors and the
+response.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID0680C4294FDE41F0B8C8F87D2138CA49_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID0680C4294FDE41F0B8C8F87D2138CA49_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID0680C4294FDE41F0B8C8F87D2138CA49_li">
+</a>Click <span class="ph uicontrol">Graphs</span>, then choose
+<span class="ph uicontrol">Four in one</span>.</li>
+
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID0C3AC2E1DADA40AA938DC977D80892A5_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID0C3AC2E1DADA40AA938DC977D80892A5_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID0C3AC2E1DADA40AA938DC977D80892A5_li">
+</a>In <span class="ph uicontrol">Residuals versus the
+variables</span>, enter <kbd class=
+"ph userinput">Semester</kbd>.</li>
+
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDAA3918CA4A86497AA270700CCC413509_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDAA3918CA4A86497AA270700CCC413509_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDAA3918CA4A86497AA270700CCC413509_li">
+</a>Click <span class="ph uicontrol">OK</span> in each dialog
+box.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Specify options</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">This analysis requires no further modifications, but
+other options are available. To change the confidence level,
+transform nonnormal data with the Box-Cox transformation, and other
+aspects of the analysis, click <span class=
+"ph uicontrol">Options</span>. To control how Minitab codes
+categorical predictors and to standardize continuous predictors,
+click <span class="ph uicontrol">Coding</span>. If you want to use
+a stepwise procedure to choose your model, click <span class=
+"ph uicontrol">Stepwise</span>. To modify the display of analysis
+results, click <span class="ph uicontrol">Results</span>. To store
+GLM statistics, click <span class=
+"ph uicontrol">Storage</span>.</p>
+</td>
+<td class="steps">
+<ul class="simple">
+<li class="sli">(no action required)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Compare means after fitting the model</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">After you fit the model, you can use the stored to
+model to easily perform additional analyses. For this example, we'
+will perform two additional analyses.</p>
+
+<p class="p">Use <span class="ph uicontrol">Comparisons</span> to
+estimate the differences between specific groups, select a multiple
+comparison method. Each method uses a different approach. Choosing
+the proper method is important because the method can change the
+results. Generally, you choose just one; however, for the sake of
+illustration, select several.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDA565813BABB8449A8D2BAF2833322F94_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDA565813BABB8449A8D2BAF2833322F94_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDA565813BABB8449A8D2BAF2833322F94_li">
+</a>Choose <span class="ph menucascade"><span class=
+"ph uicontrol">Stat</span> &gt; <span class=
+"ph uicontrol">ANOVA</span> &gt; <span class="ph uicontrol">General
+Linear Model</span> &gt; <span class=
+"ph uicontrol">Comparisons</span></span>.</li>
+
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDBBC04229874049148C5BCE13F6DC07EA_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDBBC04229874049148C5BCE13F6DC07EA_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDBBC04229874049148C5BCE13F6DC07EA_li">
+</a>Under <span class="ph uicontrol">Method</span>, check
+<span class="ph uicontrol">Tukey</span>, <span class=
+"ph uicontrol">Bonferroni</span>, and <span class=
+"ph uicontrol">Sidak</span>.</li>
+
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDB9EEB2ADA8784D248A994CA664F4A840_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDB9EEB2ADA8784D248A994CA664F4A840_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDB9EEB2ADA8784D248A994CA664F4A840_li">
+</a>In <span class="ph uicontrol">Choose terms for
+comparisons</span>, double-click <kbd class=
+"ph userinput">Subject</kbd>.</li>
+
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8EC38F46BBB94B82A355C5BD337DBEEE_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8EC38F46BBB94B82A355C5BD337DBEEE_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID8EC38F46BBB94B82A355C5BD337DBEEE_li">
+</a>Click <span class="ph uicontrol">OK</span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Generate factorial plots after fitting the model</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">Use <span class="ph uicontrol">Factorial Plots</span>
+to display the Main Effects Plot and Interactions Plot to help you
+visualize the relationship between the predictors and the
+response.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID9DC3E80D53FD48C58893DB43722EE457_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID9DC3E80D53FD48C58893DB43722EE457_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__ID9DC3E80D53FD48C58893DB43722EE457_li">
+</a>Choose <span class="ph menucascade"><span class=
+"ph uicontrol">Stat</span> &gt; <span class=
+"ph uicontrol">ANOVA</span> &gt; <span class="ph uicontrol">General
+Linear Model</span> &gt; <span class="ph uicontrol">Factorial
+Plots</span></span>.</li>
+
+<li class="li" id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDC3C38A2AE0C443E5B066EF47B4F5064E_li">
+<a name=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDC3C38A2AE0C443E5B066EF47B4F5064E_li"
+id=
+"ID4B990429482B46A1898772C0A82DB348_thowto__IDC3C38A2AE0C443E5B066EF47B4F5064E_li">
+</a>The default settings are correct, so you click <span class=
+"ph uicontrol">OK</span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="title sectiontitle">Interpreting the output</h2>
+
+<p class="p">Now what? For guidance on interpreting the results of
+these analyses, see <a href=
+"..//stanovar/glms_000_summary.htm');history.back(1);">StatGuide</a>.</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="thowto" />
+<meta name="DC.Title" content=
+"Performing Cross Tabulation and Chi-Square in Minitab" />
+<meta name="abstract" content=
+"Description of how to perform Cross Tabulation and Chi-Square using Minitab" />
+<meta name="description" content=
+"Description of how to perform Cross Tabulation and Chi-Square using Minitab" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.subject" content="Chi Square, Cross Tabulation" />
+<meta name="keywords" content="Chi Square, Cross Tabulation" />
+<meta name="DC.Relation" scheme="URI" content=
+"../Tables/cross_tabulation_and_chi_square_benefits.html" />
+<meta name="DC.Relation" scheme="URI" content=
+"../Tables/cross_tabulation_and_chi_square_data.html" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto" />
+<title>Performing Cross Tabulation and Chi-Square in
+Minitab</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "tables/cross_tabulation_and_chi_square_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Ftables%2Fcross_tabulation_and_chi_square_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Ftables%2Fcross_tabulation_and_chi_square_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href=
+"../tables/cross_tabulation_and_chi_square_benefits.html">Uses</a>
+</li>
+
+<li><a href=
+"../tables/cross_tabulation_and_chi_square_data.html">Data</a>
+</li>
+
+<li><a>How To</a>
+</li>
+
+<li class="sectiontitle">Performing Cross Tabulation and Chi-Square
+in Minitab</li>
+</ul>
+</div>
+
+<div class="body thowbody">
+<p class="noshow">Description of how to perform Cross Tabulation
+and Chi-Square using Minitab &nbsp;</p>
+
+<div class="scenario">
+<h2 class="title sectiontitle">Scenario</h2>
+
+<p class="p">A researcher wants to assess if there is an
+association between gender and their candidate preference
+(Democrats, Republicans, and Others) in a presidential election.
+Gender and candidate preference is recorded for 400 randomly
+selected individuals.</p>
+</div>
+
+<div class="phase">
+<h2>Choose the appropriate analysis</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">The researcher wants to analyze the association
+between two categorical variables, so she uses Cross Tabulation and
+Chi-Square.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID2192D8F3036F430DAAC2029B078DF5F2_li">
+<a name=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID2192D8F3036F430DAAC2029B078DF5F2_li"
+id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID2192D8F3036F430DAAC2029B078DF5F2_li">
+</a>Open the worksheet <span class=
+"ph filepath">POLITICS.MTW</span>.</li>
+
+<li class="li" id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID10340FD2E01845B9A9E4D9BB0D32E2E2_li">
+<a name=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID10340FD2E01845B9A9E4D9BB0D32E2E2_li"
+id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID10340FD2E01845B9A9E4D9BB0D32E2E2_li">
+</a>Choose <span class="ph menucascade"><span class=
+"ph uicontrol">Stat</span> &gt; <span class=
+"ph uicontrol">Tables</span> &gt; <span class="ph uicontrol">Cross
+Tabulation and Chi-Square</span></span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Enter your data</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">To create a table of your categorical data, specify
+the variable that corresponds to the table's rows and the variable
+that corresponds to the table's columns.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDE06F1FF2851D4DEFA5D01397ACD7C8E1_li">
+<a name=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDE06F1FF2851D4DEFA5D01397ACD7C8E1_li"
+id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDE06F1FF2851D4DEFA5D01397ACD7C8E1_li">
+</a>In <span class="ph uicontrol">Rows</span>, enter <kbd class=
+"ph userinput">Gender</kbd>.</li>
+
+<li class="li" id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID7DD1B10046234C03A9D3B27B79460219_li">
+<a name=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID7DD1B10046234C03A9D3B27B79460219_li"
+id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID7DD1B10046234C03A9D3B27B79460219_li">
+</a>In <span class="ph uicontrol">Columns</span>, enter <kbd class=
+"ph userinput">Preference</kbd>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Perform Chi-Square analysis</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">Click <span class="ph uicontrol">Chi-Square</span> to
+perform this analysis on the tabulated data. The analysis will
+indicate whether an association between the row and column
+variables exists.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDB63EFC2D2D5449968B9C6FF40A8E56AA_li">
+<a name=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDB63EFC2D2D5449968B9C6FF40A8E56AA_li"
+id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDB63EFC2D2D5449968B9C6FF40A8E56AA_li">
+</a>Click <span class="ph uicontrol">Chi-Square</span>.</li>
+
+<li class="li" id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDAEB4A9D0D8DE402785E5C7E73EEE3E3E_li">
+<a name=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDAEB4A9D0D8DE402785E5C7E73EEE3E3E_li"
+id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__IDAEB4A9D0D8DE402785E5C7E73EEE3E3E_li">
+</a>Check <span class="ph uicontrol">Chi-Square test</span>,
+<span class="ph uicontrol">Expected cell counts</span>,
+<span class="ph uicontrol">Raw residuals</span>, <span class=
+"ph uicontrol">Standardized residuals</span>, <span class=
+"ph uicontrol">Adjusted residuals</span>, and <span class=
+"ph uicontrol">Each cell's contribution to chi-square</span>.</li>
+
+<li class="li" id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID6596E881ACFE448684BEDAF0815965C4_li">
+<a name=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID6596E881ACFE448684BEDAF0815965C4_li"
+id=
+"ID93D33695EC6F4777BE06076D692F1A8C_thowto__ID6596E881ACFE448684BEDAF0815965C4_li">
+</a>Click <span class="ph uicontrol">OK</span> in each dialog
+box.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Specify options</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">This analysis requires no further modifications, but
+other options are available. Click <span class="ph uicontrol">Other
+Stats</span> to request additional statistics and tests of
+association and independence. Click <span class=
+"ph uicontrol">Options</span> to control how Minitab handles
+marginal statistics and missing values.</p>
+</td>
+<td class="steps">
+<ul class="simple">
+<li class="sli">(no action required)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="title sectiontitle">Interpreting the output</h2>
+
+<p class="p">Now what? For guidance on interpreting the results of
+this analysis, see <a href=
+"..//sttables/tabl_000_summary.htm');history.back(1);">StatGuide</a>.</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="thowto" name="DC.Type" />
+<meta name="DC.Title" content="在 Minitab 中创建响应曲面设计" />
+<meta name="abstract" content="有关如何使用 Minitab 的说明" />
+<meta name="description" content="有关如何使用 Minitab 的说明" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Creating_response_surface_designs.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Creating_response_surface_designs_data.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>在 Minitab 中创建响应曲面设计</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "doe/creating_response_surface_designs_in_minitab.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fdoe%2Fcreating_response_surface_designs_in_minitab.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fdoe%2Fcreating_response_surface_designs_in_minitab.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../doe/creating_response_surface_designs.html">用途</a>
+</li>
+
+<li><a href=
+"../doe/creating_response_surface_designs_data.html">数据</a>
+</li>
+
+<li><a>操作步骤</a>
+</li>
+
+<li class="sectiontitle">在 Minitab 中创建响应曲面设计</li>
+</ul>
+</div>
+
+<div>
+<p class="noshow">有关如何使用 Minitab 的说明 &nbsp;</p>
+
+<div class="scenario">
+<h2 class="sectiontitle">情形</h2>
+
+<p>一家化工厂正在尝试最大限度地提高催化反应的产量。 研究人员选择中心复合设计来研究时间和温度对反应产量的效应。
+由于数据将分两天采集，因此设计包含两个区组。</p>
+</div>
+
+<div class="phase">
+<h2>选择适当的设计和因子数</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>研究人员想要使用包含 2 个因子的中心复合设计。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__IDA925CC36B243429384A1A9B244959EFB_li">
+<a name=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__IDA925CC36B243429384A1A9B244959EFB_li"
+id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__IDA925CC36B243429384A1A9B244959EFB_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">DOE</span> &gt; <span class=
+"uicontrol">响应曲面</span> &gt; <span class=
+"uicontrol">创建响应曲面设计</span></span>。</li>
+
+<li id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID35F674542B4C48E6890B1F71FEC46D5F_li">
+<a name=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID35F674542B4C48E6890B1F71FEC46D5F_li"
+id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID35F674542B4C48E6890B1F71FEC46D5F_li">
+</a> 在<span class="uicontrol">设计类型</span>下，选择<span class=
+"uicontrol">中心复合</span>。</li>
+
+<li id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID968580BD2087412AB3E5A13B898D23F3_li">
+<a name=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID968580BD2087412AB3E5A13B898D23F3_li"
+id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID968580BD2087412AB3E5A13B898D23F3_li">
+</a> 在<span class="uicontrol">因子数</span>中，选择 <span class=
+"uicontrol">2</span>。</li>
+
+<li id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID750361892FD04304A4A086E11E3A67AD_li">
+<a name=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID750361892FD04304A4A086E11E3A67AD_li"
+id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID750361892FD04304A4A086E11E3A67AD_li">
+</a> 单击<span class="uicontrol">设计</span>。</li>
+
+<li id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__IDDF4B822259EA4CF887B9E6DBC37075D8_li">
+<a name=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__IDDF4B822259EA4CF887B9E6DBC37075D8_li"
+id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__IDDF4B822259EA4CF887B9E6DBC37075D8_li">
+</a> 在顶部的框中，选择包含 14 次试验运行的全设计。</li>
+
+<li id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID7237F924413E4DF5B414B0CFD10A0196_li">
+<a name=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID7237F924413E4DF5B414B0CFD10A0196_li"
+id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID7237F924413E4DF5B414B0CFD10A0196_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>命名因子并定义因子设置</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>您可以对每个因子命名，然后定义因子设置。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID50CFD0C15BC445CCB01A863EFA685E98_li">
+<a name=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID50CFD0C15BC445CCB01A863EFA685E98_li"
+id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID50CFD0C15BC445CCB01A863EFA685E98_li">
+</a> 单击<span class="uicontrol">因子</span>并按照以下方式填充表格： <a name=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID23BAA50D75F34081AFECC13E59CED2ED_table"
+id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID23BAA50D75F34081AFECC13E59CED2ED_table">
+</a>
+<table cellspacing="0px" cellpadding="3px" id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID23BAA50D75F34081AFECC13E59CED2ED_table"
+class="tableborder">
+<thead align="left">
+<tr>
+<th class="cellrowborder" valign="top" width="NaN%" id="N10145">
+<span class="uicontrol">因子</span>
+</th>
+<th class="cellrowborder" valign="top" width="NaN%" id="N10152">
+<span class="uicontrol">名称</span>
+</th>
+<th class="cellrowborder" valign="top" width="NaN%" id="N1015F">
+<span class="uicontrol">低</span>
+</th>
+<th class="row-nocellborder" valign="top" width="NaN%" id="N1016C">
+<span class="uicontrol">高</span>
+</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N10145"><strong>A</strong>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N10152"><kbd class="userinput-alt">时间</kbd>
+</td>
+<td class="cellrowborder" valign="top" width="NaN%" headers=
+"N1015F"><kbd class="userinput-alt">80</kbd>
+</td>
+<td class="row-nocellborder" valign="top" width="NaN%" headers=
+"N1016C"><kbd class="userinput-alt">100</kbd>
+</td>
+</tr>
+
+<tr>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N10145"><strong>B</strong>
+</td>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N10152"><kbd class="userinput-alt">温度</kbd>
+</td>
+<td class="cell-norowborder" valign="top" width="NaN%" headers=
+"N1015F"><kbd class="userinput-alt">140</kbd>
+</td>
+<td class="nocellnorowborder" valign="top" width="NaN%" headers=
+"N1016C"><kbd class="userinput-alt">150</kbd>
+</td>
+</tr>
+</tbody>
+</table></li>
+
+<li id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID0FFAA56AA5F2470494F16A24E577EC90_li">
+<a name=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID0FFAA56AA5F2470494F16A24E577EC90_li"
+id=
+"IDBDACA2AFD5CA4AA4A54690BC1F94135B_thowto__ID0FFAA56AA5F2470494F16A24E577EC90_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="sectiontitle">解释输出</h2>
+
+<p>现在应该做些什么？ 要查看有关如何分析此设计的教程，请参见<a href=
+"analyzing_response_surface_designs.html">分析响应曲面设计</a>。
+有关与此类型的设计关联的图形的教程，请参见<a href="rs_plot_uses.html">响应曲面 DOE
+的图形</a>。</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

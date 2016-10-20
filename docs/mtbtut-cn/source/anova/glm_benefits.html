@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="tuses" name="DC.Type" />
+<meta name="DC.Title" content="广义线性模型方差分析" />
+<meta name="abstract" content="执行广义线性模型方差分析的基本原理摘要" />
+<meta name="description" content="执行广义线性模型方差分析的基本原理摘要" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta content="方差分析, ANOVA, 广义线性模型" name="DC.subject" />
+<meta content="方差分析, ANOVA, 广义线性模型" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content=
+"../ANOVA/GLM_data.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../ANOVA/GLM_how_to.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="IDF4A2DC315C8149B1937C159EF1193912_tuses" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>广义线性模型方差分析</title>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "anova/glm_benefits.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fanova%2Fglm_benefits.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fanova%2Fglm_benefits.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a>用途</a>
+</li>
+
+<li><a href="../anova/glm_data.html">数据</a>
+</li>
+
+<li><a href="../anova/glm_how_to.html">操作步骤</a>
+</li>
+
+<li class="sectiontitle">广义线性模型方差分析</li>
+</ul>
+</div>
+
+<div class="use">
+<h2 class="sectiontitle">用法 1： 使用各种数据执行方差分析</h2>
+
+<p>一家饮料制造商正在研发一种新产品，希望知道甜味剂的类型、颜色和精确碳酸含量是否与客户满意度显著相关。
+因为公司正在比较不同组的数据（在本例中，为不同的饮料配方），因此单因子方差分析似乎适用，但单因子方差分析无法分析这些预测变量。</p>
+
+<p>广义线性模型 (GLM) 是最灵活的方差分析形式。 它可以为多个预测变量建模，包括类别变量和连续变量。 此外，GLM
+可以包含不同类型的因子、项和设计。</p>
+</div>
+
+<div class="use">
+<h2 class="sectiontitle">用法 2： 检验不同组间的均值和交互作用的相等性</h2>
+
+<p>一家真空吸尘器制造厂正考虑转向使用一种更便宜的发动机，但希望确保这种更便宜的发动机不会对性能产生负面影响。
+公司针对各种不同的地毯样式检验这两种真空吸尘器发动机以查看地毯上残留了多少灰尘。 这两种发动机对于不同的地毯类型性能是否相似？</p>
+
+<p>有时，知道确实存在差异就足够了。 请使用 GLM
+查找多个组之间存在的显著差异，并了解一个因子的效应是否与另一个因子的水平交互。</p>
+</div>
+
+<div class="use">
+<h2 class="sectiontitle">用法 3： 评估组之间的特定差异</h2>
+
+<p>一家建筑公司需要找到一种最佳方法以封住不同混凝土部分之间的裂缝。 他们通过对每种密封剂分别应用两种方法来对这三种密封剂进行检验。
+该公司希望找到一种耐用的密封材料，但又不希望在耐用性方面支付更多的费用。
+也许排在第二佳或者甚至是第三佳的密封剂与应用方法的组合才是正确的选择。</p>
+
+<p>通常，了解不同的组具有不同的平均值并不足够，您需要进一步研究组与组之间的比较结果。 GLM
+可以估计特定组之间的差异，从而进行此类比较。</p>
+</div>
+
+<div class="use">
+<h2 class="sectiontitle">用法 4： 预测一组新观测值的响应</h2>
+
+<p>一位客户支持经理检查其部门的详细记录并发现任意一天接听的来电次数似乎取决于多个因子，如，工作日、月份以及上个月的销售量。
+该经理希望使用这些信息预测预期的来电次数，以便为每个班次安排适当的接线员人数。</p>
+
+<p>借助 GLM，您可以使用观测数据来描述多个预测变量与单个响应值之间的关系。
+定义此关系定义之后，即可在具有一组新的预测变量值时随时预测新的响应值。</p>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

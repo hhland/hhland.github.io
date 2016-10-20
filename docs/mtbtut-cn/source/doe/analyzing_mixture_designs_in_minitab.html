@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="thowto" name="DC.Type" />
+<meta name="DC.Title" content="在 Minitab 中分析混料设计" />
+<meta name="abstract" content="有关如何使用 Minitab 的说明" />
+<meta name="description" content="有关如何使用 Minitab 的说明" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Analyze_mixture_designs.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Analyze_mixture_designs_data.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="ID17A7EDB498414C69A348D5973301A120_thowto" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>在 Minitab 中分析混料设计</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "doe/analyzing_mixture_designs_in_minitab.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fdoe%2Fanalyzing_mixture_designs_in_minitab.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fdoe%2Fanalyzing_mixture_designs_in_minitab.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../doe/analyze_mixture_designs.html">用途</a>
+</li>
+
+<li><a href="../doe/analyze_mixture_designs_data.html">数据</a>
+</li>
+
+<li><a>操作步骤</a>
+</li>
+
+<li class="sectiontitle">在 Minitab 中分析混料设计</li>
+</ul>
+</div>
+
+<div>
+<p class="noshow">有关如何使用 Minitab 的说明 &nbsp;</p>
+
+<div class="scenario">
+<h2 class="sectiontitle">情形</h2>
+
+<p>一家食品实验室的研究人员正在尝试改进奶酪火锅的烹饪方法。 他们要研究混料混合和火锅的操作温度如何影响口味。</p>
+
+<p>混料由三种成分组成： 两种类型的瑞士奶酪（Emmenthaler 和 Gruyere）和白葡萄酒。</p>
+</div>
+
+<div class="phase">
+<h2>在数据表中输入响应数据</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>创建设计之后，先执行试验，收集数据，然后再在 Minitab 工作表中输入这些数据。 工作表已准备好，可以进行分析。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__IDCE5190831BAF430D991D2D6956C9005A_li">
+<a name=
+"ID17A7EDB498414C69A348D5973301A120_thowto__IDCE5190831BAF430D991D2D6956C9005A_li"
+id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__IDCE5190831BAF430D991D2D6956C9005A_li">
+</a> 打开<span class="filepath">火锅.MTW</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>指定您的模型</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>您可以向模型中添加和从中删除单个项，或者指定模型的顺序。
+指定一个包含所有分量（三种成分）和一个过程变量（操作温度）的二次模型。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__IDB6F528A999EC4A84BAB866E4A732D4AF_li">
+<a name=
+"ID17A7EDB498414C69A348D5973301A120_thowto__IDB6F528A999EC4A84BAB866E4A732D4AF_li"
+id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__IDB6F528A999EC4A84BAB866E4A732D4AF_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">DOE</span> &gt; <span class=
+"uicontrol">混料</span> &gt; <span class=
+"uicontrol">分析混料设计</span></span>。</li>
+
+<li id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID061E3D02E6EC47C587900BB6792AF19B_li">
+<a name=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID061E3D02E6EC47C587900BB6792AF19B_li"
+id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID061E3D02E6EC47C587900BB6792AF19B_li">
+</a> 在<span class="uicontrol">响应</span>中，输入<kbd class=
+"userinput">口味</kbd>。</li>
+
+<li id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__IDD1F704F1908B4AB18C4CC58B8A3561ED_li">
+<a name=
+"ID17A7EDB498414C69A348D5973301A120_thowto__IDD1F704F1908B4AB18C4CC58B8A3561ED_li"
+id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__IDD1F704F1908B4AB18C4CC58B8A3561ED_li">
+</a> 在<span class="uicontrol">模型类型</span>下，选择<span class=
+"uicontrol">混料分量和过程变量</span>。</li>
+
+<li id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID3D1E1603899F4D3E8E06C5930F07A885_li">
+<a name=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID3D1E1603899F4D3E8E06C5930F07A885_li"
+id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID3D1E1603899F4D3E8E06C5930F07A885_li">
+</a> 单击<span class="uicontrol">项</span>。</li>
+
+<li id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID60B8BEB268BD4AFAB105AD55FF94C111_li">
+<a name=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID60B8BEB268BD4AFAB105AD55FF94C111_li"
+id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID60B8BEB268BD4AFAB105AD55FF94C111_li">
+</a> 从<span class="uicontrol">包括模型的分量项</span>中，选择<span class=
+"uicontrol">二次</span>。</li>
+
+<li id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__IDB563F61548B949B2A889E187823A361A_li">
+<a name=
+"ID17A7EDB498414C69A348D5973301A120_thowto__IDB563F61548B949B2A889E187823A361A_li"
+id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__IDB563F61548B949B2A889E187823A361A_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>将图形添加到输出中</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>当您获得最终模型后，请创建残差图来检查正态性、方差一致性和随机性的假设。
+残差图还可帮助您检查是否有其他影响响应的变量或是否存在异常值。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID7307939804EC4C78873F2CD353493041_li">
+<a name=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID7307939804EC4C78873F2CD353493041_li"
+id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID7307939804EC4C78873F2CD353493041_li">
+</a> 单击<span class="uicontrol">图形</span>。</li>
+
+<li id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID1CEB8F01B19449F78F670C97EA2E7D76_li">
+<a name=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID1CEB8F01B19449F78F670C97EA2E7D76_li"
+id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID1CEB8F01B19449F78F670C97EA2E7D76_li">
+</a> 在<span class="uicontrol">残差图</span>下，选择<span class=
+"uicontrol">四合一</span>。</li>
+
+<li id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID8068902838B04E929A4DC937920DCFC5_li">
+<a name=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID8068902838B04E929A4DC937920DCFC5_li"
+id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID8068902838B04E929A4DC937920DCFC5_li">
+</a> 选中<span class="uicontrol">残差与变量</span>，然后输入<kbd class=
+"userinput">食品</kbd>。</li>
+
+<li id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID4B69C0332D2C4BC8BA2DB4B584CA3FC4_li">
+<a name=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID4B69C0332D2C4BC8BA2DB4B584CA3FC4_li"
+id=
+"ID17A7EDB498414C69A348D5973301A120_thowto__ID4B69C0332D2C4BC8BA2DB4B584CA3FC4_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="sectiontitle">解释输出</h2>
+
+<p>现在应该做些什么？ 有关如何解释此分析结果的指导信息，请参见 <a href=
+"..//domixdes/mixc_000_summary.htm');history.back(1);">StatGuide</a>。
+要查看有关如何创建此设计的教程，请参见<a href=
+"creating_mixture_designs.html">创建混料设计</a>。
+有关与此类型的设计关联的图形的教程，请参见<a href="mixture_plot_uses.html">混料 DOE
+的图形</a>。</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

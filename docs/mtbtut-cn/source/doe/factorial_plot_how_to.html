@@ -1,0 +1,624 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="thowto" name="DC.Type" />
+<meta name="DC.Title" content="在 Minitab 中创建因子 DOE 的图形" />
+<meta name="abstract" content="有关如何使用 Minitab 创建因子图的说明" />
+<meta name="description" content="有关如何使用 Minitab 创建因子图的说明" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta content="因子, 因子图" name="DC.subject" />
+<meta content="因子, 因子图" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Factorial_plot_uses.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../DOE/Factorial_plot_data.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>在 Minitab 中创建因子 DOE 的图形</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "doe/factorial_plot_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fdoe%2Ffactorial_plot_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fdoe%2Ffactorial_plot_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../doe/factorial_plot_uses.html">用途</a>
+</li>
+
+<li><a href="../doe/factorial_plot_data.html">数据</a>
+</li>
+
+<li><a>操作步骤</a>
+</li>
+
+<li class="sectiontitle">在 Minitab 中创建因子 DOE 的图形</li>
+</ul>
+</div>
+
+<div>
+<p class="noshow">有关如何使用 Minitab 创建因子图的说明 &nbsp;</p>
+
+<div class="scenario">
+<h2 class="sectiontitle">情形</h2>
+
+<div class="p">一家建筑材料制造商正在开发一种新型绝缘产品。 他们要研究四个认为会影响绝缘强度的因子。 这四个因子是：
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID04E0642474404387A6A4F1FE575DBC5D_ul"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID04E0642474404387A6A4F1FE575DBC5D_ul">
+</a>
+<ul id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID04E0642474404387A6A4F1FE575DBC5D_ul">
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID3AC12058768B47E2A4EB811C86AC571E_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID3AC12058768B47E2A4EB811C86AC571E_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID3AC12058768B47E2A4EB811C86AC571E_li">
+</a> 材料类型（材料）</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID031A314CEEC7420AAB5A2F393BCE48E3_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID031A314CEEC7420AAB5A2F393BCE48E3_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID031A314CEEC7420AAB5A2F393BCE48E3_li">
+</a> 注塑温度（注塑温度）</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID9211E2FED4B24323A6CAE9AA5B4A2FFC_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID9211E2FED4B24323A6CAE9AA5B4A2FFC_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID9211E2FED4B24323A6CAE9AA5B4A2FFC_li">
+</a> 注塑压力（注塑压力）</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID2F94683EB0BC41D79D48A23D541FF33A_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID2F94683EB0BC41D79D48A23D541FF33A_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID2F94683EB0BC41D79D48A23D541FF33A_li">
+</a> 冷却温度（冷却温度）</li>
+</ul></div>
+
+<p>该制造商认为，温度也会对强度产生影响，但是由于在试验期间无法控制温度，因此将温度记录为协变量（测量温度）。</p>
+</div>
+
+<div class="phase">
+<h2>指定您的模型</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>此模型中包含主效应（四个因子中的每个因子）和所有双因子交互作用（所有两个因子的组合）。
+此外，模型中还包括“测量温度”这个协变量。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID4EA422BDE3394D88A895DCBCA7E0CCA2_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID4EA422BDE3394D88A895DCBCA7E0CCA2_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID4EA422BDE3394D88A895DCBCA7E0CCA2_li">
+</a> 打开<span class="filepath">绝缘.MTW</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDB55BC23D4D6743FB88FF81D231E91EB3_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDB55BC23D4D6743FB88FF81D231E91EB3_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDB55BC23D4D6743FB88FF81D231E91EB3_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">DOE</span> &gt; <span class=
+"uicontrol">因子</span> &gt; <span class=
+"uicontrol">分析因子设计</span></span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD7B7E830B8294D218F6872F900A43B18_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD7B7E830B8294D218F6872F900A43B18_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD7B7E830B8294D218F6872F900A43B18_li">
+</a> 在<span class="uicontrol">响应</span>中，输入<kbd class=
+"userinput">强度</kbd>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID326A1E6819C540ABB9B9B033078D357A_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID326A1E6819C540ABB9B9B033078D357A_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID326A1E6819C540ABB9B9B033078D357A_li">
+</a> 单击<span class="uicontrol">项</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDF7F70CBFC652483EB65DA2099A75D153_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDF7F70CBFC652483EB65DA2099A75D153_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDF7F70CBFC652483EB65DA2099A75D153_li">
+</a> 从<span class="uicontrol">按顺序在模型中包含项的阶数</span>中，选择 <span class=
+"uicontrol">2</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID682771C987144592A3A0198E158D8E7E_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID682771C987144592A3A0198E158D8E7E_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID682771C987144592A3A0198E158D8E7E_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID98310CBBA77C436AB24D2B981864614B_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID98310CBBA77C436AB24D2B981864614B_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID98310CBBA77C436AB24D2B981864614B_li">
+</a> 单击<span class="uicontrol">协变量</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDCF93103EBF4343A89EE5675A10A58B33_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDCF93103EBF4343A89EE5675A10A58B33_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDCF93103EBF4343A89EE5675A10A58B33_li">
+</a> 在<span class="uicontrol">协变量</span>中，输入<kbd class=
+"userinput">测量温度</kbd>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD6C5BE1C63A7416F94355F194CAEBB92_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD6C5BE1C63A7416F94355F194CAEBB92_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD6C5BE1C63A7416F94355F194CAEBB92_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>创建因子图</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>在主效应和交互作用图中绘制拟合均值。 对立方图使用数据均值。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID9F1526FA16FC492DA27AA023EC18B6A4_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID9F1526FA16FC492DA27AA023EC18B6A4_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID9F1526FA16FC492DA27AA023EC18B6A4_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">DOE</span> &gt; <span class=
+"uicontrol">因子</span> &gt; <span class=
+"uicontrol">因子图</span></span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDAADB9F57FC3840228DC0FF0C28D0E581_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDAADB9F57FC3840228DC0FF0C28D0E581_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDAADB9F57FC3840228DC0FF0C28D0E581_li">
+</a> 在<span class="uicontrol">图中使用的均值类型</span>中，选择<span class=
+"uicontrol">拟合均值</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDA8E1EBA031B24EB5A17CE4C9521B9A32_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDA8E1EBA031B24EB5A17CE4C9521B9A32_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDA8E1EBA031B24EB5A17CE4C9521B9A32_li">
+</a> 选中<span class="uicontrol">主效应图</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID50276F4DAFD54BDD8CF03E16944386EA_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID50276F4DAFD54BDD8CF03E16944386EA_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID50276F4DAFD54BDD8CF03E16944386EA_li">
+</a> 单击<span class="uicontrol">设置</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID374D31524B1F40B795E2646BA832A9B0_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID374D31524B1F40B795E2646BA832A9B0_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID374D31524B1F40B795E2646BA832A9B0_li">
+</a> 在<span class="uicontrol">响应</span>中，输入<span class=
+"uicontrol">强度</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID9DA5E249CAF2414B915F9EC940FD7C70_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID9DA5E249CAF2414B915F9EC940FD7C70_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID9DA5E249CAF2414B915F9EC940FD7C70_li">
+</a> 将<span class="uicontrol">可用项</span>中的<span class=
+"uicontrol">材料</span>、<span class=
+"uicontrol">注塑压力</span>、<span class=
+"uicontrol">注塑温度</span>和<span class=
+"uicontrol">冷却温度</span>移动到<span class="uicontrol">选定项</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID05589F4B285F4AAFAC44F908CDD5A61A_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID05589F4B285F4AAFAC44F908CDD5A61A_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID05589F4B285F4AAFAC44F908CDD5A61A_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDF9650ED7EDA24C089A290FE6969681FE_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDF9650ED7EDA24C089A290FE6969681FE_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDF9650ED7EDA24C089A290FE6969681FE_li">
+</a> 重复步骤 3 - 7，此时应该选中<span class="uicontrol">交互作用图</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDC831C1F6D7D04097BDBE2F11D67267D0_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDC831C1F6D7D04097BDBE2F11D67267D0_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDC831C1F6D7D04097BDBE2F11D67267D0_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID9241708725A241C594217363FC1995D2_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID9241708725A241C594217363FC1995D2_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID9241708725A241C594217363FC1995D2_li">
+</a> 按 [Ctrl]+[E]。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDA9A547A6DECA4B2497C7D0E0023FB685_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDA9A547A6DECA4B2497C7D0E0023FB685_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDA9A547A6DECA4B2497C7D0E0023FB685_li">
+</a> 取消选中<span class="uicontrol">主效应图</span>和<span class=
+"uicontrol">交互作用图</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID90C7973645FB4B4DA8FB74841A2AC67A_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID90C7973645FB4B4DA8FB74841A2AC67A_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID90C7973645FB4B4DA8FB74841A2AC67A_li">
+</a> 在<span class="uicontrol">图中使用的均值类型</span>中，选择<span class=
+"uicontrol">数据均值</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD9EAE40E2D014082BEA6CF50E123F361_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD9EAE40E2D014082BEA6CF50E123F361_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD9EAE40E2D014082BEA6CF50E123F361_li">
+</a> 选中<span class="uicontrol">立方图</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID2F8EFB67623F470AB9CD760F1E70C677_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID2F8EFB67623F470AB9CD760F1E70C677_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID2F8EFB67623F470AB9CD760F1E70C677_li">
+</a> 单击<span class="uicontrol">设置</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDAF1FDDB590DB4BED930AEC2302A578B7_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDAF1FDDB590DB4BED930AEC2302A578B7_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDAF1FDDB590DB4BED930AEC2302A578B7_li">
+</a> 在<span class="uicontrol">响应</span>中，输入<span class=
+"uicontrol">强度</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID12DE1D68444F482286F137903BA2509A_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID12DE1D68444F482286F137903BA2509A_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID12DE1D68444F482286F137903BA2509A_li">
+</a> 将<span class="uicontrol">可用项</span>中的<span class=
+"uicontrol">材料</span>、<span class=
+"uicontrol">注塑压力</span>、<span class=
+"uicontrol">注塑温度</span>和<span class=
+"uicontrol">冷却温度</span>移动到<span class="uicontrol">选定项</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID476C1520B77242C4B391A6D96ACF943D_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID476C1520B77242C4B391A6D96ACF943D_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID476C1520B77242C4B391A6D96ACF943D_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>创建等值线图和曲面图</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>为注塑压力和注塑温度、注塑压力和冷却温度以及注塑温度和冷却温度创建等值线图和曲面图，以确定其理想的设置。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDE6DAAE760AB24C35A47636B662191958_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDE6DAAE760AB24C35A47636B662191958_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDE6DAAE760AB24C35A47636B662191958_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">DOE</span> &gt; <span class=
+"uicontrol">因子</span> &gt; <span class=
+"uicontrol">等值线/曲面图</span></span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDAF684D972D234E29B1B72503E2DF4C7F_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDAF684D972D234E29B1B72503E2DF4C7F_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDAF684D972D234E29B1B72503E2DF4C7F_li">
+</a> 选中<span class="uicontrol">等值线图</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID6FA28C04EAD04E21B12E996B912913B7_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID6FA28C04EAD04E21B12E996B912913B7_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID6FA28C04EAD04E21B12E996B912913B7_li">
+</a> 单击<span class="uicontrol">设置</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD01661D3F81743D7B1A3F23A5857DCC6_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD01661D3F81743D7B1A3F23A5857DCC6_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD01661D3F81743D7B1A3F23A5857DCC6_li">
+</a> 在<span class="uicontrol">因子</span>下，选择<span class=
+"uicontrol">所有数字因子对生成图</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID9FF6B7925FCE41F3A35E74AD27D6E868_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID9FF6B7925FCE41F3A35E74AD27D6E868_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID9FF6B7925FCE41F3A35E74AD27D6E868_li">
+</a> 单击<span class="uicontrol">等值线</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID3B3A0DB447A24AED80D82355B0D47946_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID3B3A0DB447A24AED80D82355B0D47946_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID3B3A0DB447A24AED80D82355B0D47946_li">
+</a> 在<span class="uicontrol">等值线水平</span>下，选择<span class=
+"uicontrol">数字</span>，然后输入 <kbd class="userinput">7</kbd>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID843CFFC292B340AABC207E516EA27ABC_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID843CFFC292B340AABC207E516EA27ABC_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID843CFFC292B340AABC207E516EA27ABC_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID387ED871A05B4C2496D633A4C5E6B433_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID387ED871A05B4C2496D633A4C5E6B433_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID387ED871A05B4C2496D633A4C5E6B433_li">
+</a> 单击<span class="uicontrol">设置</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID85D9715DBEBC41C3B09372633C34FC60_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID85D9715DBEBC41C3B09372633C34FC60_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID85D9715DBEBC41C3B09372633C34FC60_li">
+</a> 在<span class="uicontrol">设置</span>下，对<span class=
+"uicontrol">材料</span>输入<kbd class="userinput">公式
+2</kbd>，对<span class="uicontrol">注塑压力</span>输入 <kbd class=
+"userinput">150</kbd>，对<span class="uicontrol">注塑温度</span>输入
+<kbd class="userinput">100</kbd>，对<span class=
+"uicontrol">冷却温度</span>输入 <kbd class="userinput">25</kbd>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID22EE8F5BF27643A5BDABD87E08EB8317_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID22EE8F5BF27643A5BDABD87E08EB8317_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__ID22EE8F5BF27643A5BDABD87E08EB8317_li">
+</a> 单击<span class="uicontrol">确定</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD5D3C89A436447969CDAA57DE6D75B8C_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD5D3C89A436447969CDAA57DE6D75B8C_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD5D3C89A436447969CDAA57DE6D75B8C_li">
+</a> 选中<span class="uicontrol">曲面图</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDDAE880BCD79C4777B74F36659D31AC48_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDDAE880BCD79C4777B74F36659D31AC48_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDDAE880BCD79C4777B74F36659D31AC48_li">
+</a> 单击<span class="uicontrol">设置</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDF84B58FEB2C94FABAEFD8AEA1AB355D5_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDF84B58FEB2C94FABAEFD8AEA1AB355D5_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDF84B58FEB2C94FABAEFD8AEA1AB355D5_li">
+</a> 在<span class="uicontrol">因子</span>下，选择<span class=
+"uicontrol">为所有数字因子对生成图</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD7E28DBA27D848A2901678511A96F974_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD7E28DBA27D848A2901678511A96F974_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDD7E28DBA27D848A2901678511A96F974_li">
+</a> 单击<span class="uicontrol">设置</span>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDBA15C4F87151491A8E53986CE81A50A8_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDBA15C4F87151491A8E53986CE81A50A8_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDBA15C4F87151491A8E53986CE81A50A8_li">
+</a> 在<span class="uicontrol">设置</span>下，对<span class=
+"uicontrol">材料</span>输入<kbd class="userinput">公式
+2</kbd>，对<span class="uicontrol">注塑压力</span>输入 <kbd class=
+"userinput">150</kbd>，对<span class="uicontrol">注塑温度</span>输入
+<kbd class="userinput">100</kbd>，对<span class=
+"uicontrol">冷却温度</span>输入 <kbd class="userinput">25</kbd>。</li>
+
+<li id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDB2ED735D515D4E9D8FF90181DD9327A3_li">
+<a name=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDB2ED735D515D4E9D8FF90181DD9327A3_li"
+id=
+"ID5E5DA4FEB0574C79BB533045DC38B0AB_thowto__IDB2ED735D515D4E9D8FF90181DD9327A3_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="sectiontitle">解释输出</h2>
+
+<p>现在应该做些什么？ 有关如何解释此分析结果的指导信息，请参见 <a href=
+"..//dofacdes/faca_000_summary.htm');history.back(1);">StatGuide</a>。
+要查看有关如何创建此设计的教程，请参见<a href=
+"creating_factorial_designs.html">创建因子设计</a>。
+要查看有关如何分析此设计的教程，请参见<a href=
+"analyzing_factorial_designs.html">分析因子设计</a>。</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

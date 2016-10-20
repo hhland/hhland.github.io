@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="zh-cn" xml:lang="zh-cn" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+
+<meta name="copyright" content="(C) 版权 2005" />
+<meta name="DC.rights.owner" content="(C) 版权 2005" />
+<meta content="thowto" name="DC.Type" />
+<meta name="DC.Title" content="在 Minitab 中执行一般回归" />
+<meta name="abstract" content="使用 Minitab 执行一般回归的说明" />
+<meta name="description" content="使用 Minitab 执行一般回归的说明" />
+<meta content="" name="DC.Coverage" />
+<meta content="" name="DC.Coverage" />
+<meta content="回归" name="DC.subject" />
+<meta content="回归" name="keywords" />
+<meta scheme="URI" name="DC.Relation" content=
+"../Regression/general_regression_benefits.html" />
+<meta scheme="URI" name="DC.Relation" content=
+"../Regression/general_regression_data.html" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="IDB4BFA234ECCE408F93969EBF6C709C72_thowto" name=
+"DC.Identifier" />
+<meta content="zh-cn" name="DC.Language" />
+<title>在 Minitab 中执行一般回归</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "regression/general_regression_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fregression%2Fgeneral_regression_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fregression%2Fgeneral_regression_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href="../regression/general_regression_benefits.html">用途</a>
+</li>
+
+<li><a href="../regression/general_regression_data.html">数据</a>
+</li>
+
+<li><a>操作步骤</a>
+</li>
+
+<li class="sectiontitle">在 Minitab 中执行一般回归</li>
+</ul>
+</div>
+
+<div>
+<p class="noshow">使用 Minitab 执行一般回归的说明 &nbsp;</p>
+
+<div class="scenario">
+<h2 class="sectiontitle">方案</h2>
+
+<p>一家制药公司希望为科研人员的薪金以及他们的性别、工作年限以及发表文章的质量指数之间的关系建模。
+该公司希望检测所有这些预测变量之间的交互作用。</p>
+</div>
+
+<div class="phase">
+<h2>选择适当的分析方式</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>该公司希望使用连续变量和类别预测变量以及预测变量之间的交互作用创建一个回归模型，因此他们使用一般回归。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDE78FA97D25884FACAAADEB73B6345D27_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDE78FA97D25884FACAAADEB73B6345D27_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDE78FA97D25884FACAAADEB73B6345D27_li">
+</a> 打开工作表“<span class="filepath">研究人员薪金.MTW</span>”。</li>
+
+<li id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDDA69539683B24EBFA315F830E20451A3_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDDA69539683B24EBFA315F830E20451A3_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDDA69539683B24EBFA315F830E20451A3_li">
+</a> 选择<span class="menucascade"><span class="uicontrol">统计</span>
+&gt; <span class="uicontrol">回归</span> &gt; <span class=
+"uicontrol">一般回归</span></span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>输入响应变量</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>输入一列响应变量的测量值。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDC640185345174ED899B0DCE797763D21_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDC640185345174ED899B0DCE797763D21_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDC640185345174ED899B0DCE797763D21_li">
+</a> 在<span class="uicontrol">响应</span>中，输入<kbd class=
+"userinput">薪金</kbd>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>输入模型项</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>为每个预测变量输入一列数据。 使用 | 来表示您希望包括所有预测变量及其交互作用。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID645CB922014442B5BB13F388C2B74AC5_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID645CB922014442B5BB13F388C2B74AC5_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID645CB922014442B5BB13F388C2B74AC5_li">
+</a> 在<span class="uicontrol">模型</span>中，输入<kbd class=
+"userinput">性别|发表文章的质量|工作年限</kbd>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>指定哪些预测变量为类别变量</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>一般回归可以在模型中包括类别预测变量和连续预测变量。 指定模型中的因子（类别预测变量）。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID88C6D1CF7BE94060BEDA4285E83C1CB3_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID88C6D1CF7BE94060BEDA4285E83C1CB3_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID88C6D1CF7BE94060BEDA4285E83C1CB3_li">
+</a> 在<span class="uicontrol">因子</span>中，输入<kbd class=
+"userinput">性别</kbd>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>指定选项</h2>
+
+<table style="width: 100%;" class="nocellnorowborder">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p>要创建残差图，请单击<span class="uicontrol">图形</span>。
+要更改置信水平以及其他分析内容，请单击<span class="uicontrol">选项</span>。
+要对新的观测值进行预测，请单击<span class="uicontrol">预测</span>。 要使用 Box-Cox
+变换来变换非正态数据，请单击 <span class="uicontrol">Box-Cox</span>。
+要控制分析结果的显示方式，请单击<span class="uicontrol">结果</span>。
+要存储回归统计量，请单击<span class="uicontrol">存储</span>。</p>
+</td>
+<td class="steps">
+<ol>
+<li id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDEE9F235E4E4C46B997A2A3FAFC9E0C3A_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDEE9F235E4E4C46B997A2A3FAFC9E0C3A_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__IDEE9F235E4E4C46B997A2A3FAFC9E0C3A_li">
+</a> 单击<span class="uicontrol">图形</span>。</li>
+
+<li id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID7936C1468438480799270D7E0197BFAF_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID7936C1468438480799270D7E0197BFAF_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID7936C1468438480799270D7E0197BFAF_li">
+</a> 在<span class="uicontrol">残差图</span>下，选择<span class=
+"uicontrol">四合一</span>。</li>
+
+<li id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID9B79E622804F45E0AFF5EFBA9385D290_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID9B79E622804F45E0AFF5EFBA9385D290_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID9B79E622804F45E0AFF5EFBA9385D290_li">
+</a> 在<span class="uicontrol">残差与变量</span>下，输入<kbd class=
+"userinput">工作年限</kbd>。</li>
+
+<li id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID74E45B5C246544D3837C62E6C414B295_li">
+<a name=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID74E45B5C246544D3837C62E6C414B295_li"
+id=
+"IDB4BFA234ECCE408F93969EBF6C709C72_thowto__ID74E45B5C246544D3837C62E6C414B295_li">
+</a> 在每个对话框中单击<span class="uicontrol">确定</span>。</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="sectiontitle">解释输出</h2>
+
+<p>现在应该做些什么？ 有关如何解释此分析结果的指导信息，请参见 <a href=
+"..//stregrsn/greg_000_summary.htm');history.back(1);">StatGuide</a>。</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>

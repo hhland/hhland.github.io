@@ -1,0 +1,488 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Standard 2.85 (unicode)" />
+
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta name="DC.Type" content="thowto" />
+<meta name="DC.Title" content=
+"Using Pre-Process Responses and Analyze Variability in Minitab" />
+<meta name="abstract" content=
+"Description of how to using Analyze Variability and Preprocess Responses in Minitab" />
+<meta name="description" content=
+"Description of how to using Analyze Variability and Preprocess Responses in Minitab" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.Coverage" content="" />
+<meta name="DC.subject" content=
+"Analyze Variability, Pre-Process Responses" />
+<meta name="keywords" content=
+"Analyze Variability, Pre-Process Responses" />
+<meta name="DC.Relation" scheme="URI" content=
+"../DOE/Analyze_variability_preprocess_responses_uses.html" />
+<meta name="DC.Relation" scheme="URI" content=
+"../DOE/Analyze_variability_preprocess_responses_data.html" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto" />
+<title>Using Pre-Process Responses and Analyze Variability in
+Minitab</title>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+
+function GetChmDir() {
+
+// This function gets the absolute path to the directory that contains
+// the help file. See http://tinyurl.com/drd9k for an explanation of
+// what these lines are doing.
+
+   var X, Y, sl, a, ra, dir, dir2;
+
+   ra = /::/;
+   a = location.href.search(ra);
+   if (a <= 0) return("");
+   X = 0;
+   ra = /:/;
+   a = location.href.search(ra);
+   if (a == 2) X = 14; else if (a > 2) X = a+1;
+   sl = "\\";
+   Y = location.href.lastIndexOf(sl);
+   dir = location.href.substring(X, Y);
+   dir2 = unescape(dir);
+   return(dir2 + "\\");
+
+}
+
+function ShortCut(FileName) {
+
+// This function builds a shortcut control dynamically. As part of doing
+// that, it invokes the GetChmDir function to get the path to the .chm
+// directory.
+
+   shortcut = "<object id='hhctrl' classid='clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11'>" +
+              "<param name='Command' value='ShortCut'>" +
+              "<param name='Item1' value=',hh.exe," + GetChmDir() + FileName + "'>" +
+              "<\/object>";
+
+// Add the shortcut control to the current page, and click it.
+
+   document.write(shortcut); 
+   document.hhctrl.hhclick();
+
+}
+
+//-->
+//]]>
+</script>
+<link rel="stylesheet" href="../../files/helpindex.css" type=
+"text/css" />
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+
+<script type="text/JavaScript" src="../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "doe/analyze_variability_preprocess_responses_how_to.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2Fdoe%2Fanalyze_variability_preprocess_responses_how_to.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2Fdoe%2Fanalyze_variability_preprocess_responses_how_to.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<div id="navbar">
+<ul>
+<li><a href=
+"../doe/analyze_variability_preprocess_responses_uses.html">Uses</a>
+</li>
+
+<li><a href=
+"../doe/analyze_variability_preprocess_responses_data.html">Data</a>
+</li>
+
+<li><a>How To</a>
+</li>
+
+<li class="sectiontitle">Using Pre-Process Responses and Analyze
+Variability in Minitab</li>
+</ul>
+</div>
+
+<div class="body thowbody">
+<p class="noshow">Description of how to using Analyze Variability
+and Preprocess Responses in Minitab &nbsp;</p>
+
+<div class="scenario">
+<h2 class="title sectiontitle">Scenario</h2>
+
+<div class="p">A building material manufacturer is developing a new
+insulation product for construction. The manufacturer studied four
+factors that were believed to impact the strength of the
+insulation. The four factors are:<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID6B6EA4AE5673431DA588C00B58D91ED7_ul"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID6B6EA4AE5673431DA588C00B58D91ED7_ul"></a>
+<ul class="ul" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID6B6EA4AE5673431DA588C00B58D91ED7_ul">
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDA75EA679A9A246FD87CADB48B0C55A11_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDA75EA679A9A246FD87CADB48B0C55A11_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDA75EA679A9A246FD87CADB48B0C55A11_li">
+</a>Material type (Material)</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDDADC1CF78F6143819ABF8363C88E8BAB_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDDADC1CF78F6143819ABF8363C88E8BAB_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDDADC1CF78F6143819ABF8363C88E8BAB_li">
+</a>Injection pressure (InjPress)</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDFC240CA87581418CB437C8ABFC2E73B1_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDFC240CA87581418CB437C8ABFC2E73B1_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDFC240CA87581418CB437C8ABFC2E73B1_li">
+</a>Injection temperature (InjTemp)</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDE4FDDD73C0154BD4BC1F70FAD81F0AEC_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDE4FDDD73C0154BD4BC1F70FAD81F0AEC_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDE4FDDD73C0154BD4BC1F70FAD81F0AEC_li">
+</a>Cooling temperature (CoolTemp)</li>
+</ul></div>
+
+<p class="p">After examining the mean strength, they decided to
+conduct another experiment to examine the effects of the four
+factors on the variability in insulation strength.</p>
+</div>
+
+<div class="phase">
+<h2>Calculate standard deviations</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">Before you can analyze variability in your response
+data, you must either calculate and store the standard deviations
+and counts of your repeat or replicate responses, or you must
+specify standard deviations that you have already stored in the
+worksheet. In this example, this information has already been
+calculated and recorded.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDA728B247B97F4D90BEF8DEAE9879800E_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDA728B247B97F4D90BEF8DEAE9879800E_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDA728B247B97F4D90BEF8DEAE9879800E_li">
+</a>Open <span class=
+"ph filepath">InsulationStrength.MTW</span>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID2F5B3FF344BB466A874C22434409D629_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID2F5B3FF344BB466A874C22434409D629_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID2F5B3FF344BB466A874C22434409D629_li">
+</a>Choose <span class="ph menucascade"><span class=
+"ph uicontrol">Stat</span> &gt; <span class=
+"ph uicontrol">DOE</span> &gt; <span class=
+"ph uicontrol">Factorial</span> &gt; <span class=
+"ph uicontrol">Preprocess Responses for Analyze
+Variability</span></span>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID6084F90917414FA1842795008A71C9AC_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID6084F90917414FA1842795008A71C9AC_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID6084F90917414FA1842795008A71C9AC_li">
+</a>Under <span class="ph uicontrol">Standard deviations to use for
+analysis</span>, choose <span class="ph uicontrol">Standard
+deviations already in worksheet</span>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID46DA93C5FF13495CB609ABA0E57BC235_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID46DA93C5FF13495CB609ABA0E57BC235_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID46DA93C5FF13495CB609ABA0E57BC235_li">
+</a>Under <span class="ph uicontrol">Use Std Devs in</span>, enter
+<kbd class="ph userinput">Std</kbd>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID6131B1AEFD544CF4A655AD7E597E1C0E_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID6131B1AEFD544CF4A655AD7E597E1C0E_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID6131B1AEFD544CF4A655AD7E597E1C0E_li">
+</a>Under <span class="ph uicontrol">Use Counts</span>, enter
+<kbd class="ph userinput">N</kbd>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID0BEB122ACE2B4DCFA17C601077EDBAE0_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID0BEB122ACE2B4DCFA17C601077EDBAE0_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID0BEB122ACE2B4DCFA17C601077EDBAE0_li">
+</a>Click <span class="ph uicontrol">OK</span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Analyze the design using least squares regression</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">After you pre-process the response data, you are ready
+to determine which effects to include in the model. Use least
+squares regression for this part of the analysis.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID4AE0BAF700E34634A70D2E42BEAF8415_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID4AE0BAF700E34634A70D2E42BEAF8415_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID4AE0BAF700E34634A70D2E42BEAF8415_li">
+</a>Choose <span class="ph menucascade"><span class=
+"ph uicontrol">Stat</span> &gt; <span class=
+"ph uicontrol">DOE</span> &gt; <span class=
+"ph uicontrol">Factorial</span> &gt; <span class=
+"ph uicontrol">Analyze Variability</span></span>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDA62D40A915754094BEA243192D7AE478_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDA62D40A915754094BEA243192D7AE478_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDA62D40A915754094BEA243192D7AE478_li">
+</a>In <span class="ph uicontrol">Response (standard
+deviations)</span>, enter <kbd class="ph userinput">Std</kbd>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID75A7C2B7CA0245FBA083A99FD1425916_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID75A7C2B7CA0245FBA083A99FD1425916_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID75A7C2B7CA0245FBA083A99FD1425916_li">
+</a>Click <span class="ph uicontrol">Terms</span>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID5124D9855B5A4F798577B3C49964420E_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID5124D9855B5A4F798577B3C49964420E_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID5124D9855B5A4F798577B3C49964420E_li">
+</a>In <span class="ph uicontrol">Include terms in the model up
+through order</span> choose <span class=
+"ph uicontrol">2</span>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID07EFB3913495454A9A8211BB39154E45_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID07EFB3913495454A9A8211BB39154E45_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID07EFB3913495454A9A8211BB39154E45_li">
+</a>Click <span class="ph uicontrol">Options</span>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDC65033F8258244019B2C33CCFC1AC430_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDC65033F8258244019B2C33CCFC1AC430_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDC65033F8258244019B2C33CCFC1AC430_li">
+</a>Under <span class="ph uicontrol">Estimation method</span>,
+choose <span class="ph uicontrol">Least squares
+regression</span>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDBFF6F58FBF924FD2A931A7D55B67A086_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDBFF6F58FBF924FD2A931A7D55B67A086_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDBFF6F58FBF924FD2A931A7D55B67A086_li">
+</a>Click <span class="ph uicontrol">OK</span> in each dialog
+box.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Add graphs to your output</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">Create effects plots to identify influential factors.
+When you have a final model, create residual plots to check
+assumptions of normality, constant variance, and randomness.
+Residual plots also help you to see if another variable affects the
+response or if outliers are present.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDB795DDC575424297B71B3A7C4DB5A5BD_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDB795DDC575424297B71B3A7C4DB5A5BD_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDB795DDC575424297B71B3A7C4DB5A5BD_li">
+</a>Click <span class="ph uicontrol">Graphs</span>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDC682EBC13A59471B94ECB486819B6C9B_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDC682EBC13A59471B94ECB486819B6C9B_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDC682EBC13A59471B94ECB486819B6C9B_li">
+</a>Under <span class="ph uicontrol">Effects Plots</span>, check
+<span class="ph uicontrol">Pareto</span>, <span class=
+"ph uicontrol">Normal</span>, and <span class="ph uicontrol">Half
+Normal</span>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID8C457D3295614C39AE673E94F7A81566_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID8C457D3295614C39AE673E94F7A81566_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID8C457D3295614C39AE673E94F7A81566_li">
+</a>Under <span class="ph uicontrol">Residual Plots</span>, check
+<span class="ph uicontrol">Three in one</span>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDB308E3E3F9424737A1887200287D08DD_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDB308E3E3F9424737A1887200287D08DD_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDB308E3E3F9424737A1887200287D08DD_li">
+</a>Click <span class="ph uicontrol">OK</span> in each dialog
+box.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="phase">
+<h2>Analyze the design using maximum likelihood estimation</h2>
+
+<table class="nocellnorowborder" style="width: 100%;">
+<col style="width: 45%;" />
+<col style="width: 55%;" />
+<tbody>
+<tr>
+<td class="phase">
+<p class="p">After you use least squares regression to choose the
+model, you are ready to estimate the coefficients. Use maximum
+likelihood analysis for this part of the analysis.</p>
+</td>
+<td class="steps">
+<ol>
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID247CBD11D08D41FB91B0FA792A839BF0_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID247CBD11D08D41FB91B0FA792A839BF0_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID247CBD11D08D41FB91B0FA792A839BF0_li">
+</a>Choose <span class="ph menucascade"><span class=
+"ph uicontrol">Stat</span> &gt; <span class=
+"ph uicontrol">DOE</span> &gt; <span class=
+"ph uicontrol">Factorial</span> &gt; <span class=
+"ph uicontrol">Analyze Variability</span></span>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDB85BB0C993AB476D92B4742C800D51E3_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDB85BB0C993AB476D92B4742C800D51E3_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__IDB85BB0C993AB476D92B4742C800D51E3_li">
+</a>In <span class="ph uicontrol">Response (standard
+deviations)</span>, enter <kbd class="ph userinput">Std</kbd>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID2997DA787BB14878B8A8C2EECA86A464_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID2997DA787BB14878B8A8C2EECA86A464_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID2997DA787BB14878B8A8C2EECA86A464_li">
+</a>Click <span class="ph uicontrol">Options</span>.</li>
+
+<li class="li" id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID323FF549755B412FAE566E20A9715108_li">
+<a name=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID323FF549755B412FAE566E20A9715108_li"
+id=
+"IDB47A5BD0EFB1484587121BDCD2BC0BE0_thowto__ID323FF549755B412FAE566E20A9715108_li">
+</a>Under <span class="ph uicontrol">Estimation method</span>,
+choose <span class="ph uicontrol">Maximum likelihood</span>.</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="interpret">
+<h2 class="title sectiontitle">Interpreting the output</h2>
+
+<p class="p">Now what? For guidance on interpreting the results of
+this analysis, see <a href=
+"..//dofacdes/facv_000_summary.htm');history.back(1);">StatGuide</a>.</p>
+</div>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+
+<!-- CHM2WEB -->
+<!-- DO NOT DELETE OR MODIFY THIS CODE WITHOUT 
+     WRITTEN PERMISSION OF A!K RESEARCH LABS -->
+<table width="100%" cellspacing="0" cellpadding="0" 
+style="margin-top: 0pt; border-collapse: collapse;"> 
+<tr> <td align="right" style="background-color:white; border-top: 1px solid gray;"> 
+<a href="http://chm2web.aklabs.com" target="_blank" style="font-family: sans-serif;  font-size: 11px; text-decoration: none;"><font color="gray">Converted from CHM to HTML with <b>chm2web Standard 2.85 (unicode)</b></font></a>
+</td></tr></table> 
+<!-- /CHM2WEB -->
+
+</body>
+</html>
